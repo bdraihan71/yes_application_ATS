@@ -1,0 +1,15 @@
+{
+  "name": "YES_Online_Application",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "firebase": "~3.4.1",
+    "angularfire": "~2.0.2"
+  }
+}

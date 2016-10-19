@@ -1,0 +1,878 @@
+ <div class="row">
+  <div class="col-md-10 col-md-offset-1">
+    <form name="myForm" class="form-inline" ng-submit="addApplicant()">
+      <div class="row">
+        <div class="row">
+          
+          <div class="col-md-12">
+            <label>Note:</label>
+          </div>
+          <div class="col-md-12">
+              <textarea style="width:97%" row="3" ng-model="applicant.note" type="textarea" class="form-control" id="noteInput" placeholder="note"></textarea>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <label>Name:</label>
+          </div>
+          <div class="col-md-12">
+              <input required style="width:32%" ng-model="applicant.first_name" type="text" class="form-control" id="firstNameInput" placeholder="first">
+              <input style="width:32%" ng-model="applicant.middle_name" ng-init="middleName=''" type="text" class="form-control" id="middleNameInput" placeholder="middle">
+              <input required style="width:32%" ng-model="applicant.last_name" type="text" class="form-control" id="lastNameInput" placeholder="last">
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="radio">
+              <label>
+              <input required type="radio" ng-model="applicant.sex" name="gender" value="male"> Male
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+              <input type="radio" ng-model="applicant.sex" name="gender" value="female"> Female
+              </label>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <label>Date of Birth:</label>
+            <input type="text" id="datepicker" required ng-model="applicant.date_of_birth">
+          </div>
+          <div class="col-md-3">
+            <label>Age on 1st August, 2017: @{{applicant.ageOnFirstAugust}}</label>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-md-6">
+                <label>Citizenship:</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <input required style="width:90%" ng-model="applicant.citizenship" type="text" class="form-control"/>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-md-6">
+                <label>Contact No:</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <input required style="width:90%" ng-model="applicant.contact" type="text" class="form-control">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-md-6">
+                <label>E-mail ID:</label>
+              </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <input required style="width:90%" ng-model="applicant.email" type="text" class="form-control">
+                </div>
+              </div>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-md-12">
+            <label>Address:</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <input required style="width:97%" ng-model="applicant.address" type="text" placeholder="Address" class="form-control">
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-md-12">
+            <input required  ng-model="applicant.postalCode" type="text" class="form-control" placeholder="Postal Code">
+            <input required  ng-model="applicant.thana" type="text" class="form-control"  placeholder="Thana">
+            <input required  ng-model="applicant.district" type="text" class="form-control" placeholder="District">
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-md-12">
+                <label>Facebook profile URL(if any):</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <input style="width:90%" ng-model="applicant.facebookURL" ng-init="facebookURL=''" type="text" class="form-control" placeholder="www.facebook.com/">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-md-12">
+                <label>Twitter Handle(if any):</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <input style="width:90%" ng-model="applicant.twitterHandle" ng-init="twitterHandle=''" type="text" class="form-control">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-md-12">
+                <label>Instagram ID(if any):</label>
+              </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                <input style="width:90%" ng-model="applicant.instagramID" ng-init="instagramID=''" type="text" class="form-control">
+                </div>
+              </div>
+          </div>
+        </div>
+        <br>
+      </div>
+      <!-- student info -->
+      <hr>
+      <div class="row">
+        <h4>School's Info</h4>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-6">
+                <label>School Name:</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <input required style="width:97%"  ng-model="applicant.schoolName" type="text" class="form-control " id="firstNameInput">
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-md-6">
+                <label>Address:</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <input required style="width:90%"  ng-model="applicant.schoolAddress" type="text" class="form-control">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-md-6">
+                <label>Phone:</label>
+              </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                <input required style="width:94%"  ng-model="applicant.schoolPhone" type="text" class="form-control">
+                </div>
+              </div>
+          </div>
+        </div>
+        <br>
+
+        <div class="row">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="col-md-4">
+                <div class="row">
+                  <div class="col-md-10">
+                    <label>Class currently studying:</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <input required style="width:70%" ng-model="applicant.classCurrentlyStudying" type="text" class="form-control">
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="row">
+                  <div class="col-md-10">
+                    <label>Class studied in 2015-2016:</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <input required style="width:70%" ng-model="applicant.classStudiedIn20152016" type="text" class="form-control">
+                  </div>
+                </div>
+              </div>
+
+                <div class="col-md-4">
+                <div class="row">
+                  <div class="col-md-10">
+                    <label>Class studied in 2014-2015:</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <input required style="width:70%" ng-model="applicant.classStudiedIn20142015" type="text" class="form-control">
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-md-12">
+
+               <div class="col-md-4">
+                <div class="row">
+                  <div class="col-md-10">
+                    <label>Current percentage marks:</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <input required style="width:70%" ng-model="applicant.currentPercentageMarks" type="text" class="form-control">
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="row">
+                  <div class="col-md-10">
+                    <label>Percentage makes in 2015-2016:</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <input required style="width:70%" ng-model="applicant.percentageMarksIn20152016" type="text" class="form-control">
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="row">
+                  <div class="col-md-10">
+                    <label>Percentage makes in 2014-2015:</label>
+                  </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                    <input required style="width:70%" ng-model="applicant.percentageMarksIn20142015" type="text" class="form-control">
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- school's info -->
+      <hr>
+      <div class="row">
+        <h4>Travel & Family Immigration Info</h4>
+        <div class="row">
+
+          <div class="col-md-12">
+            <div class="col-md-6">
+
+              <div class="row">
+                <div class="row">
+                  <div class="col-md-12">
+                    <label>Have you visited the United States in previous 5 years?:</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="radio">
+                      <label>
+                      <input required id="visitedUS5" type="radio" ng-model="applicant.visitedUS5" name="visitedUS5" value="yes"> Yes
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                      <input type="radio" id="visitedUS5" ng-model="applicant.visitedUS5" name="visitedUS5" value="no"> No
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="row">
+                  <div class="col-md-12">
+                    <label>If yes, when and where?:</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <input id="visitedUS5WhenAndWhere" ng-model="applicant.visitedUS5WhenAndWhere" ng-init="visitedUS5WhenAndWhere=''" type="text" class="form-control">
+                  </div>
+                </div>
+              </div>
+
+  <!--                   <div class="row">
+                <label>If yes, when and where?:</label>
+                <input  ng-model="applicant.visitedUS5WhenAndWhere" ng-init="visitedUS5WhenAndWhere=''" type="text" class="form-control">
+              </div> -->
+
+              <div class="row">
+                <div class="row">
+                  <div class="col-md-12">
+                    <label>Purpose of your visit:</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <input id="visitedUS5Purpose"  ng-model="applicant.visitedUS5Purpose" ng-init="visitedUS5Purpose=''" type="text" class="form-control">
+                  </div>
+                </div>
+              </div>
+  <!-- 
+              <div class="row">
+                <label>Purpose of your visit:</label>
+                <input  ng-model="applicant.visitedUS5Purpose" ng-init="visitedUS5Purpose=''" type="text" class="form-control">
+              </div> -->
+
+              <div class="row">
+                <div class="row">
+                  <div class="col-md-12">
+                    <label>How long did you stay?</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <input  id="visitedUS5HowLong" ng-model="applicant.visitedUS5HowLong" ng-init="visitedUS5HowLong=''" type="text" class="form-control">
+                  </div>
+                </div>
+              </div>
+
+             <!--  <div class="row">
+                <label>How long did you stay?</label>
+                <input   ng-model="applicant.visitedUS5HowLong" ng-init="visitedUS5HowLong=''" type="text" class="form-control">
+              </div> -->
+              <br>
+              <div class="row">
+                <div class="row">
+                  <div class="col-md-12">
+                    <label>Has anyone in your immediate family applied for U.S. immigration?</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="radio">
+                      <label>
+                      <input required type="radio" ng-model="applicant.familyImmigration" name="familyImmigration" value="yes"> Yes
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                      <input type="radio" ng-model="applicant.familyImmigration" name="familyImmigration" value="no"> No
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+
+              <!-- <div class="row">
+                <label>Has anyone in your immediate family applied for U.S. immigration?</label>
+                <div class="radio">
+                  <label>
+                  <input required type="radio" ng-model="applicant.familyImmigration" name="familyImmigration" value="yes"> Yes
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                  <input type="radio" ng-model="applicant.familyImmigration" name="familyImmigration" value="no"> No
+                  </label>
+                </div>
+              </div> -->
+
+              <div class="row">
+                <div class="row">
+                  <div class="col-md-12">
+                    <label>Is anyone in your immediate family a U.S. Green Card holder?</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="radio">
+                      <label>
+                      <input required type="radio" ng-model="applicant.familyGreenCard" name="familyGreenCard" value="yes"> Yes
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                      <input type="radio" ng-model="applicant.familyGreenCard" name="familyGreenCard" value="no"> No
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="col-md-6">
+              
+              
+              <!-- <br> -->
+              <!-- <div class="row">
+                <label>Is anyone in your immediate family a U.S. Green Card holder?</label>
+                <div class="radio">
+                  <label>
+                  <input required type="radio" ng-model="applicant.familyGreenCard" name="familyGreenCard" value="yes"> Yes
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                  <input type="radio" ng-model="applicant.familyGreenCard" name="familyGreenCard" value="no"> No
+                  </label>
+                </div>
+              </div> -->
+
+              <div class="row">
+                <div class="row">
+                  <div class="col-md-12">
+                    <label>Is anyone in your immediate family living in U.S.A?</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="radio">
+                      <label>
+                      <input required type="radio" ng-model="applicant.familyLivingInUSA" name="familyLivingInUSA" value="yes"> Yes
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                      <input type="radio" ng-model="applicant.familyLivingInUSA" name="familyLivingInUSA" value="no"> No
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+
+              <!-- <div class="row">
+                <label>Is anyone in your immediate family living in U.S.A?</label>
+                <div class="radio">
+                  <label>
+                  <input required type="radio" ng-model="applicant.familyLivingInUSA" name="familyLivingInUSA" value="yes"> Yes
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                  <input type="radio" ng-model="applicant.familyLivingInUSA" name="familyLivingInUSA" value="no"> No
+                  </label>
+                </div>
+              </div> -->
+
+              <div class="row">
+                <div class="row">
+                  <div class="col-md-12">
+                    <label>Is any of your relatives living in U.S.A?</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="radio">
+                      <label>
+                      <input required type="radio" ng-model="applicant.relativesLivingInUSA" name="relativesLivingInUSA" value="yes"> Yes
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                      <input type="radio" ng-model="applicant.relativesLivingInUSA" name="relativesLivingInUSA" value="no"> No
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- <div class="row">
+                <label>Is any of your relatives living in U.S.A?</label>
+                <div class="radio">
+                  <label>
+                  <input required type="radio" ng-model="applicant.relativesLivingInUSA" name="relativesLivingInUSA" value="yes"> Yes
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                  <input type="radio" ng-model="applicant.relativesLivingInUSA" name="relativesLivingInUSA" value="no"> No
+                  </label>
+                </div>
+              </div> -->
+
+              <div class="row">
+                <div class="row">
+                  <div class="col-md-12">
+                    <label>If yes, which state?</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <input id="relativesLivingInUSAState"  ng-model="applicant.relativesLivingInUSAState" ng-init="relativesLivingInUSAState=''" type="text" class="form-control">
+                  </div>
+                </div>
+              </div>
+              <br>
+
+
+              <!-- <div class="row">
+                <label>If yes, which state?</label>
+                <input  ng-model="applicant.relativesLivingInUSAState" ng-init="relativesLivingInUSAState=''" type="text" class="form-control">
+              </div> -->
+
+              <div class="row">
+                <div class="row">
+                  <div class="col-md-12">
+                    <label>Do you hold a U.S Visa?</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="radio">
+                      <label>
+                      <input required type="radio" ng-model="applicant.holdUSVisa" name="holdUSVisa" value="yes"> Yes
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                      <input type="radio" ng-model="applicant.holdUSVisa" name="holdUSVisa" value="no"> No
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- <div class="row">
+                <label>Do you hold a U.S Visa?</label>
+                <div class="radio">
+                  <label>
+                  <input required type="radio" ng-model="applicant.holdUSVisa" name="holdUSVisa" value="yes"> Yes
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                  <input type="radio" ng-model="applicant.holdUSVisa" name="holdUSVisa" value="no"> No
+                  </label>
+                </div>
+              </div> -->
+
+              <div class="row">
+                <div class="row">
+                  <div class="col-md-12">
+                    <label>If yes, date of expiry?</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <input id="holdUSVisaExpiry" ng-model="applicant.holdUSVisaExpiry" ng-init="holdUSVisaExpiry=''" type="text" class="form-control">
+                  </div>
+                </div>
+              </div>
+
+              <!-- <div class="row">
+                <label>If yes, date of expiry?</label>
+                <input  ng-model="applicant.holdUSVisaExpiry" ng-init="holdUSVisaExpiry=''" type="text" class="form-control">
+              </div> -->
+            </div>
+          </div>
+        </div>
+        <!-- immigration's info -->
+        <hr>
+        <div class="row">
+          <h4>Please answer the following questions in 100 words or less.</h4>
+          
+          <div class="col-md-12">
+
+            <div class="row">
+              <div class="row">
+                <div class="col-md-12">
+                  <label>Tell us about yourself, like your hobbies, activities, interests or anything you will like us to know on this application.</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <textarea style="width:97%" required  class="form-control" rows="3" type="textarea" ng-model="applicant.aboutYourself" ></textarea>
+                </div>
+              </div>
+            </div>
+
+            <br>
+            <div class="row">
+              <div class="row">
+                <div class="col-md-12">
+                  <label>Community service is very important part of the program. Please describe any community service projects you have participated. If you have not, what kind of community service projects would you be interested in?</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <textarea style="width:97%" required  class="form-control" rows="3" type="textarea" ng-model="applicant.aboutCommunityWork" ></textarea>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- <div class="row">
+              <label>Tell us about yourself, like your hobbies, activities, interests or anything you will like us to know on this application.</label>
+              <textarea required  class="form-control" rows="3" type="textarea" ng-model="applicant.aboutYourself" ></textarea>
+            </div>
+             -->
+            <!-- <div class="row">
+              <label>Community service is very important part of the program. Please describe any community service projects you have participated. If you have not, what kind of community service projects would you be interested in?</label>
+              <textarea required  class="form-control" rows="3" type="textarea" ng-model="applicant.aboutCommunityWork" ></textarea>
+            </div> -->
+
+          </div>
+
+        </div>
+        <!-- essays -->
+        <hr>
+        <div class="row">
+          <h4>Father's Info</h4>
+          <div class="row">
+
+            <div class="col-md-12">
+              <label>Name:</label>
+            </div>
+            <div class="col-md-12">
+                <input required style="width:32%" ng-model="applicant.fatherFirstName" type="text" class="form-control" placeholder="first">
+                <input style="width:32%" ng-model="applicant.fatherMiddleName" ng-init="fatherMiddleName=''" type="text" class="form-control"  placeholder="middle">
+                <input required style="width:32%"  ng-model="applicant.fatherLastName" type="text" class="form-control" placeholder="last">
+            </div>
+
+            <!-- <div class="col-md-12">
+              <label>Name:</label>
+              <input required style="width:32%" ng-model="applicant.fatherFirstName" type="text" class="form-control" placeholder="first">
+              <input style="width:32%" ng-model="applicant.fatherMiddleName" ng-init="fatherMiddleName=''" type="text" class="form-control"  placeholder="middle">
+              <input style="width:32%" required  ng-model="applicant.fatherLastName" type="text" class="form-control" placeholder="last">
+            </div> -->
+
+          </div>
+          <br>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="row">
+                <div class="col-md-6">
+                  <label>Contact No:</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <input required style="width:94%" ng-model="applicant.fatherContact" type="text" class="form-control">
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="row">
+                <div class="col-md-6">
+                  <label>E-mail ID:</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <input  style="width:94%" ng-model="applicant.fatherEmailID"   ng-init="fatherEmailID=''" type="text" class="form-control">
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+
+         <!--  <div class="row">
+            <div class="col-md-6">
+              <label>Contact No:</label>
+              <input required  ng-model="applicant.fatherContact" type="text" class="form-control">
+            </div>
+            <div class="col-md-6">
+              <label>E-mail ID:</label>
+              <input   ng-model="applicant.fatherEmailID"   ng-init="fatherEmailID=''" type="text" class="form-control">
+            </div>
+          </div>
+  -->
+          <div class="row">
+            <div class="col-md-6">
+              <div class="row">
+                <div class="col-md-6">
+                  <label>Occupation:</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <input required style="width:94%" ng-model="applicant.fatherOccupation"  type="text" class="form-control">
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="row">
+                <div class="col-md-6">
+                  <label>Office Phone:</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <input  style="width:94%"  ng-model="applicant.fatherOfficePhone" ng-init="fatherOfficePhone=''" type="text" class="form-control">
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+
+
+          <!-- <div class="row">
+            <div class="col-md-6">
+              <label>Occupation:</label>
+              <input required   ng-model="applicant.fatherOccupation"  type="text" class="form-control">
+            </div>
+            <div class="col-md-6">
+              <label>Office Phone:</label>
+              <input    ng-model="applicant.fatherOfficePhone" ng-init="fatherOfficePhone=''" type="text" class="form-control">
+            </div>
+          </div> -->
+
+        </div>
+        <!-- father info -->
+        <hr>
+        <div class="row">
+          <h4>Mother's Info</h4>
+
+          <div class="row">
+
+            <div class="col-md-12">
+              <label>Name:</label>
+            </div>
+            <div class="col-md-12">
+                <input required style="width:32%" ng-model="applicant.motherFirstName" type="text" class="form-control" placeholder="first">
+                <input style="width:32%" ng-model="applicant.motherMiddleName" ng-init="motherMiddleName=''" type="text" class="form-control"  placeholder="middle">
+                <input required style="width:32%"  ng-model="applicant.motherLastName" type="text" class="form-control" placeholder="last">
+            </div>
+          </div>
+          <br>
+
+  <!--               <div class="row">
+            <div class="col-md-12">
+              <label>Name:</label>
+              <input required  ng-model="applicant.motherFirstName" type="text" class="form-control" placeholder="first">
+              <input  ng-model="applicant.motherMiddleName" ng-init="motherMiddleName=''" type="text" class="form-control"  placeholder="middle">
+              <input required ng-model="applicant.motherLastName" type="text" class="form-control" placeholder="last">
+            </div>
+          </div> -->
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="row">
+                <div class="col-md-6">
+                  <label>Contact No:</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <input required style="width:94%" ng-model="applicant.motherContact" type="text" class="form-control">
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="row">
+                <div class="col-md-6">
+                  <label>E-mail ID:</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <input style="width:94%" ng-model="applicant.motherEmailID" ng-init="motherEmailID=''" type="text" class="form-control">
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="row">
+                <div class="col-md-6">
+                  <label>Occupation:</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <input required  style="width:94%" ng-model="applicant.motherOccupation"  type="text" class="form-control">
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="row">
+                <div class="col-md-6">
+                  <label>Office Phone:</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <input  style="width:94%"  ng-model="applicant.motherOfficePhone" ng-init="motherOfficePhone=''" type="text" class="form-control">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <br>
+          <div class="row">
+            <div class="col-md-12">
+              <label>File URls:</label>
+            </div>
+            <div class="col-md-12" style="padding-bottom: 20px">
+                <p><a href="{{applicant.photo}}" target="_blank">Photo: </a><span style="color: red" ng-if="applicant.photo.includes('blank_file')">No File Uploaded</span></p>
+                <input style="width:97%" ng-model="applicant.photo" type="textarea" class="form-control" id="photo" placeholder="File Location">
+            </div>
+            <br>
+            <div class="col-md-12" style="padding-bottom: 20px">
+                <p><a href="{{applicant.birthCertificate}}" target="_blank">Birth Certificate: </a><span style="color: red" ng-if="applicant.birthCertificate.includes('blank_file')">No File Uploaded</span></p>
+                <input style="width:97%" ng-model="applicant.birthCertificate" type="textarea" class="form-control" id="birthCertificate" placeholder="File Location">
+            </div>
+            <br>
+            <div class="col-md-12" style="padding-bottom: 20px">
+                <p><a href="{{applicant.transcriptCurrent}}" target="_blank">Transcript of Current Year: </a><span style="color: red" ng-if="applicant.transcriptCurrent.includes('blank_file')">No File Uploaded</span></p>
+                <input style="width:97%" ng-model="applicant.transcriptCurrent" type="textarea" class="form-control" id="transcriptCurrent" placeholder="File Location">
+            </div>
+            <br>
+            <div class="col-md-12" style="padding-bottom: 20px">
+                <p><a href="{{applicant.transcript2015}}" target="_blank">Transcript of 2015-2016: </a><span style="color: red" ng-if="applicant.transcript2015.includes('blank_file')">No File Uploaded</span></p>
+                <input style="width:97%" ng-model="applicant.transcript2015" type="textarea" class="form-control" id="transcript2015" placeholder="File Location">
+            </div>
+            <br>
+            <div class="col-md-12" style="padding-bottom: 20px">
+                <p><a href="{{applicant.transcript2014}}" target="_blank">Transcript of 2014-2015: </a><span style="color: red" ng-if="applicant.transcript2014.includes('blank_file')">No File Uploaded</span></p>
+                <input style="width:97%" ng-model="applicant.transcript2014" type="textarea" class="form-control" id="transcript2014" placeholder="File Location">
+            </div>
+          </div>
+          <br>
+        </div>
+        <br>
+    </form>
+  </div>
+</div>
+            
