@@ -5,6 +5,20 @@
         <div class="row">
 
           <div class="col-md-12">
+            <label>Status: @{{applicant.status}}</label>
+          </div>
+          <div class="col-md-12">
+              <select name="singleSelect" ng-model="applicant.status">
+              <option value="Pending">Pending</option>
+              <option value="Accepted">Accepted</option>
+              <option value="Rejceted">Rejected</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+
+          <div class="col-md-12">
             <label>Note:</label>
           </div>
           <div class="col-md-12">

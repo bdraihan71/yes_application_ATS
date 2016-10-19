@@ -342,7 +342,7 @@ app.controller("FormCtrl", [ '$scope', '$firebaseArray' ,'$sce', function($scope
           transcriptCurrent: transcriptCurrent,
           transcript2015: transcript2015,
           transcript2014: transcript2014,
-          status: "pending",
+          status: "Pending",
           applicant_id: applicant_count
          }).then(function(p){
           console.log(p.key());
