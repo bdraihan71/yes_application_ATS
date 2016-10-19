@@ -20,7 +20,5 @@ Route::auth();
 Route::get('/home', 'HomeController@dashboard')->middleware('auth');
 Route::get('/upload', 'HomeController@upload')->middleware('auth');
 Route::get('/student-details', 'HomeController@studentDetails')->middleware('auth');
-
-Route::get('profile', function () {
-    // Only authenticated users may enter...
-});
+// route registration attempts to home
+Route::any('/register','HomeController@dashboard');
