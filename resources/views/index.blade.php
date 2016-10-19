@@ -1,80 +1,80 @@
 <!doctype html>
 <html ng-app="applicationApp">
-  <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Kennedy-Lugar Youth Exchange and Study (YES) Program</title>
-    <!-- Angular Material style sheet -->
-    <link rel="stylesheet" href="yes_program/node_modules/angular-material/angular-material.min.css">
-    <!-- Bootstrap -->
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="yes_program/node_modules/bootstrap/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="yes_program/node_modules/bootstrap/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <script src="yes_program/node_modules/angular/angular.js"></script>
-    <script src="yes_program/node_modules/angularfire/dist/angularfire.js"></script>
-    <script src="yes_program/node_modules/firebase/firebase.js"></script>
-    <script src="yes_program/node_modules/angularfire/dist/angularfire.min.js"></script>
-    <script src="yes_program/node_modules/firebase/firebase-app.js"></script>
-    <script src="yes_program/node_modules/firebase/firebase-storage.js"></script>
-    <script src="yes_program/node_modules/firebase/firebase-database.js"></script>
-    <script src="yes_program/node_modules/angular-animate/angular-animate.min.js"></script>
-    <script src="yes_program/node_modules/angular-aria/angular-aria.min.js"></script>
-    <script   src="yes_program/node_modules/jquery/dist/jquery.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
-    <script src="yes_program/node_modules/angular-messages/angular-messages.min.js"></script>
-    <!-- Angular Material Library -->
-    <script src="yes_program/node_modules/angular-material/angular-material.min.js"></script>
-    <script src="yes_program/app/app.js"></script>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="yes_program/node_modules/bootstrap/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    
-    <link rel="stylesheet" href="yes_program/other_library/jquery-ui/jquery-ui.css">
-    <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
-    <script
-        src="yes_program/other_library/jquery-ui/jquery-ui.min.js"
-        integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
-        crossorigin="anonymous"></script>
-    <script>
-        $( function() {
-        $( "#datepicker" ).datepicker({
-          changeMonth: true,
-          changeYear: true,
-          yearRange: "-100:+0",
-        });
-      } );
-    </script>
-    <style>
-      li {
-        display: inline;
-        padding: 3px;
-        background: yellow;
-      }
-      #necc {
-        padding: 3px;
-        color: white;
-        background: #ea2e2e;
-      }
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kennedy-Lugar Youth Exchange and Study (YES) Program</title>
+  <!-- Angular Material style sheet -->
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+  <!-- Bootstrap -->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <script src="yes_program/node_modules/angular/angular.js"></script>
+  <script src="yes_program/node_modules/angularfire/dist/angularfire.js"></script>
+  <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+  <script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
+  <script src="yes_program/node_modules/firebase/firebase-app.js"></script>
+  <script src="yes_program/node_modules/firebase/firebase-storage.js"></script>
+  <script src="yes_program/node_modules/firebase/firebase-database.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+  <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+  <!-- Angular Material Library -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+  <script src="yes_program/app/app.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-      ul {
-        background: yellow;
-      }
-    </style>
-  </head>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
+  <script
+      src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+      integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+      crossorigin="anonymous"></script>
+  <script>
+      $( function() {
+      $( "#datepicker" ).datepicker({
+        changeMonth: true,
+        changeYear: true,
+        yearRange: "-100:+0",
+      });
+    } );
+  </script>
+  <style>
+    li {
+      display: inline;
+      padding: 3px;
+      background: yellow;
+    }
+    #necc {
+      padding: 3px;
+      color: white;
+      background: #ea2e2e;
+    }
+
+    ul {
+      background: yellow;
+    }
+  </style>
+</head>
   <body ng-controller="FormCtrl" >
     <div class="container" style="background-color:#CACFE9" >
       <div class="jumbotron" style="margin-top:20px">
         <div class="row">
           <div class="col-md-4">
-            <img src="yes_program/res/usdeptlogo.png" width="300" class="img"> 
+            <img src="yes_program/res/usdeptlogo.png" width="300" class="img">
           </div>
           <div class="col-md-6" style="font-weight: bold; text-align:center;">
-            <h2>Kennedy-Lugar Youth Exchange and Study (YES) Program</h2> 
-            <h3>Country: Bangladesh</h3> 
+            <h2>Kennedy-Lugar Youth Exchange and Study (YES) Program</h2>
+            <h3>Country: Bangladesh</h3>
           </div>
           <div class="col-md-2">
             <img src="yes_program/res/yeslogo.png" width="130" class="img">
-          </div> 
-        </div>    
+          </div>
+        </div>
       </div>
       <div>
         <div class="row text-center">
@@ -433,7 +433,7 @@
                         </div>
                       </div>
                     </div>
-  <!-- 
+  <!--
                     <div class="row">
                       <label>Purpose of your visit:</label>
                       <input  ng-model="visitedUS5PurposeText" ng-init="visitedUS5PurposeText=''" type="text" class="form-control">
@@ -519,8 +519,8 @@
                   </div>
 
                   <div class="col-md-6">
-                    
-                    
+
+
                     <!-- <br> -->
                     <!-- <div class="row">
                       <label>Is anyone in your immediate family a U.S. Green Card holder?</label>
@@ -690,7 +690,7 @@
               <hr>
               <div class="row">
                 <h4>Please answer the following questions in 100 words or less.</h4>
-                
+
                 <div class="col-md-12">
 
                   <div class="row">
@@ -949,13 +949,13 @@
                 </div> -->
               </div>
 
-              
+
                 <div class="row" >
                   <div style=" width:97% ; padding: 5px; border:2px solid black; background: white;">
                     <p style="color:#ea2e2e; font-weight: bold;">
                       Uploading the documents is not mandatory. Please do note, you must send all the required documents along with the signed application by courier or in person at the iEARN-BD office by Nov 24, 2016.
                     </p>
-                    
+
                   </div>
                 </div>
               <br>
@@ -983,7 +983,7 @@
               <div>
                 <p>• Your Birth Certificate, Academic Transcripts and the completed application form must be signed and attested by the Head/Principal of your Educational Institution.
                 </p>
-                <p>• Without the Parents signature, and the Signature and Seal of your educational Institution, your application will be invalid.  
+                <p>• Without the Parents signature, and the Signature and Seal of your educational Institution, your application will be invalid.
                 </p>
                 <p>• If you send us your completed application form by courier/postal service, write down your applicant ID on top of the envelope.
                 </p>
@@ -999,6 +999,9 @@
           </form>
           </div>
         </div>
+      </div>
+      <div class="footer">
+        <p style="text-align: center;">Powered by <a target="_blank" href="http://www.techynaf.com">Techynaf</a></p>
       </div>
       <!-- The overlay -->
       <div id="myNav" class="overlay">
@@ -1024,12 +1027,12 @@
         .input-block-level {
           display: block;
           width: 100%;
-          min-height: 28px;        
+          min-height: 28px;
           .box-sizing(border-box);
         }
          /* The Overlay (background) */
         .overlay {
-            /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+            /* Height & width depends on how you want to reveal the overlay (see JS below) */
             height: 100%;
             width: 0;
             position: fixed; /* Stay in place */
@@ -1153,6 +1156,6 @@
             };
         }
       </script>
-    <div>  
+    <div>
   </body>
 </html>

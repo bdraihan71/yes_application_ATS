@@ -1,41 +1,43 @@
 <html ng-app="applicationApp">
+
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>YES Application Dashboard</title>
-    <link rel="stylesheet" href="yes_program/node_modules/angular-material/angular-material.min.css">
-    <link rel="stylesheet" href="yes_program/node_modules/bootstrap/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="yes_program/node_modules/bootstrap/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <script src="yes_program/node_modules/angular/angular.js"></script>
     <script src="yes_program/node_modules/angularfire/dist/angularfire.js"></script>
-    <script src="yes_program/node_modules/firebase/firebase.js"></script>
-    <script src="yes_program/node_modules/angularfire/dist/angularfire.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
     <script src="yes_program/node_modules/firebase/firebase-app.js"></script>
     <script src="yes_program/node_modules/firebase/firebase-storage.js"></script>
     <script src="yes_program/node_modules/firebase/firebase-database.js"></script>
-    <script src="yes_program/node_modules/angular-animate/angular-animate.min.js"></script>
-    <script src="yes_program/node_modules/angular-aria/angular-aria.min.js"></script>
-    <script src="yes_program/node_modules/angular-messages/angular-messages.min.js"></script>
-    <script src="yes_program/node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="yes_program/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="yes_program/node_modules/angular-material/angular-material.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
     <script src="yes_program/app/app.js"></script>
-    <script src="yes_program/res/pdf.js"></script>
-    <script src="yes_program/res/ng-pdfviewer.js"></script>
-    <script src="yes_program/res/pdf.compat.js"></script>
+    <!-- <script src="res/pdf.js"></script>
+    <script src="res/ng-pdfviewer.js"></script>
+    <script src="res/pdf.compat.js"></script> -->
   </head>
 
   <body class="" style="height: auto;" ng-controller="FormCtrl">
     <div class="container">
       <div class="row">
-        
+
         <div class="modal">
           <div class="col-md-12">
             <p>hello</p>
           </div>
         </div>
 
-        
+
 
         <div class="col-md-12">
           <div>
@@ -43,10 +45,13 @@
               <div class="navbar-header">
                 <a class="navbar-brand" href="#">K-L YES Application Dashboard</a>
               </div>
-            </nav>  
+              <div>
+                <a class="navbar-button pull-right" href="/logout">logout</a>
+              </div>
+            </nav>
           </div>
 
-          
+
 
           <table class="table fixed table-bordered table-striped">
             <div>
@@ -71,30 +76,30 @@
                 <div>
                   <div class="col-md-5" ng-init="showDeleteModal=false">
                     <button class="btn btn-danger" ng-click="showDeleteModal = !showDeleteModal"><span class="glyphicon glyphicon-trash"></span></button>
-                    <div class="modal fade in" aria-hidden="false" style="display: block;" ng-show="showDeleteModal">  
-                        <div class="modal-dialog">    
-                            <div class="modal-content">   
+                    <div class="modal fade in" aria-hidden="false" style="display: block;" ng-show="showDeleteModal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
                               <div class="modal-header">
                                 <h3>Are you sure?</h3>
-                              </div>   
-                              <div class="modal-footer">        
+                              </div>
+                              <div class="modal-footer">
                                   <button type="button" class="btn btn-danger" ng-click="applicants.$remove(applicant) ; showDeleteModal=false">Delete</button>
-                                  <button type="button" class="btn btn-primary" ng-click="showDeleteModal=false">Cancel</button>     
-                              </div>    
-                            </div>  
+                                  <button type="button" class="btn btn-primary" ng-click="showDeleteModal=false">Cancel</button>
+                              </div>
+                            </div>
                         </div>
                     </div>
                   </div>
 
                   <div class="col-md-5" ng-init="showDetailsModal=false">
                     <button class="btn btn-default" ng-click="showDetailsModal = !showDetailsModal"><span class="glyphicon glyphicon-info-sign"></span></button>
-                    <div class="modal fade in" aria-hidden="false" style="display: block; max-height: 95%; overflow-y: auto;" ng-show="showDetailsModal">  
-                        <div class="modal-dialog" style="width: 90%">    
-                            <div class="modal-content">   
+                    <div class="modal fade in" aria-hidden="false" style="display: block; max-height: 95%; overflow-y: auto;" ng-show="showDetailsModal">
+                        <div class="modal-dialog" style="width: 90%">
+                            <div class="modal-content">
                               <div class="modal-header">
                                 <div style="float: right;">
                                   <div style="height: 50px; width: 50px; vertical-align: middle;" class="glyphicon glyphicon-remove" ng-click="showDetailsModal=false">
-                                    
+
                                   </div>
                                 </div>
                                 <h3>@{{applicant.first_name}}'s Details</h3>
@@ -103,14 +108,14 @@
                               <br>
                               <div class="modal-body" style=" background-color: #CACFE9;height: auto;">
                                 <div ng-include="'/yes_program/student_details.html'"></div>
-                              </div>   
-                              <div class="modal-footer">        
+                              </div>
+                              <div class="modal-footer">
                                   <button type="button" class="btn btn-danger" ng-click="applicants.$save(applicant) ; showDetailsModal=false">Update</button>
-                                  <button type="button" class="btn btn-primary" ng-click="showDetailsModal=false">Cancel</button>    
+                                  <button type="button" class="btn btn-primary" ng-click="showDetailsModal=false">Cancel</button>
                                   <br>
-                                  <br> 
-                              </div>    
-                            </div>  
+                                  <br>
+                              </div>
+                            </div>
                         </div>
                     </div>
                   </div>
@@ -123,8 +128,8 @@
               <!-- delete an applicant -->
             </tr>
           </table>
-        </div>  
+        </div>
       </div>
-    </div> 
+    </div>
   </body>
 </html>

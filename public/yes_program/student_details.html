@@ -3,7 +3,21 @@
     <form name="myForm" class="form-inline" ng-submit="addApplicant()">
       <div class="row">
         <div class="row">
-          
+
+          <div class="col-md-12">
+            <label>Status: @{{applicant.status}}</label>
+          </div>
+          <div class="col-md-12">
+              <select name="singleSelect" ng-model="applicant.status">
+              <option value="Pending">Pending</option>
+              <option value="Accepted">Accepted</option>
+              <option value="Rejceted">Rejected</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+
           <div class="col-md-12">
             <label>Note:</label>
           </div>
@@ -41,7 +55,7 @@
             <input type="text" id="datepicker" required ng-model="applicant.date_of_birth">
           </div>
           <div class="col-md-3">
-            <label>Age on 1st August, 2017: @{{applicant.ageOnFirstAugust}}</label>
+            <label>Age on 1st August, 2017: {{applicant.ageOnFirstAugust}} years</label>
           </div>
         </div>
         <br>
@@ -347,7 +361,7 @@
                   </div>
                 </div>
               </div>
-  <!-- 
+  <!--
               <div class="row">
                 <label>Purpose of your visit:</label>
                 <input  ng-model="applicant.visitedUS5Purpose" ng-init="visitedUS5Purpose=''" type="text" class="form-control">
@@ -433,8 +447,8 @@
             </div>
 
             <div class="col-md-6">
-              
-              
+
+
               <!-- <br> -->
               <!-- <div class="row">
                 <label>Is anyone in your immediate family a U.S. Green Card holder?</label>
@@ -604,7 +618,7 @@
         <hr>
         <div class="row">
           <h4>Please answer the following questions in 100 words or less.</h4>
-          
+
           <div class="col-md-12">
 
             <div class="row">
@@ -875,4 +889,3 @@
     </form>
   </div>
 </div>
-            
