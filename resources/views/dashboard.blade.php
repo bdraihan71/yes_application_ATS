@@ -45,6 +45,9 @@
               <div class="navbar-header">
                 <a class="navbar-brand" href="#">K-L YES Application Dashboard</a>
               </div>
+              <div>
+                <a style="float:rignt" href="/logout">logout</a>
+              </div>
             </nav>
           </div>
 
