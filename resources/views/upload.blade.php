@@ -12,9 +12,9 @@
  <!--   <script src="yes_program/node_modules/angularfire/dist/angularfire.js"></script>-->
    <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
  <!--   <script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>-->
- <!--   <script src="yes_program/node_modules/firebase/firebase-app.js"></script>-->
- <!--   <script src="yes_program/node_modules/firebase/firebase-storage.js"></script>-->
- <!--   <script src="yes_program/node_modules/firebase/firebase-database.js"></script>-->
+   <!-- <script src="yes_program/node_modules/firebase/firebase-app.js"></script>
+   <script src="yes_program/node_modules/firebase/firebase-storage.js"></script>
+   <script src="yes_program/node_modules/firebase/firebase-database.js"></script> -->
  <!--   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>-->
  <!--   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>-->
  <!--   <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>-->
@@ -33,9 +33,9 @@
     <link rel="stylesheet" href="yes_program/node_modules/bootstrap/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <script src="yes_program/node_modules/angular/angular.js"></script>
     <script src="yes_program/node_modules/angularfire/dist/angularfire.js"></script>
-    <script src="yes_program/node_modules/firebase/firebase.js"></script>
+    <!-- <script src="yes_program/node_modules/firebase/firebase.js"></script> -->
     <script src="yes_program/node_modules/angularfire/dist/angularfire.min.js"></script>
-    <script src="yes_program/node_modules/firebase/firebase-app.js"></script>
+    <!-- <script src="yes_program/node_modules/firebase/firebase-app.js"></script> -->
     <script src="yes_program/node_modules/firebase/firebase-storage.js"></script>
     <script src="yes_program/node_modules/firebase/firebase-database.js"></script>
     <script src="yes_program/node_modules/angular-animate/angular-animate.min.js"></script>

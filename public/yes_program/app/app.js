@@ -11,28 +11,7 @@ var config = {
 firebase.initializeApp(config);
 
 
-app.controller("UploadCtrl",[ '$scope', '$rootScope', '$firebaseAuth', function($scope, $rootScope, $firebaseAuth){
-  var ref = new Firebase('"https://yesprogram-dcb5c.firebaseio.com/');
-  auth = $firebaseAuth(ref);
-    
-  $scope.signIn = function () {
-    auth.$login('password', {
-      email: $scope.email,
-      password: $scope.password
-    }).then(function(user) {
-      console.log("success");
-      $scope.alert.message = '';
-    }, function(error) {
-      if (error = 'INVALID_EMAIL') {
-        console.log('email invalid or not signed up — trying to sign you up!');
-        $scope.signUp();
-      } else if (error = 'INVALID_PASSWORD') {
-        console.log('wrong password!');
-      } else {
-        console.log(error);
-      }
-    });
-  }
+app.controller("UploadCtrl",[ '$scope', function($scope){
 
   function guid() {
    return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
@@ -51,13 +30,13 @@ app.controller("UploadCtrl",[ '$scope', '$rootScope', '$firebaseAuth', function(
     var file = document.getElementById("file").files[0];
     var storage = firebase.storage().ref('file/' + uuid + "-" + file.name);
     storage.put(file).then(function(snapshot) {
-      
+
       console.log(snapshot['a']['downloadURLs'][0]);
       $scope.$apply(function () {
         $scope.file_location = snapshot['a']['downloadURLs'][0];
         $scope.message = "Uploaded."
       });
-     
+
     })
   };
 }]);
@@ -133,18 +112,18 @@ app.controller("FormCtrl", [ '$scope', '$firebaseArray' ,'$sce', function($scope
   }
 
   var photo_file = document.getElementById("photo_file").files[0];
-  
+
   if(!photo_file) {
     console.log("blank file");
      photo_file = new File([""], "blank_file");
   }
-  
+
   var uuid = guid();
 
   var storage = firebase.storage().ref('images/' + uuid + "-" + photo_file.name);
   storage.put(photo_file).then(function(snapshot) {
 
-  
+
 
    console.log(snapshot['a']['downloadURLs'][0]);
    photo = snapshot['a']['downloadURLs'][0];
@@ -158,14 +137,14 @@ app.controller("FormCtrl", [ '$scope', '$firebaseArray' ,'$sce', function($scope
     }
 
    $scope.$apply(function () {
-          $scope.upload_progress = "uploaded 1 out of 5 files";  
+          $scope.upload_progress = "uploaded 1 out of 5 files";
     });
    var uuid = guid();
 
    var storage = firebase.storage().ref('file/' + uuid + "-" + birth_certificate_file.name);
    storage.put(birth_certificate_file).then(function(snapshot2) {
     $scope.$apply(function () {
-          $scope.upload_progress = "uploaded 2 out of 5 files";  
+          $scope.upload_progress = "uploaded 2 out of 5 files";
     });
     console.log(snapshot2['a']['downloadURLs'][0]);
     birthCertificate = snapshot2['a']['downloadURLs'][0];
@@ -180,7 +159,7 @@ app.controller("FormCtrl", [ '$scope', '$firebaseArray' ,'$sce', function($scope
     var storage = firebase.storage().ref('file/' + uuid + "-" + current_transcript_file.name);
     storage.put(current_transcript_file).then(function(snapshot3) {
       $scope.$apply(function () {
-            $scope.upload_progress = "uploaded 3 out of 5 files";  
+            $scope.upload_progress = "uploaded 3 out of 5 files";
       });
 
      console.log(snapshot3['a']['downloadURLs'][0]);
@@ -196,7 +175,7 @@ app.controller("FormCtrl", [ '$scope', '$firebaseArray' ,'$sce', function($scope
      var storage = firebase.storage().ref('file/' + uuid + "-" + transcript_2015_file.name);
      storage.put(transcript_2015_file).then(function(snapshot4) {
       $scope.$apply(function () {
-            $scope.upload_progress = "uploaded 4 out of 5 files";  
+            $scope.upload_progress = "uploaded 4 out of 5 files";
       });
       console.log(snapshot4['a']['downloadURLs'][0]);
       transcript2015 = snapshot4['a']['downloadURLs'][0];
@@ -211,7 +190,7 @@ app.controller("FormCtrl", [ '$scope', '$firebaseArray' ,'$sce', function($scope
       var storage = firebase.storage().ref('file/' + uuid + "-" + transcript_2014_file.name);
       storage.put(transcript_2014_file).then(function(snapshot5) {
       $scope.$apply(function () {
-            $scope.upload_progress = "uploaded 5 out of 5 files";  
+            $scope.upload_progress = "uploaded 5 out of 5 files";
       });
        console.log(snapshot5['a']['downloadURLs'][0]);
        transcript2014 = snapshot5['a']['downloadURLs'][0];
@@ -219,7 +198,7 @@ app.controller("FormCtrl", [ '$scope', '$firebaseArray' ,'$sce', function($scope
         var dob = $( "#datepicker" ).datepicker( "getDate" );
         console.log(dob);
 
-       var age_on_first_august; 
+       var age_on_first_august;
        var age_on_first_august_value;
 
        var startyear = "1910";
@@ -269,9 +248,9 @@ app.controller("FormCtrl", [ '$scope', '$firebaseArray' ,'$sce', function($scope
        }
 
 
-       var calday = dob.getDate(); 
-       var calmon = (dob.getMonth()+1); 
-       var calyear = dob.getFullYear(); 
+       var calday = dob.getDate();
+       var calmon = (dob.getMonth()+1);
+       var calyear = dob.getFullYear();
        if (curday == "" || curmon == "" || curyear == "" || calday == "" || calmon == "" || calyear == "") {
         console.log("please fill all the values and click go -");
        } else {

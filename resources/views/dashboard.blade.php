@@ -11,7 +11,7 @@
     <script src="yes_program/node_modules/firebase/firebase.js"></script>
     <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
     <script src="yes_program/node_modules/angularfire/dist/angularfire.min.js"></script>
-    <script src="yes_program/node_modules/firebase/firebase-app.js"></script>
+    <!-- <script src="yes_program/node_modules/firebase/firebase-app.js"></script> -->
     <script src="yes_program/node_modules/firebase/firebase-storage.js"></script>
     <script src="yes_program/node_modules/firebase/firebase-database.js"></script>
     <script src="yes_program/node_modules/angular-animate/angular-animate.min.js"></script>
