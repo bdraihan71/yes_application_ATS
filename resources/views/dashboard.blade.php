@@ -1,29 +1,30 @@
 <html ng-app="applicationApp">
+  
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>YES Application Dashboard</title>
-    <link rel="stylesheet" href="yes_program/node_modules/angular-material/angular-material.min.css">
-    <link rel="stylesheet" href="yes_program/node_modules/bootstrap/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="yes_program/node_modules/bootstrap/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <script src="yes_program/node_modules/angular/angular.js"></script>
-    <script src="yes_program/node_modules/angularfire/dist/angularfire.js"></script>
-    <script src="yes_program/node_modules/firebase/firebase.js"></script>
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/angularfire/dist/angularfire.js"></script>
     <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
-    <script src="yes_program/node_modules/angularfire/dist/angularfire.min.js"></script>
-    <!-- <script src="yes_program/node_modules/firebase/firebase-app.js"></script> -->
-    <script src="yes_program/node_modules/firebase/firebase-storage.js"></script>
-    <script src="yes_program/node_modules/firebase/firebase-database.js"></script>
-    <script src="yes_program/node_modules/angular-animate/angular-animate.min.js"></script>
-    <script src="yes_program/node_modules/angular-aria/angular-aria.min.js"></script>
-    <script src="yes_program/node_modules/angular-messages/angular-messages.min.js"></script>
-    <script src="yes_program/node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="yes_program/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="yes_program/node_modules/angular-material/angular-material.min.js"></script>
-    <script src="yes_program/app/app.js"></script>
-    <script src="yes_program/res/pdf.js"></script>
-    <script src="yes_program/res/ng-pdfviewer.js"></script>
-    <script src="yes_program/res/pdf.compat.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
+    <script src="node_modules/firebase/firebase-app.js"></script>
+    <script src="node_modules/firebase/firebase-storage.js"></script>
+    <script src="node_modules/firebase/firebase-database.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+    <script src="app/app.js"></script>
+    <script src="res/pdf.js"></script>
+    <script src="res/ng-pdfviewer.js"></script>
+    <script src="res/pdf.compat.js"></script>
   </head>
 
   <body class="" style="height: auto;" ng-controller="FormCtrl">

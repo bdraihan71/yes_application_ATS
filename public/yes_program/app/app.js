@@ -11,7 +11,7 @@ var config = {
 firebase.initializeApp(config);
 
 
-app.controller("UploadCtrl",[ '$scope', function($scope){
+app.controller("UploadCtrl",[ '$scope',  function($scope){
 
   function guid() {
    return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
