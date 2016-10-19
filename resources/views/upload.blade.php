@@ -10,7 +10,7 @@
  <!--   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">-->
  <!--   <script src="yes_program/node_modules/angular/angular.js"></script>-->
  <!--   <script src="yes_program/node_modules/angularfire/dist/angularfire.js"></script>-->
- <!--   <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>-->
+   <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
  <!--   <script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>-->
  <!--   <script src="yes_program/node_modules/firebase/firebase-app.js"></script>-->
  <!--   <script src="yes_program/node_modules/firebase/firebase-storage.js"></script>-->
@@ -47,7 +47,7 @@
     <script src="yes_program/app/app.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="yes_program/node_modules/bootstrap/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    
+
     <link rel="stylesheet" href="yes_program/other_library/jquery-ui/jquery-ui.css">
 
 </head>

@@ -9,6 +9,7 @@
     <script src="yes_program/node_modules/angular/angular.js"></script>
     <script src="yes_program/node_modules/angularfire/dist/angularfire.js"></script>
     <script src="yes_program/node_modules/firebase/firebase.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
     <script src="yes_program/node_modules/angularfire/dist/angularfire.min.js"></script>
     <script src="yes_program/node_modules/firebase/firebase-app.js"></script>
     <script src="yes_program/node_modules/firebase/firebase-storage.js"></script>
@@ -28,14 +29,14 @@
   <body class="" style="height: auto;" ng-controller="FormCtrl">
     <div class="container">
       <div class="row">
-        
+
         <div class="modal">
           <div class="col-md-12">
             <p>hello</p>
           </div>
         </div>
 
-        
+
 
         <div class="col-md-12">
           <div>
@@ -43,10 +44,10 @@
               <div class="navbar-header">
                 <a class="navbar-brand" href="#">K-L YES Application Dashboard</a>
               </div>
-            </nav>  
+            </nav>
           </div>
 
-          
+
 
           <table class="table fixed table-bordered table-striped">
             <div>
@@ -71,30 +72,30 @@
                 <div>
                   <div class="col-md-5" ng-init="showDeleteModal=false">
                     <button class="btn btn-danger" ng-click="showDeleteModal = !showDeleteModal"><span class="glyphicon glyphicon-trash"></span></button>
-                    <div class="modal fade in" aria-hidden="false" style="display: block;" ng-show="showDeleteModal">  
-                        <div class="modal-dialog">    
-                            <div class="modal-content">   
+                    <div class="modal fade in" aria-hidden="false" style="display: block;" ng-show="showDeleteModal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
                               <div class="modal-header">
                                 <h3>Are you sure?</h3>
-                              </div>   
-                              <div class="modal-footer">        
+                              </div>
+                              <div class="modal-footer">
                                   <button type="button" class="btn btn-danger" ng-click="applicants.$remove(applicant) ; showDeleteModal=false">Delete</button>
-                                  <button type="button" class="btn btn-primary" ng-click="showDeleteModal=false">Cancel</button>     
-                              </div>    
-                            </div>  
+                                  <button type="button" class="btn btn-primary" ng-click="showDeleteModal=false">Cancel</button>
+                              </div>
+                            </div>
                         </div>
                     </div>
                   </div>
 
                   <div class="col-md-5" ng-init="showDetailsModal=false">
                     <button class="btn btn-default" ng-click="showDetailsModal = !showDetailsModal"><span class="glyphicon glyphicon-info-sign"></span></button>
-                    <div class="modal fade in" aria-hidden="false" style="display: block; max-height: 95%; overflow-y: auto;" ng-show="showDetailsModal">  
-                        <div class="modal-dialog" style="width: 90%">    
-                            <div class="modal-content">   
+                    <div class="modal fade in" aria-hidden="false" style="display: block; max-height: 95%; overflow-y: auto;" ng-show="showDetailsModal">
+                        <div class="modal-dialog" style="width: 90%">
+                            <div class="modal-content">
                               <div class="modal-header">
                                 <div style="float: right;">
                                   <div style="height: 50px; width: 50px; vertical-align: middle;" class="glyphicon glyphicon-remove" ng-click="showDetailsModal=false">
-                                    
+
                                   </div>
                                 </div>
                                 <h3>@{{applicant.first_name}}'s Details</h3>
@@ -103,14 +104,14 @@
                               <br>
                               <div class="modal-body" style=" background-color: #CACFE9;height: auto;">
                                 <div ng-include="'/yes_program/student_details.html'"></div>
-                              </div>   
-                              <div class="modal-footer">        
+                              </div>
+                              <div class="modal-footer">
                                   <button type="button" class="btn btn-danger" ng-click="applicants.$save(applicant) ; showDetailsModal=false">Update</button>
-                                  <button type="button" class="btn btn-primary" ng-click="showDetailsModal=false">Cancel</button>    
+                                  <button type="button" class="btn btn-primary" ng-click="showDetailsModal=false">Cancel</button>
                                   <br>
-                                  <br> 
-                              </div>    
-                            </div>  
+                                  <br>
+                              </div>
+                            </div>
                         </div>
                     </div>
                   </div>
@@ -123,8 +124,8 @@
               <!-- delete an applicant -->
             </tr>
           </table>
-        </div>  
+        </div>
       </div>
-    </div> 
+    </div>
   </body>
 </html>
