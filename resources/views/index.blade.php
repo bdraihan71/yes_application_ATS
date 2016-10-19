@@ -86,9 +86,15 @@
           </ul>
         </div>
 
+         <div class="text-center" style="color:#0000" >
+          <p>Instruction: Type Not Applicable or NA where the field does not apply.</p>
+        </div>
+        
         <div class="text-center" style="color:#ea2e2e" >
           <p>N:B: You are not eligible for this program if any of your parents is currently employed by the U.S. Embassy.</p>
         </div>
+        
+   
       </div>
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
