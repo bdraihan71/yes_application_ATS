@@ -46,7 +46,7 @@
                 <a class="navbar-brand" href="#">K-L YES Application Dashboard</a>
               </div>
               <div>
-                <a style="float:rignt" href="/logout">logout</a>
+                <a class="navbar-button pull-right" href="/logout">logout</a>
               </div>
             </nav>
           </div>
