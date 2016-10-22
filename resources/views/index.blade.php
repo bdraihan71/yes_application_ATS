@@ -1009,7 +1009,7 @@
           <h2 style="color:white"><p id="progress">Progress: @{{upload_progress}}</h2>
           <h2 style="color:white">@{{success_message}}</h2>
           <h2 style="color:white">@{{unique_id}}</h2>
-          <p style="color:white">@{{note}}</p>
+          <h4 style="color:white">@{{note}}</h4>
           <a style="color:white" ng-show="download_message != null" class="btn btn-primary col-md-8 col-md-offset-2" href="@{{pdf_url}}">@{{download_message}}</a>
         </div>
 

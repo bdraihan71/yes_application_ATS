@@ -60,14 +60,16 @@
             </div>
             <tr>
               <th width="15%" >Applicant ID</th>
-              <th width="25%">Name</th>
-              <th width="20%">Father's name</th>
-              <th width="20%">Email</th>
+              <th width="15%" >Status</th>
+              <th width="20%">Name</th>
+              <th width="15%">Father's name</th>
+              <th width="15%">Email</th>
               <th width="20%">Action</th>
             </tr>
 
             <tr ng-repeat="(name, applicant) in applicants | filter:searchInput">
               <td>@{{applicant.applicant_id}}</td>
+              <td>@{{applicant.status}}</td>
               <td>@{{applicant.first_name}} @{{applicant.middle_name}} @{{applicant.last_name}}</td>
               <td>@{{applicant.fatherFirstName}} @{{applicant.fatherMiddleName}} @{{applicant.fatherLastName}}</td>
               <td>@{{applicant.email}}</td>
