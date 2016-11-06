@@ -5,13 +5,13 @@
         <div class="row">
 
           <div class="col-md-12">
-            <label>Status: @{{applicant.status}}</label>
+            <label>Status: {{applicant.status}}</label>
           </div>
           <div class="col-md-12">
               <select name="singleSelect" ng-model="applicant.status">
               <option value="Pending">Pending</option>
               <option value="Accepted">Accepted</option>
-              <option value="Rejceted">Rejected</option>
+              <option value="Rejected">Rejected</option>
             </select>
           </div>
         </div>
