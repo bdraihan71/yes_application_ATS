@@ -26,22 +26,30 @@ class HomeController extends Controller
     {
         return view('home');
     }
-    
+
+    public function formPage(){
+        if(Auth::guest()){
+          return view('message');
+        }else{
+          return view('index');
+        }
+    }
+
     public function dashboard()
     {
         return view('dashboard');
     }
-    
+
        public function studentDetails()
     {
         return view('student_details');
     }
-    
+
       public function upload()
     {
         return view('upload');
     }
-    
-    
-    
+
+
+
 }

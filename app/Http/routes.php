@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-})->middleware('auth');
+Route::get('/', 'HomeController@formPage'});
 
 Route::auth();
 
