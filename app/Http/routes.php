@@ -12,8 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('index')->middleware('auth');;
-});
+    return view('index');
+})->middleware('auth');
 
 Route::auth();
 
