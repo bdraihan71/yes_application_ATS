@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'HomeController@formPage'});
+Route::get('/', 'HomeController@formPage');
 
 Route::auth();
 
