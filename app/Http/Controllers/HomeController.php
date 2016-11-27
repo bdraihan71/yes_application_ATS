@@ -29,10 +29,10 @@ class HomeController extends Controller
     }
 
     public function formPage(){
-        if(Auth::guest()){
-          return view('message');
-        }else{
+        if(Auth::check()){
           return view('index');
+        }else{
+          return view('message');
         }
     }
 
