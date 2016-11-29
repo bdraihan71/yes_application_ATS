@@ -62,6 +62,9 @@
             <div>
               <input type="text" class="form-control" placeholder="Search any field" ng-change="resetLimit()" ng-model="searchInput" ng-model-options="{debounce: 1000}">
               <br>
+              <div ng-show="showLoadingSpinner">
+                <img style="display: block; margin: auto; height:120px;width:120px"src="http://www.lettersmarket.com/uploads/lettersmarket/blog/loaders/common_metal/ajax_loader_metal_512.gif">
+              </div>
             </div>
             <tr>
               <th width="15%" >Applicant ID</th>

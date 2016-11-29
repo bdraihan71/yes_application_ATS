@@ -49,6 +49,7 @@ app.controller("FormCtrl", [ '$scope', '$firebaseArray' ,'$sce', '$timeout', fun
  $scope.loadMoreMessage = false;
  $scope.loadMoreButton = false;
  $scope.showSplash = true;
+ $scope.showLoadingSpinner = false;
 
 
  // create a synchronized array
@@ -64,6 +65,11 @@ app.controller("FormCtrl", [ '$scope', '$firebaseArray' ,'$sce', '$timeout', fun
 
 
  $scope.resetLimit = function(){
+   $scope.showLoadingSpinner = true;
+
+    $timeout(function() {
+      $scope.showLoadingSpinner  = false;
+    }, 2000)
    $scope.totalDisplayed = 20;
  }
 
