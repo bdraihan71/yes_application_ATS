@@ -32,7 +32,7 @@
       <img style="display: block; margin: auto;"src="http://33.media.tumblr.com/65dc338eaf4230389b09f1c3e6f9190d/tumblr_nnnf3v5EP31u4b9apo1_1280.gif">
       <p style="text-align:center; color:#000;font-size:28px">Loading</p>
     </div>
-    
+
     <div class="container">
       <div class="row">
 
@@ -60,7 +60,7 @@
 
           <table class="table fixed table-bordered table-striped">
             <div>
-              <input type="text" class="form-control" placeholder="Search any field" ng-model="searchInput" ng-model-options="{debounce: 1000}">
+              <input type="text" class="form-control" placeholder="Search any field" ng-change="resetLimit()" ng-model="searchInput" ng-model-options="{debounce: 1000}">
               <br>
             </div>
             <tr>

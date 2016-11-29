@@ -58,9 +58,14 @@ app.controller("FormCtrl", [ '$scope', '$firebaseArray' ,'$sce', '$timeout', fun
     $scope.loadMoreButton = true;
     $scope.showSplash = false;
   });
-  
+
   //the controller
   $scope.totalDisplayed = 20;
+
+
+ $scope.resetLimit = function(){
+   $scope.totalDisplayed = 20;
+ }
 
   $scope.loadMore = function () {
    if($scope.totalDisplayed>$scope.applicants.length){
