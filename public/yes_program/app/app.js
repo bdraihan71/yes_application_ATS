@@ -56,7 +56,7 @@ app.controller("FormCtrl", [ '$scope', '$firebaseArray' ,'$sce', function($scope
     $scope.loadMoreButton = true;
   });
   //the controller
-  $scope.totalDisplayed = 50;
+  $scope.totalDisplayed = 20;
 
   $scope.loadMore = function () {
    if($scope.totalDisplayed>$scope.applicants.length){
@@ -67,7 +67,7 @@ app.controller("FormCtrl", [ '$scope', '$firebaseArray' ,'$sce', function($scope
        $scope.loadMoreMessage = false;
      }, 2000)
    }
-   $scope.totalDisplayed += 50;
+   $scope.totalDisplayed += 20;
   };
  // add new items to the array
  // the message is automatically added to our Firebase database!
