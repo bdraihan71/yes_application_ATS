@@ -67,7 +67,7 @@
               <th width="20%">Action</th>
             </tr>
 
-            <tr ng-repeat="(name, applicant) in applicants | filter:searchInput">
+            <tr ng-repeat="(name, applicant) in applicants | filter:searchInput  | limitTo:totalDisplayed">
               <td>@{{applicant.applicant_id}}</td>
               <td>@{{applicant.status}}</td>
               <td>@{{applicant.first_name}} @{{applicant.middle_name}} @{{applicant.last_name}}</td>
