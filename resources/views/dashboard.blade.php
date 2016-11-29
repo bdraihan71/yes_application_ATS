@@ -55,7 +55,7 @@
 
           <table class="table fixed table-bordered table-striped">
             <div>
-              <input type="text" class="form-control" placeholder="Search any field" ng-model="searchInput" ng-model-options="{debounce: 1000}>
+              <input type="text" class="form-control" placeholder="Search any field" ng-model="searchInput" ng-model-options="{debounce: 1000}">
               <br>
             </div>
             <tr>
