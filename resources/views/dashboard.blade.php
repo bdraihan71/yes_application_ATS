@@ -66,7 +66,7 @@
                 <img style="display: block; margin: auto; height:120px;width:120px"src="http://www.lettersmarket.com/uploads/lettersmarket/blog/loaders/common_metal/ajax_loader_metal_512.gif">
               </div>
             </div>
-            <tr>
+            <tr ng-hide="showLoadingSpinner" >
               <th width="15%" >Applicant ID</th>
               <th width="15%" >Status</th>
               <th width="20%">Name</th>
@@ -75,7 +75,7 @@
               <th width="20%">Action</th>
             </tr>
 
-            <tr ng-repeat="(name, applicant) in applicants | filter:searchInput  | limitTo:totalDisplayed">
+            <tr ng-hide="showLoadingSpinner" ng-repeat="(name, applicant) in applicants | filter:searchInput  | limitTo:totalDisplayed">
               <td>@{{applicant.applicant_id}}</td>
               <td>@{{applicant.status}}</td>
               <td>@{{applicant.first_name}} @{{applicant.middle_name}} @{{applicant.last_name}}</td>
