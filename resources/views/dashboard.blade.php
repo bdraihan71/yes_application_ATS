@@ -130,6 +130,12 @@
               <!-- delete an applicant -->
             </tr>
           </table>
+          <div>
+            <button style="margin:auto;display:block" ng-show="loadMoreButton" class="btn" ng-click="loadMore()">load more</button><span></span>
+            <p style="text-align:center" ng-show="loadMoreMessage">nothing to load</p>
+            <br>
+            <br>
+          </div>
         </div>
       </div>
     </div>

@@ -46,8 +46,29 @@ app.controller("FormCtrl", [ '$scope', '$firebaseArray' ,'$sce', function($scope
  var firebaseRef = new Firebase("https://yesprogram-dcb5c.firebaseio.com/");
 
  var applicant_count = undefined;
+ $scope.loadMoreMessage = false;
+ $scope.loadMoreButton = false;
+
  // create a synchronized array
  $scope.applicants = $firebaseArray(ref);
+
+  $scope.applicants.$loaded().then(function(){
+    $scope.loadMoreButton = true;
+  });
+  //the controller
+  $scope.totalDisplayed = 50;
+
+  $scope.loadMore = function () {
+   if($scope.totalDisplayed>$scope.applicants.length){
+     console.log("over");
+
+    $scope.loadMoreMessage = true;
+     $timeout(function() {
+       $scope.loadMoreMessage = false;
+     }, 2000)
+   }
+   $scope.totalDisplayed += 50;
+  };
  // add new items to the array
  // the message is automatically added to our Firebase database!
  $scope.showDetails = function($id) {
