@@ -41,20 +41,24 @@ app.controller("UploadCtrl",[ '$scope',  function($scope){
   };
 }]);
 
-app.controller("FormCtrl", [ '$scope', '$firebaseArray' ,'$sce', function($scope, $firebaseArray, $sce) {
+app.controller("FormCtrl", [ '$scope', '$firebaseArray' ,'$sce', '$timeout', function($scope, $firebaseArray, $sce , $timeout) {
  var ref = new Firebase("https://yesprogram-dcb5c.firebaseio.com/applicants");
  var firebaseRef = new Firebase("https://yesprogram-dcb5c.firebaseio.com/");
 
  var applicant_count = undefined;
  $scope.loadMoreMessage = false;
  $scope.loadMoreButton = false;
+ $scope.showSplash = true;
+
 
  // create a synchronized array
  $scope.applicants = $firebaseArray(ref);
 
   $scope.applicants.$loaded().then(function(){
     $scope.loadMoreButton = true;
+    $scope.showSplash = false;
   });
+  
   //the controller
   $scope.totalDisplayed = 20;
 
