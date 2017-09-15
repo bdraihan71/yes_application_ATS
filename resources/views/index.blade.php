@@ -39,7 +39,7 @@
       $( "#datepicker" ).datepicker({
         changeMonth: true,
         changeYear: true,
-        yearRange: "-100:+0",
+        yearRange: "-99:+1",
       });
     } );
   </script>
@@ -301,12 +301,12 @@
                     <div class="col-md-4">
                       <div class="row">
                         <div class="col-md-10">
-                          <label>Class studied in 2015-2016:</label>
+                          <label>Class studied in 2016-2017:</label>
                         </div>
                       </div>
                       <div class="row">
                         <div class="col-md-12">
-                          <input required style="width:70%" ng-model="classStudiedIn20152016Text" type="text" class="form-control">
+                          <input required style="width:70%" ng-model="classStudiedIn20162017Text" type="text" class="form-control">
                         </div>
                       </div>
                     </div>
@@ -314,12 +314,12 @@
                       <div class="col-md-4">
                       <div class="row">
                         <div class="col-md-10">
-                          <label>Class studied in 2014-2015:</label>
+                          <label>Class studied in 2015-2016:</label>
                         </div>
                       </div>
                       <div class="row">
                         <div class="col-md-12">
-                          <input required style="width:70%" ng-model="classStudiedIn20142015Text" type="text" class="form-control">
+                          <input required style="width:70%" ng-model="classStudiedIn20152016Text" type="text" class="form-control">
                         </div>
                       </div>
                     </div>
@@ -346,12 +346,12 @@
                     <div class="col-md-4">
                       <div class="row">
                         <div class="col-md-10">
-                          <label>Percentage makes in 2015-2016:</label>
+                          <label>Percentage marks in 2016-2017:</label>
                         </div>
                       </div>
                       <div class="row">
                         <div class="col-md-12">
-                          <input required style="width:70%" ng-model="percentageMarksIn20152016Text" type="text" class="form-control">
+                          <input required style="width:70%" ng-model="percentageMarksIn20162017Text" type="text" class="form-control">
                         </div>
                       </div>
                     </div>
@@ -359,12 +359,12 @@
                     <div class="col-md-4">
                       <div class="row">
                         <div class="col-md-10">
-                          <label>Percentage makes in 2014-2015:</label>
+                          <label>Percentage makes in 2015-2016:</label>
                         </div>
                         </div>
                         <div class="row">
                           <div class="col-md-12">
-                          <input required style="width:70%" ng-model="percentageMarksIn20142015Text" type="text" class="form-control">
+                          <input required style="width:70%" ng-model="percentageMarksIn20152016Text" type="text" class="form-control">
                           </div>
                         </div>
                     </div>
@@ -816,12 +816,12 @@
                   <div class="col-md-6">
                     <div class="row">
                       <div class="col-md-6">
-                        <label>Office Phone:</label>
+                        <label>Name of Workplace:</label>
                       </div>
                     </div>
                     <div class="row">
                       <div class="col-md-12">
-                        <input  style="width:94%"  ng-model="fatherOfficePhoneText" ng-init="fatherOfficePhoneText=''" type="text" class="form-control">
+                        <input  style="width:94%"  ng-model="fatherNameOfWorkplaceText" ng-init="fatherNameOfWorkplaceText=''" type="text" class="form-control">
                       </div>
                     </div>
                   </div>
@@ -925,12 +925,12 @@
                   <div class="col-md-6">
                     <div class="row">
                       <div class="col-md-6">
-                        <label>Office Phone:</label>
+                        <label>Name of Workplace:</label>
                       </div>
                     </div>
                     <div class="row">
                       <div class="col-md-12">
-                        <input  style="width:94%"  ng-model="motherOfficePhoneText" ng-init="motherOfficePhoneText=''" type="text" class="form-control">
+                        <input  style="width:94%"  ng-model="motherNameOfWorkplaceText" ng-init="motherNameOfWorkplaceText=''" type="text" class="form-control">
                       </div>
                     </div>
                   </div>
@@ -953,7 +953,7 @@
                 <div class="row" >
                   <div style=" width:97% ; padding: 5px; border:2px solid black; background: white;">
                     <p style="color:#ea2e2e; font-weight: bold;">
-                      Uploading the documents is not mandatory. Please do note, you must send all the required documents along with the signed application by courier or in person at the iEARN-BD office by Nov 24, 2016.
+                      Uploading the documents is not mandatory. Please do note, you must send all the required documents along with the signed application by courier or in person at the iEARN-BD office by Nov 16, 2017.
                     </p>
 
                   </div>
@@ -972,12 +972,12 @@
               <input id ="current_transcript_file"  ng-model= "currentTranscript" type="file" name="image"/>
               <p></p>
 
-              <p>Upload Transcript of 2015-2016 (max 2MB)</p>
-              <input id ="transcript_2015_file"  ng-model= "transcript2015" type="file" name="image"/>
+              <p>Upload Transcript of 2016-2017 (max 2MB)</p>
+              <input id ="transcript_2016_file"  ng-model= "transcript2016" type="file" name="image"/>
               <p></p>
 
-              <p>Upload Transcript of 2014-2015 (max 2MB)</p>
-              <input id ="transcript_2014_file"  ng-model= "transcript2014" type="file" name="image"/>
+              <p>Upload Transcript of 2015-2016 (max 2MB)</p>
+              <input id ="transcript_2015_file"  ng-model= "transcript2015" type="file" name="image"/>
               <p></p>
               <br>
               <div>

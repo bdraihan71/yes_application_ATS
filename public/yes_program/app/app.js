@@ -134,7 +134,7 @@ app.controller("FormCtrl", [ '$scope', '$firebaseArray' ,'$sce', '$timeout', fun
   var imagesRef, safename, imageUpload;
   imagesRef = new Firebase("https://yesprogram-dcb5c.firebaseio.com/applicants" + '/images');
 
-  var photo, birthCertificate, transcriptCurrent, transcript2015, transcript2014;
+  var photo, birthCertificate, transcriptCurrent, transcript2016, transcript2015;
 
   function guid() {
    return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
@@ -201,35 +201,35 @@ app.controller("FormCtrl", [ '$scope', '$firebaseArray' ,'$sce', '$timeout', fun
      console.log(snapshot3['a']['downloadURLs'][0]);
      transcriptCurrent = snapshot3['a']['downloadURLs'][0];
 
-     var transcript_2015_file = document.getElementById("transcript_2015_file").files[0];
-     if(!transcript_2015_file) {
+     var transcript_2016_file = document.getElementById("transcript_2016_file").files[0];
+     if(!transcript_2016_file) {
         console.log("blank file");
-        transcript_2015_file = new File([""], "blank_file");
+        transcript_2016_file = new File([""], "blank_file");
       }
      var uuid = guid();
 
-     var storage = firebase.storage().ref('file/' + uuid + "-" + transcript_2015_file.name);
-     storage.put(transcript_2015_file).then(function(snapshot4) {
+     var storage = firebase.storage().ref('file/' + uuid + "-" + transcript_2016_file.name);
+     storage.put(transcript_2016_file).then(function(snapshot4) {
       $scope.$apply(function () {
             $scope.upload_progress = "uploaded 4 out of 5 files";
       });
       console.log(snapshot4['a']['downloadURLs'][0]);
-      transcript2015 = snapshot4['a']['downloadURLs'][0];
+      transcript2016 = snapshot4['a']['downloadURLs'][0];
 
-      var transcript_2014_file = document.getElementById("transcript_2014_file").files[0];
-      if(!transcript_2014_file) {
+      var transcript_2015_file = document.getElementById("transcript_2015_file").files[0];
+      if(!transcript_2015_file) {
         console.log("blank file");
-        transcript_2014_file = new File([""], "blank_file");
+        transcript_2015_file = new File([""], "blank_file");
       }
       var uuid = guid();
 
-      var storage = firebase.storage().ref('file/' + uuid + "-" + transcript_2014_file.name);
-      storage.put(transcript_2014_file).then(function(snapshot5) {
+      var storage = firebase.storage().ref('file/' + uuid + "-" + transcript_2015_file.name);
+      storage.put(transcript_2015_file).then(function(snapshot5) {
       $scope.$apply(function () {
             $scope.upload_progress = "uploaded 5 out of 5 files";
       });
        console.log(snapshot5['a']['downloadURLs'][0]);
-       transcript2014 = snapshot5['a']['downloadURLs'][0];
+       transcript2015 = snapshot5['a']['downloadURLs'][0];
 
         var dob = $( "#datepicker" ).datepicker( "getDate" );
         console.log(dob);
@@ -237,12 +237,12 @@ app.controller("FormCtrl", [ '$scope', '$firebaseArray' ,'$sce', '$timeout', fun
        var age_on_first_august;
        var age_on_first_august_value;
 
-       var startyear = "1910";
-       var endyear = "2010";
+       var startyear = "1911";
+       var endyear = "2011";
        var dat = new Date();
        var curday = 1; //dat.getDate();
        var curmon = 8; //dat.getMonth()+1;
-       var curyear = 2017; //dat.getFullYear();
+       var curyear = 2018; //dat.getFullYear();
 
        function checkleapyear(datea) {
         if (datea.getYear() % 4 == 0) {
@@ -340,10 +340,10 @@ app.controller("FormCtrl", [ '$scope', '$firebaseArray' ,'$sce', '$timeout', fun
           schoolPhone: $scope.schoolPhoneText,
           classCurrentlyStudying: $scope.classCurrentlyStudyingText,
           currentPercentageMarks: $scope.currentPercentageMarksText,
+          classStudiedIn20162017: $scope.classStudiedIn20162017Text,
+          percentageMarksIn20162017: $scope.percentageMarksIn20162017Text,
           classStudiedIn20152016: $scope.classStudiedIn20152016Text,
           percentageMarksIn20152016: $scope.percentageMarksIn20152016Text,
-          classStudiedIn20142015: $scope.classStudiedIn20142015Text,
-          percentageMarksIn20142015: $scope.percentageMarksIn20142015Text,
           visitedUS5: $scope.visitedUS5,
           visitedUS5WhenAndWhere: $scope.visitedUS5WhenAndWhereText,
           visitedUS5Purpose: $scope.visitedUS5PurposeText,
@@ -363,21 +363,21 @@ app.controller("FormCtrl", [ '$scope', '$firebaseArray' ,'$sce', '$timeout', fun
           fatherContact: $scope.fatherContactText,
           fatherEmailID: $scope.fatherEmailIDText,
           fatherOccupation: $scope.fatherOccupationText,
-          fatherOfficePhone: $scope.fatherOfficePhoneText,
+          fatherNameOfWorkplace: $scope.fatherNameOfWorkplaceText,
           motherFirstName: $scope.motherFirstNameText,
           motherMiddleName: $scope.motherMiddleNameText,
           motherLastName: $scope.motherLastNameText,
           motherContact: $scope.motherContactText,
           motherEmailID: $scope.motherEmailIDText,
           motherOccupation: $scope.motherOccupationText,
-          motherOfficePhone: $scope.motherOfficePhoneText,
+          motherNameOfWorkplace: $scope.motherNameOfWorkplaceText,
           ageOnFirstAugust: age_on_first_august_value,
 
           photo: photo,
           birthCertificate: birthCertificate,
           transcriptCurrent: transcriptCurrent,
+          transcript2016: transcript2016,
           transcript2015: transcript2015,
-          transcript2014: transcript2014,
           status: "Pending",
           applicant_id: applicant_count
          }).then(function(p){
@@ -435,21 +435,21 @@ app.controller("FormCtrl", [ '$scope', '$firebaseArray' ,'$sce', '$timeout', fun
             "fatherContact="+ encodeURIComponent($scope.fatherContactText)+"&"+
             "fatherEmailID="+ encodeURIComponent($scope.fatherEmailIDText)+"&"+
             "fatherOccupation="+ encodeURIComponent($scope.fatherOccupationText)+"&"+
-            "fatherOfficePhone="+ encodeURIComponent($scope.fatherOfficePhoneText)+"&"+
+            "fatherNameOfWorkplace="+ encodeURIComponent($scope.fatherNameOfWorkplaceText)+"&"+
             "motherFirstName="+ encodeURIComponent($scope.motherFirstNameText)+"&"+
             "motherMiddleName="+ encodeURIComponent($scope.motherMiddleNameText)+"&"+
             "motherLastName="+ encodeURIComponent($scope.motherLastNameText)+"&"+
             "motherContact="+ encodeURIComponent($scope.motherContactText)+"&"+
             "motherEmailID="+ encodeURIComponent($scope.motherEmailIDText)+"&"+
             "motherOccupation="+ encodeURIComponent($scope.motherOccupationText)+"&"+
-            "motherOfficePhone="+ encodeURIComponent($scope.motherOfficePhoneText)+"&"+
+            "motherNameOfWorkplace="+ encodeURIComponent($scope.motherNameOfWorkplaceText)+"&"+
             "ageOnFirstAugust="+ age_on_first_august_value;
             "note"+"";
 
           console.log(pdf_download_url);
           $scope.pdf_url = pdf_download_url;
           $scope.download_message = "Download this file";
-          $scope.note = "Please download this PDF file. This must be signed by the applicant, parents and educational institution's principal or headmaster/headmistress. You MUST send this form along with the attested mandatory documents to the iEARN-BD office by 24th November, 2016.";
+          $scope.note = "Please download this PDF file. This must be signed by the applicant, parents and educational institution's principal or headmaster/headmistress. You MUST send this form along with the attested mandatory documents to the iEARN-BD office by 16th November, 2017.";
 
         });
        };
