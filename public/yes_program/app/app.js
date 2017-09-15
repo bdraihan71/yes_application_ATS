@@ -389,6 +389,7 @@ app.controller("FormCtrl", [ '$scope', '$firebaseArray' ,'$sce', '$timeout', fun
           $scope.unique_id = applicant_count;//p.key();
 
           var pdf_base_url = "http://election.yesalumnibd.org/process-pdf?";
+          // pdf_base_url = "http://election.yesalumnibd.dev/process-pdf?";
 
           var pdf_download_url = pdf_base_url+
             "unique_id="+ encodeURIComponent(applicant_count)+"&"+
@@ -412,10 +413,10 @@ app.controller("FormCtrl", [ '$scope', '$firebaseArray' ,'$sce', '$timeout', fun
             "schoolPhone="+ encodeURIComponent($scope.schoolPhoneText)+"&"+
             "classCurrentlyStudying="+ encodeURIComponent($scope.classCurrentlyStudyingText)+"&"+
             "currentPercentageMarks="+ encodeURIComponent($scope.currentPercentageMarksText)+"&"+
+            "classStudiedIn20162017="+ encodeURIComponent($scope.classStudiedIn20162017Text)+"&"+
+            "percentageMarksIn20162017="+ encodeURIComponent($scope.percentageMarksIn20162017Text)+"&"+
             "classStudiedIn20152016="+ encodeURIComponent($scope.classStudiedIn20152016Text)+"&"+
             "percentageMarksIn20152016="+ encodeURIComponent($scope.percentageMarksIn20152016Text)+"&"+
-            "classStudiedIn20142015="+ encodeURIComponent($scope.classStudiedIn20142015Text)+"&"+
-            "percentageMarksIn20142015="+ encodeURIComponent($scope.percentageMarksIn20142015Text)+"&"+
             "visitedUS5="+ encodeURIComponent($scope.visitedUS5)+"&"+
             "visitedUS5WhenAndWhere="+ encodeURIComponent($scope.visitedUS5WhenAndWhereText)+"&"+
             "visitedUS5Purpose="+ encodeURIComponent($scope.visitedUS5PurposeText)+"&"+

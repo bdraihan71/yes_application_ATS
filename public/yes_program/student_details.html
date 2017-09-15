@@ -67,7 +67,7 @@
             <input type="text" id="datepicker" required ng-model="applicant.date_of_birth">
           </div>
           <div class="col-md-3">
-            <label>Age on 1st August, 2017: {{applicant.ageOnFirstAugust}} years</label>
+            <label>Age on 1st August, 2018: {{applicant.ageOnFirstAugust}} years</label>
           </div>
         </div>
         <br>
@@ -241,12 +241,12 @@
               <div class="col-md-4">
                 <div class="row">
                   <div class="col-md-10">
-                    <label>Class studied in 2015-2016:</label>
+                    <label>Class studied in 2016-2017:</label>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-md-12">
-                    <input required style="width:70%" ng-model="applicant.classStudiedIn20152016" type="text" class="form-control">
+                    <input required style="width:70%" ng-model="applicant.classStudiedIn20162017" type="text" class="form-control">
                   </div>
                 </div>
               </div>
@@ -254,12 +254,12 @@
                 <div class="col-md-4">
                 <div class="row">
                   <div class="col-md-10">
-                    <label>Class studied in 2014-2015:</label>
+                    <label>Class studied in 2015-2016:</label>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-md-12">
-                    <input required style="width:70%" ng-model="applicant.classStudiedIn20142015" type="text" class="form-control">
+                    <input required style="width:70%" ng-model="applicant.classStudiedIn20152016" type="text" class="form-control">
                   </div>
                 </div>
               </div>
@@ -286,12 +286,12 @@
               <div class="col-md-4">
                 <div class="row">
                   <div class="col-md-10">
-                    <label>Percentage makes in 2015-2016:</label>
+                    <label>Percentage makes in 2016-2017:</label>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-md-12">
-                    <input required style="width:70%" ng-model="applicant.percentageMarksIn20152016" type="text" class="form-control">
+                    <input required style="width:70%" ng-model="applicant.percentageMarksIn20162017" type="text" class="form-control">
                   </div>
                 </div>
               </div>
@@ -299,12 +299,12 @@
               <div class="col-md-4">
                 <div class="row">
                   <div class="col-md-10">
-                    <label>Percentage makes in 2014-2015:</label>
+                    <label>Percentage makes in 2015-2016:</label>
                   </div>
                   </div>
                   <div class="row">
                     <div class="col-md-12">
-                    <input required style="width:70%" ng-model="applicant.percentageMarksIn20142015" type="text" class="form-control">
+                    <input required style="width:70%" ng-model="applicant.percentageMarksIn20152016" type="text" class="form-control">
                     </div>
                   </div>
               </div>
@@ -756,12 +756,12 @@
             <div class="col-md-6">
               <div class="row">
                 <div class="col-md-6">
-                  <label>Office Phone:</label>
+                  <label>Name of Workplace:</label>
                 </div>
               </div>
               <div class="row">
                 <div class="col-md-12">
-                  <input  style="width:94%"  ng-model="applicant.fatherOfficePhone" ng-init="fatherOfficePhone=''" type="text" class="form-control">
+                  <input  style="width:94%"  ng-model="applicant.fatherNameOfWorkplace" ng-init="fatherNameOfWorkplace=''" type="text" class="form-control">
                 </div>
               </div>
             </div>
@@ -854,12 +854,12 @@
             <div class="col-md-6">
               <div class="row">
                 <div class="col-md-6">
-                  <label>Office Phone:</label>
+                  <label>Name of Workplace:</label>
                 </div>
               </div>
               <div class="row">
                 <div class="col-md-12">
-                  <input  style="width:94%"  ng-model="applicant.motherOfficePhone" ng-init="motherOfficePhone=''" type="text" class="form-control">
+                  <input  style="width:94%"  ng-model="applicant.motherNameOfWorkplace" ng-init="motherNameOfWorkplace=''" type="text" class="form-control">
                 </div>
               </div>
             </div>
@@ -886,13 +886,13 @@
             </div>
             <br>
             <div class="col-md-12" style="padding-bottom: 20px">
-                <p><a href="{{applicant.transcript2015}}" target="_blank">Transcript of 2015-2016: </a><span style="color: red" ng-if="applicant.transcript2015.includes('blank_file')">No File Uploaded</span></p>
-                <input style="width:97%" ng-model="applicant.transcript2015" type="textarea" class="form-control" id="transcript2015" placeholder="File Location">
+                <p><a href="{{applicant.transcript2016}}" target="_blank">Transcript of 2016-2017: </a><span style="color: red" ng-if="applicant.transcript2016.includes('blank_file')">No File Uploaded</span></p>
+                <input style="width:97%" ng-model="applicant.transcript2016" type="textarea" class="form-control" id="transcript2016" placeholder="File Location">
             </div>
             <br>
             <div class="col-md-12" style="padding-bottom: 20px">
-                <p><a href="{{applicant.transcript2014}}" target="_blank">Transcript of 2014-2015: </a><span style="color: red" ng-if="applicant.transcript2014.includes('blank_file')">No File Uploaded</span></p>
-                <input style="width:97%" ng-model="applicant.transcript2014" type="textarea" class="form-control" id="transcript2014" placeholder="File Location">
+                <p><a href="{{applicant.transcript2015}}" target="_blank">Transcript of 2015-2016: </a><span style="color: red" ng-if="applicant.transcript2015.includes('blank_file')">No File Uploaded</span></p>
+                <input style="width:97%" ng-model="applicant.transcript2015" type="textarea" class="form-control" id="transcript2015" placeholder="File Location">
             </div>
           </div>
           <br>
