@@ -24,7 +24,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-8 col-md-offset-2">
+            <div class="col-md-12 col-lg-12">
                 @yield('ats_content')
             </div>
         </div>

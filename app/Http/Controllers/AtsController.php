@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\ApplicationFile;
 use App\Batch;
+use App\Criteria;
+use App\CriteriawiseScore;
 use App\ScoreSheet;
 use App\Student;
 use App\User;
@@ -45,6 +47,7 @@ class AtsController extends Controller
         $student_failed_ids = array_pluck($score_sheets_failed, 'student_id');
         $students_failed = Student::whereIn('id', $student_failed_ids)->get();
 
+        $criterion = Criteria::where('stage_id', $stage)->get();
         if($stage==1){
             $not_scored = Student::where('batch_id', $batch)->whereNotIn('id',array_merge($student_ids, $student_failed_ids) )->get();
         }else{
@@ -56,6 +59,70 @@ class AtsController extends Controller
         }
 
 
-        return view('ats.stages.preliminary_application', compact('students', 'students_failed', 'not_scored'));
+        return view('ats.stages.preliminary_application', compact('students', 'account', 'students_failed', 'not_scored', 'criterion'));
+    }
+
+    public function processStage(Request $request, $batch, $account, $stage)
+    {
+        if($stage == 1) {
+            if($request->score == null){
+                $criterion = Criteria::where('stage_id', 1)->get();
+            }else {
+                $criterion = Criteria::where('stage_id', 1)->whereNotIn('id', array_keys($request->score))->get();
+            }
+            if(isset($criterion)){
+                foreach ($criterion as $item) {
+                    $criteriawise_score = CriteriawiseScore::where('criteria_id', $item->id)->where('student_id', $request->student_id)->where('score_account_id', $account)->first();
+                    if($criteriawise_score){
+                        $criteriawise_score->score = 0;
+                        $criteriawise_score->save();
+                    }else{
+                        CriteriawiseScore::create([
+                            'score' => 0,
+                            'student_id' => $request->student_id,
+                            'criteria_id' => $item->id,
+                            'score_account_id' => $account
+                        ]);
+                    }
+                }
+            }
+            if($request->score!= null){
+                foreach ($request->score as $key => $value) {
+                    if ($value == "on") {
+                        $criteriawise_score = CriteriawiseScore::where('criteria_id', $key)->where('student_id', $request->student_id)->where('score_account_id', $account)->first();
+
+                        if ($criteriawise_score) {
+                            $criteriawise_score->score = 1;
+                            $criteriawise_score->save();
+                        } else {
+                            CriteriawiseScore::create([
+                                'score' => 1,
+                                'student_id' => $request->student_id,
+                                'criteria_id' => $key,
+                                'score_account_id' => $account
+                            ]);
+                        }
+                    }
+                }
+            }
+
+
+            $score_sheet = ScoreSheet::where('student_id', $request->student_id)->where('stage_id', $stage)->where('score_account_id', $account)->first();
+            $total = 0;
+            $scores = CriteriawiseScore::whereIn('criteria_id', [1, 3, 4, 5, 6, 7])->where('student_id', $request->student_id)->where('score_account_id', $account)->get();
+            foreach ($scores as $score) {
+                $total = $total + $score->score;
+            }
+
+            if ($score_sheet) {
+                $score_sheet->score = $total;
+                $score_sheet->has_passed = ($total == 6);
+                $score_sheet->save();
+            } else {
+                ScoreSheet::create(['score' => $total, 'student_id' => $request->student_id, 'stage_id' => 1, 'has_passed' => ($total == 6), 'score_account_id' => $account]);
+            }
+        }
+
+        return redirect()->back() ;
     }
 }

@@ -19,6 +19,7 @@ Route::get('/ats', 'AtsController@home')->middleware('auth');
 Route::get('/ats/student', 'AtsController@student')->middleware('auth');
 Route::get('/ats/file', 'AtsController@student_file_location')->middleware('auth');
 Route::get('/ats/batch/{batch}/account/{account}/stage/{stage}', 'AtsController@stage')->middleware('auth');
+Route::post('/ats/batch/{batch}/account/{account}/stage/{stage}', 'AtsController@processStage')->middleware('auth');
 Route::get('/home', 'HomeController@dashboard')->middleware('auth');
 Route::get('/upload', 'HomeController@upload')->middleware('auth');
 Route::get('/student-details', 'HomeController@studentDetails')->middleware('auth');
