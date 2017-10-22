@@ -16,5 +16,17 @@
         <td><input name="score[{{$criteria->id}}]" type="checkbox" {!!$score?"checked":"unchecked"!!}></td>
         @endforeach
         <td><button class="btn btn-xs" type="submit">Save</button></td>
-    </tr>
 </form>
+        <td>
+             <ul>
+            @foreach($student->notes as $item)
+                <li>{{$item->body}}, {{$item->user->name}}</li>
+            @endforeach
+            </ul>
+            <form action="/ats/{{$student->id}}/note" method="post" >
+                {{csrf_field()}}
+                <input type="text" name="body" class="form-control">
+                <button class="btn btn-default" type="submit">Add Note</button>
+            </form>
+        </td>
+    </tr>

@@ -16,6 +16,7 @@ Route::get('/', 'HomeController@formPage');
 Route::auth();
 
 Route::get('/ats', 'AtsController@home')->middleware('auth');
+Route::post('/ats/{student}/note', 'AtsController@addNote')->middleware('auth');
 Route::get('/ats/student', 'AtsController@student')->middleware('auth');
 Route::get('/ats/file', 'AtsController@student_file_location')->middleware('auth');
 Route::get('/ats/batch/{batch}/account/{account}/stage/{stage}', 'AtsController@stage')->middleware('auth');

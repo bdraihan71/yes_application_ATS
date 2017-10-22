@@ -20,6 +20,7 @@
                                 @foreach($criterion as $criteria)
                                     <td>{{$criteria->label}} </td>
                                 @endforeach
+                                <td>Notes</td>
                                 <td>Actions</td>
                             </tr>
                         </thead>
@@ -42,6 +43,7 @@
                     @foreach($criterion as $criteria)
                         <td>{{$criteria->label}} </td>
                     @endforeach
+                    <td>Notes</td>
                     <td>Actions</td>
                 </tr>
                 </thead>
@@ -67,6 +69,7 @@
                         @foreach($criterion as $criteria)
                             <td>{{$criteria->label}} </td>
                         @endforeach
+                        <td>Notes</td>
                         <td>Actions</td>
                     </tr>
                     </thead>

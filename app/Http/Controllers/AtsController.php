@@ -6,12 +6,14 @@ use App\ApplicationFile;
 use App\Batch;
 use App\Criteria;
 use App\CriteriawiseScore;
+use App\Note;
 use App\ScoreSheet;
 use App\Student;
 use App\User;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class AtsController extends Controller
@@ -124,5 +126,10 @@ class AtsController extends Controller
         }
 
         return redirect()->back() ;
+    }
+
+    public function addNote(Request $request, $student){
+        Note::create(['student_id'=>$student, 'user_id' => Auth::user()->id, 'body' => $request->body]);
+        return redirect()->back();
     }
 }

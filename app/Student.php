@@ -15,4 +15,8 @@ class Student extends Model
     public function batch(){
         return $this->hasOne('App\Batch');
     }
+
+    public function notes(){
+        return $this->hasMany('App\Note');
+    }
 }
