@@ -15,7 +15,7 @@
         <div class="panel-body">
             <h3>Students</h3>
             @foreach($students as $student)
-                {{$student->id}} {{$student->first_name}} <br>
+                {{$student->applicant_id}} {{$student->first_name}} <br>
             @endforeach
 
 

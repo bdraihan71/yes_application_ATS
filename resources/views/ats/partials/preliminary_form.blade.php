@@ -1,8 +1,8 @@
 <form action="/{{Request::path()}}" method="post">
     {{csrf_field()}}
     <tr class="row">
-        <td>{{$student->id}}</td>
-        <td>{{$student->first_name}}</td>
+        <td>{{$student->applicant_id}}</td>
+        <td><a href="/ats/student/{{$student->id}}/account/1">{{$student->first_name}}</a></td>
         <input type="hidden" name="student_id" value="{{$student->id}}">
         @foreach($criterion as $criteria)
         @php
@@ -23,10 +23,6 @@
                 <li>{{$item->body}}, {{$item->user->name}}</li>
             @endforeach
             </ul>
-            <form action="/ats/{{$student->id}}/note" method="post" >
-                {{csrf_field()}}
-                <input type="text" name="body" class="form-control">
-                <button class="btn btn-default" type="submit">Add Note</button>
-            </form>
+
         </td>
     </tr>

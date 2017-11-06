@@ -13,12 +13,15 @@
                         <a href="/ats">ATS Home</a>
                         <a href="/ats/student">Student Information</a>
                         <a href="/ats/file">File</a>
+                        <a href="/ats/report/batch/2/account/1/stage/1"><h1>Preliminary Result</h1></a>
                         @php
                             $stages = \App\Stage::all();
                         @endphp
                         @foreach($stages as $stage)
                             <a href="/ats/batch/2/account/1/stage/{{$stage->id}}">{{$stage->name}} {{$stage->details}}</a>
                         @endforeach
+                        <a href="/ats/backup/batch/2/account/1/stage/1">Backup</a>
+                        <a href="/ats/import">Import</a>
                     </li>
                 </ul>
             </div>

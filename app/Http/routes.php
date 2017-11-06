@@ -15,7 +15,28 @@ Route::get('/', 'HomeController@formPage');
 
 Route::auth();
 
+Route::get('/api/sync/all', 'ApiController@syncAll');
+Route::get('/api/sync/{firebase_id}', 'ApiController@syncData');
+
 Route::get('/ats', 'AtsController@home')->middleware('auth');
+
+//preliminary application
+Route::get('/ats/preliminary_application', 'PreliminaryApplicationController@home')->middleware('auth');
+Route::get('/ats/preliminary_application/import', 'PreliminaryApplicationController@import')->middleware('auth');
+Route::get('/ats/preliminary_application/result', 'PreliminaryApplicationController@result')->middleware('auth');
+Route::get('/ats/preliminary_application/backup', 'PreliminaryApplicationController@backup')->middleware('auth');
+
+
+
+
+
+
+
+
+Route::get('/ats/import', 'ImportController@studentList')->middleware('auth');
+Route::get('/ats/backup/batch/{batch}/account/{account}/stage/{stage}', 'AtsController@downloadBackup')->middleware('auth');
+Route::get('/ats/student/{student}/account/{account}', 'AtsController@studentPage')->middleware('auth');
+Route::get('/ats/report/batch/{batch}/account/{account}/stage/{stage}', 'AtsController@stageReport')->middleware('auth');
 Route::post('/ats/{student}/note', 'AtsController@addNote')->middleware('auth');
 Route::get('/ats/student', 'AtsController@student')->middleware('auth');
 Route::get('/ats/file', 'AtsController@student_file_location')->middleware('auth');
