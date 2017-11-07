@@ -2,6 +2,9 @@
 
 <!-- Main Content -->
 @section('preliminary_application_content')
+    <style>
+        .big-checkbox {width: 80px; height: 80px;}
+    </style>
 
     <div class="row">
         <div class="panel panel-default">
@@ -36,7 +39,7 @@
                                     $score = 0;
                                     }
                                 @endphp
-                                <td><input name="score[{{$criteria->id}}]" type="checkbox" {!!$score?"checked":"unchecked"!!}></td>
+                                <td><input class="big-checkbox" name="score[{{$criteria->id}}]" type="checkbox" {!!$score?"checked":"unchecked"!!}></td>
                             @endforeach
                             <td><button class="btn btn-xs" type="submit">Save</button></td>
                         </tr>
@@ -50,6 +53,7 @@
             </div>
         </div>
     </div>
+
     <div class="row">
         <div class="panel panel-default">
             <div class="panel-heading">Notes</div>
