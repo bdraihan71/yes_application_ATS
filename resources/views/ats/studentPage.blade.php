@@ -4,6 +4,13 @@
 @section('preliminary_application_content')
     <style>
         .big-checkbox {width: 80px; height: 80px;}
+
+        .personal-info tr th {
+            padding: 10px;
+        }
+        .personal-info tr td {
+            padding: 10px;
+        }
     </style>
 
     <div class="row">
@@ -83,23 +90,69 @@
         <div class="panel panel-default">
             <div class="panel-heading">Student Information</div>
             <div class="panel-body">
-                <p>ID : {{$student->id}}</p>
-                <p>first_name : {{$student->first_name}}</p>
+                <table class="personal-info">
+                    <tr>
+                        <th>ID</th>
+                        <th>First Name</th>
+                        <th>Middle Name</th>
+                        <th>Last Name</th>
+                        <th>Phone Number</th>
+                        <th>Email Address</th>
+                        <th>Address</th>
+                    </tr>
+                    <tr>
+
+                        <td>{{$student->id}}</td>
+                        <td>{{$student->first_name}}</td>
+                        <td>{{$student->middle_name}}</td>
+                        <td>{{$student->last_name}}</td>
+                        <td>{{$student->contact}}</td>
+                        <td>{{$student->email}}</td>
+                        <td>{{$student->address}}</td>
+                    </tr>
+                    <tr>
+                        <th>Applicant ID</th>
+                        <th>Age on 1st August</th>
+                        <th>Citizenship</th>
+                        <th>Currently Studying</th>
+                        <th>Grade in 2016-2017</th>
+                        <th>Grade in 2015-2016</th>
+                        <th>Facebook URL</th>
+                    </tr>
+                    <tr>
+                        <td>{{$student->applicant_id}}</td>
+                        <td>{{$student->ageOnFirstAugust}}</td>
+                        <td>{{$student->citizenship}}</td>
+                        <td>{{$student->classCurrentlyStudying}}</td>
+                        <td>{{$student->classStudiedIn20152016}}</td>
+                        <td>{{$student->classStudiedIn20142015}}</td>
+                        <td>{{$student->facebookURL}}</td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th>Date of birth</th>
+                        <th>Citizenship</th>
+                        <th>Currently Studying</th>
+                        <th>Grade in 2016-2017</th>
+                        <th>Grade in 2015-2016</th>
+                        <th>Facebook URL</th>
+                    </tr>
+                    <tr>
+                        <td>{{$student->applicant_id}}</td>
+                        <td>{{$student->ageOnFirstAugust}}</td>
+                        <td>{{$student->citizenship}}</td>
+                        <td>{{$student->classCurrentlyStudying}}</td>
+                        <td>{{$student->classStudiedIn20152016}}</td>
+                        <td>{{$student->classStudiedIn20142015}}</td>
+                        <td>{{$student->facebookURL}}</td>
+                    </tr>
+                </table>
                 <p>aboutCommunityWork: {{$student->aboutCommunityWork}}</p>
                 <p>aboutYourself: {{$student->aboutYourself}}</p>
-                <p>address: {{$student->address}}</p>
-                <p>ageOnFirstAugust: {{$student->ageOnFirstAugust}}</p>
-                <p>applicant_id: {{$student->applicant_id}}</p>
                 <p>birthCertificate: {{$student->birthCertificate}}</p>
-                <p>citizenship: {{$student->citizenship}}</p>
-                <p>classCurrentlyStudying: {{$student->classCurrentlyStudying}}</p>
-                <p>classStudiedIn20142015: {{$student->classStudiedIn20142015}}</p>
-                <p>classStudiedIn20152016: {{$student->classStudiedIn20152016}}</p>
-                <p>contact: {{$student->contact}}</p>
                 <p>currentPercentageMarks: {{$student->currentPercentageMarks}}</p>
                 <p>date_of_birth: {{$student->date_of_birth}}</p>
                 <p>district: {{$student->district}}</p>
-                <p>email: {{$student->email}}</p>
                 <p>facebookURL: {{$student->facebookURL}}</p>
                 <p>familyGreenCard: {{$student->familyGreenCard}}</p>
                 <p>familyImmigration: {{$student->familyImmigration}}</p>
