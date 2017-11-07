@@ -127,14 +127,16 @@ class AtsController extends Controller
 
             if ($score_sheet) {
                 $score_sheet->score = $total;
-                $score_sheet->has_passed = ($total == 6);
+                $score_sheet->has_passed = ($total == 7);
                 $score_sheet->save();
-                ActionLog::create(['action_id'=>'4', 'action_by_user_id' => Auth::user()->id, 'action_on_student_id' => $request->student_id, 'content' => 'total:'. $total . ';has_passed:' . (($total==6)?'yes':'no')]);
+                ActionLog::create(['action_id'=>'4', 'action_by_user_id' => Auth::user()->id, 'action_on_student_id' => $request->student_id, 'content' => 'total:'. $total . ';has_passed:' . (($total==7)?'yes':'no')]);
             } else {
                 $score_sheet = ScoreSheet::create(['score' => $total, 'student_id' => $request->student_id, 'stage_id' => 1, 'has_passed' => ($total == 6), 'score_account_id' => $account]);
                 ActionLog::create(['action_id'=>'5', 'action_by_user_id' => Auth::user()->id, 'action_on_student_id' => $request->student_id, 'content' => 'score_sheet_id:'.$score_sheet->id]);
             }
         }
+
+        $request->session()->flash('message', 'Score saved!');
 
         return redirect()->back() ;
     }
@@ -152,6 +154,7 @@ class AtsController extends Controller
             $action_logs = ActionLog::where('action_on_student_id',$student->id)->orderBy('created_at', 'DESC')->get()->take(10);
             return view('ats.studentPage', compact('student', 'account', 'criterion', 'action_logs'));
         }
+        $request->session()->flash('message', 'No more application!');
         return redirect('/ats/preliminary_application');
     }
 
