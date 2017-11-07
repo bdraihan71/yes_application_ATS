@@ -3,8 +3,17 @@
 <!-- Main Content -->
 @section('preliminary_application_content')
     <style>
-        .big-checkbox {width: 80px; height: 80px;}
+        .big-checkbox {width: 40px; height: 40px;}
     </style>
+
+
+
+    <div class="row">
+        <a href="/ats/student/{{$student->id - 1}}/account/1" class="btn btn-default">Next Application</a>
+        <a href="/ats/student/{{$student->id + 1}}/account/1" class="btn btn-default pull-right">Previous Application</a>
+        <hr>
+    </div>
+
 
     <div class="row">
         <div class="panel panel-default">
@@ -12,44 +21,45 @@
 
             <div class="panel-body">
                 <h3>{{$student->first_name}} {{$student->last_name}}</h3>
+                <div class="row">
+                    <div>
+                        <table class="table table-bordered table-sm">
+                            <thead>
+                            <tr>
+                                <td>ID</td>
+                                @foreach($criterion as $criteria)
+                                    <td>{{$criteria->label}} </td>
+                                @endforeach
+                                <td>Action</td>
+                            </tr>
+                            </thead>
 
-                <table class="table table-responsive table-bordered table-sm">
-                    <thead>
-                    <tr>
-                        <td>ID</td>
-                        @foreach($criterion as $criteria)
-                            <td>{{$criteria->label}} </td>
-                        @endforeach
-                        <td>Action</td>
-                    </tr>
-                    </thead>
-
-                    <tbody>
-                    <form action="/ats/batch/2/account/1/stage/1" method="post">
-                        {{csrf_field()}}
-                        <tr>
-                            <td>{{$student->applicant_id}}</td>
-                            <input type="hidden" name="student_id" value="{{$student->id}}">
-                            @foreach($criterion as $criteria)
-                                @php
-                                    $criteriawise_score = \App\CriteriawiseScore::where('student_id', $student->id)->where('criteria_id', $criteria->id)->where('score_account_id', $account)->first();
-                                    if($criteriawise_score){
-                                    $score = $criteriawise_score->score;
-                                    }else{
-                                    $score = 0;
-                                    }
-                                @endphp
-                                <td><input class="big-checkbox" name="score[{{$criteria->id}}]" type="checkbox" {!!$score?"checked":"unchecked"!!}></td>
-                            @endforeach
-                            <td><button class="btn btn-xs" type="submit">Save</button></td>
-                        </tr>
-                    </form>
-                    </tbody>
-
-
-                </table>
+                            <tbody>
+                            <form action="/ats/batch/2/account/1/stage/1" method="post">
+                                {{csrf_field()}}
+                                <tr>
+                                    <td>{{$student->applicant_id}}</td>
+                                    <input type="hidden" name="student_id" value="{{$student->id}}">
+                                    @foreach($criterion as $criteria)
+                                        @php
+                                            $criteriawise_score = \App\CriteriawiseScore::where('student_id', $student->id)->where('criteria_id', $criteria->id)->where('score_account_id', $account)->first();
+                                            if($criteriawise_score){
+                                            $score = $criteriawise_score->score;
+                                            }else{
+                                            $score = 0;
+                                            }
+                                        @endphp
+                                        <td><input class="big-checkbox" name="score[{{$criteria->id}}]" type="checkbox" {!!$score?"checked":"unchecked"!!}></td>
+                                    @endforeach
+                                    <td><button class="btn btn-xs" type="submit">Save</button></td>
+                                </tr>
+                            </form>
+                            </tbody>
 
 
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

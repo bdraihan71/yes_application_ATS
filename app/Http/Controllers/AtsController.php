@@ -120,7 +120,7 @@ class AtsController extends Controller
 
             $score_sheet = ScoreSheet::where('student_id', $request->student_id)->where('stage_id', $stage)->where('score_account_id', $account)->first();
             $total = 0;
-            $scores = CriteriawiseScore::whereIn('criteria_id', [1, 3, 4, 5, 6, 7])->where('student_id', $request->student_id)->where('score_account_id', $account)->get();
+            $scores = CriteriawiseScore::whereIn('criteria_id', [1, 3, 4, 5, 6, 7, 8])->where('student_id', $request->student_id)->where('score_account_id', $account)->get();
             foreach ($scores as $score) {
                 $total = $total + $score->score;
             }
@@ -148,8 +148,11 @@ class AtsController extends Controller
     public function studentPage(Request $request, $student, $account){
         $criterion = Criteria::where('stage_id', 1)->get();
         $student = Student::find($student);
-        $action_logs = ActionLog::where('action_on_student_id',$student->id)->orderBy('created_at', 'DESC')->get()->take(10);
-        return view('ats.studentPage', compact('student', 'account', 'criterion', 'action_logs'));
+        if($student){
+            $action_logs = ActionLog::where('action_on_student_id',$student->id)->orderBy('created_at', 'DESC')->get()->take(10);
+            return view('ats.studentPage', compact('student', 'account', 'criterion', 'action_logs'));
+        }
+        return redirect('/ats/preliminary_application');
     }
 
     public function stageReport(Request $request, $batch, $account, $stage){
