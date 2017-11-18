@@ -3,6 +3,9 @@
 <!-- Main Content -->
 @section('preliminary_application_content')
     <div class="row">
+        <a href="/ats/preliminary_application/result/publish" class="btn btn-default">Get Publishable Result</a>
+    </div>
+    <div class="row">
         <h3>Passed ({{count($students)}})</h3>
         @include('ats.preliminary_application.partials.table', ['criterion' => $criterion, 'students' => $students])
     </div>

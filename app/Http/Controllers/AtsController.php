@@ -130,10 +130,19 @@ class AtsController extends Controller
                 $score_sheet->has_passed = ($total == 7);
                 $score_sheet->save();
                 ActionLog::create(['action_id'=>'4', 'action_by_user_id' => Auth::user()->id, 'action_on_student_id' => $request->student_id, 'content' => 'total:'. $total . ';has_passed:' . (($total==7)?'yes':'no')]);
+                $student = Student::find($request->id);
             } else {
-                $score_sheet = ScoreSheet::create(['score' => $total, 'student_id' => $request->student_id, 'stage_id' => 1, 'has_passed' => ($total == 6), 'score_account_id' => $account]);
+                $score_sheet = ScoreSheet::create(['score' => $total, 'student_id' => $request->student_id, 'stage_id' => 1, 'has_passed' => ($total == 7), 'score_account_id' => $account]);
                 ActionLog::create(['action_id'=>'5', 'action_by_user_id' => Auth::user()->id, 'action_on_student_id' => $request->student_id, 'content' => 'score_sheet_id:'.$score_sheet->id]);
+                $student = Student::find($request->id);
             }
+
+            if($total == 7){
+                $student->stage = 2;
+            }else{
+                $student->stage = 1;
+            }
+            $student->save();
         }
 
         $request->session()->flash('message', 'Score saved!');

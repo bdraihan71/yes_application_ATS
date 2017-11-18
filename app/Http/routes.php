@@ -24,6 +24,7 @@ Route::get('/ats', 'AtsController@home')->middleware('auth');
 Route::get('/ats/preliminary_application', 'PreliminaryApplicationController@home')->middleware('auth');
 Route::get('/ats/preliminary_application/import', 'PreliminaryApplicationController@import')->middleware('auth');
 Route::get('/ats/preliminary_application/result', 'PreliminaryApplicationController@result')->middleware('auth');
+Route::get('/ats/preliminary_application/result/publish', 'PreliminaryApplicationController@publish')->middleware('auth');
 Route::get('/ats/preliminary_application/backup', 'PreliminaryApplicationController@backup')->middleware('auth');
 
 

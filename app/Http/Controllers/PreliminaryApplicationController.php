@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Criteria;
 use App\Student;
+use PDF;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -46,6 +47,14 @@ class PreliminaryApplicationController extends Controller
         $criterion = $data['criterion'];
 
         return view('ats.preliminary_application.result', compact('students', 'account', 'students_failed', 'not_scored', 'criterion'));
+    }
+
+    public function publish(){
+        $students = Student::where('batch_id', 2)->get();
+
+        $pdf = PDF::loadView('ats.preliminary_application.pdf.result', compact('students'));
+
+        return $pdf->download('preliminary_application_result_2018_19.pdf');
     }
 
     private function getAllData()

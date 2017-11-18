@@ -77,6 +77,7 @@ class ApiController extends Controller
             }
 
             $student->batch_id = 2;
+            $student->stage = 1;
             $student->save();
 
         }
