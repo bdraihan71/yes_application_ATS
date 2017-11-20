@@ -2,6 +2,7 @@
 
 <!-- Main Content -->
 @section('preliminary_application_content')
+
     <style>
         .big-checkbox {width: 40px; height: 40px;}
         .student-info-table td{
@@ -99,264 +100,253 @@
         <div class="panel panel-default">
             <div class="panel-heading">Student Information</div>
             <div class="panel-body">
+                <img src="{{$student->photo}}">
                 <h2>Application ID: {{$student->applicant_id}}</h2>
                 <h4>ID: {{$student->id}}</h4>
                 <h4>Status: {{$student->status}}</h4>
 
-                <div align="right">
-                    <a href="{{$student->photo}}">Student's picture</a>
+                <div class="sub-field">
+                    <h3 class="heading">Personal Information</h3>
+                    <h4>Applicant Name: {{$student->first_name}} {{$student->middle_name}} {{$student->last_name}}</h4>
+                    <table>
+                        <tr>
+                            <th>Date of birth:</th>
+                            <td>{{$student->date_of_birth}}</td>
+                            <th>Age on 1st of August, 2018: </th>
+                            <td>{{$student->ageOnFirstAugust}}</td>
+                        </tr>
+
+                        <tr>
+                            <th>Citizenship: </th>
+                            <td>{{$student->citizenship}}</td>
+                            <th>Birth Certificate: </th>
+                            <td>{{$student->birthCertificate}}</td>
+                        </tr>
+
+                        <tr>
+                            <th>Gender: </th>
+                            <td>{{$student->sex}}</td>
+                            <th>Facebook URL: </th>
+                            <td>{{$student->facebookURL}}</td>
+
+                        </tr>
+
+                        <tr>
+                            <th>Twitter URL: </th>
+                            <td>{{$student->twitterHandle}}</td>
+                            <th>Instagram ID: </th>
+                            <td>{{$student->instagramID}}</td>
+                        </tr>
+                    </table>
                 </div>
 
-                <center>
-                    <h3>Personal Information</h3>
-                </center>
+                <div class="sub-field">
+                    <h3 class="heading">Contact Information</h3>
 
-                <h4>Applicant Name: {{$student->first_name}} {{$student->middle_name}} {{$student->last_name}}</h4>
+                    <table>
+                        <tr>
+                            <th>Contact Number: </th>
+                            <td>{{$student->contact}}</td>
+                            <th>District: </th>
+                            <td>{{$student->district}}</td>
+                        </tr>
+                    </table>
 
-                <table class="student-info-table">
-                    <tr>
-                        <th>Date of birth: </th>
-                        <td>{{$student->date_of_birth}}</td>
-                        <th>Age on 1st of August, 2018: </th>
-                        <td>{{$student->ageOnFirstAugust}}</td>
-                    </tr>
+                    <table>
+                        <tr>
+                            <th>Thana: </th>
+                            <td>{{$student->thana}}</td>
+                            <th>Postal Code: </th>
+                            <td>{{$student->postalCode}}</td>
+                        </tr>
+                    </table>
 
-                    <br>
+                    <table>
+                        <tr>
+                            <th>Email address: </th>
+                            <td class="address-field">{{$student->email}}</td>
+                        </tr>
+                        <tr>
+                            <th>Address: </th>
+                            <td class="address-field">{{$student->address}}</td>
+                        </tr>
+                    </table>
+                </div>
 
-                    <tr>
-                        <th>Citizenship: </th>
-                        <td>{{$student->citizenship}}</td>
-                        <th>Birth Certificate: </th>
-                        <td>{{$student->birthCertificate}}</td>
-                    </tr>
+                <div class="sub-field">
+                    <h3 class="heading">Academic Information</h3>
 
-                    <br>
+                    <table class="academic-info">
+                        <tr>
+                            <th>Current Grade: </th>
+                            <td>{{$student->classCurrentlyStudying}}</td>
+                            <th>Grade in 2016-2017: </th>
+                            <td>{{$student->classStudiedIn20152016}}</td>
+                            <th>Grade in 2015-2016: </th>
+                            <td>{{$student->classStudiedIn20142015}}</td>
+                        </tr>
+                    </table>
 
-                    <tr>
-                        <th>Gender: </th>
-                        <td>{{$student->sex}}</td>
-                        <th>Facebook URL: </th>
-                        <td>{{$student->facebookURL}}</td>
+                    <table class="academic-info">
+                        <tr>
+                            <th>Percentage marks(2017-18): </th>
+                            <td>{{$student->currentPercentageMarks}}</td>
+                            <th>Percentage marks(2016-17): </th>
+                            <td>{{$student->percentageMarksIn20152016}}</td>
+                            <th>Percentage marks(2015-16): </th>
+                            <td>{{$student->percentageMarksIn20142015}}</td>
+                        </tr>
+                    </table>
 
-                    </tr>
+                    <h4>Transcripts:</h4>
 
-                    <br>
+                    <table class="academic-info">
+                        <tr>
+                            <th>Current year transcript:</th>
+                            <td><a href="{{$student->transcriptCurrent}}">{{$student->classCurrentlyStudying}}</a></td>
+                            <th>Transcript of 2016-2017:</th>
+                            <td><a href="{{$student->transcript2015}}">{{$student->classStudiedIn20152016}}</a></td>
+                            <th>Transcript of 2015-2016:</th>
+                            <td><a href="{{$student->transcript2014}}">{{$student->classStudiedIn20142015}}</a></td>
+                        </tr>
+                    </table>
+                </div>
 
-                    <tr>
-                        <th>Twitter URL: </th>
-                        <td>{{$student->twitterHandle}}</td>
-                        <th>Instagram ID: </th>
-                        <td>{{$student->instagramID}}</td>
-                    </tr>
+                <div class="sub-field">
+                    <h3 class="heading">School Information</h3>
 
-                    <br>
-                </table>
+                    <table>
+                        <tr>
+                            <th class="school-field-name">School Name: </th>
+                            <td class="school-address-field">{{$student->schoolName}}</td>
+                            <th class="school-field-name">School's phone number: </th>
+                            <td>{{$student->schoolPhone}}</td>
+                        </tr>
 
-                <center>
-                    <h3>Contact Information</h3>
-                </center>
+                        <tr>
+                            <th class="school-field-name">School's address: </th>
+                            <td class="school-address-field">{{$student->schoolAddress}}</td>
+                        </tr>
+                    </table>
+                </div>
 
-                <table class="student-info-table">
-                    <tr>
-                        <th>Contact Number: </th>
-                        <td>{{$student->contact}}</td>
-                        <th>Email address: </th>
-                        <td>{{$student->email}}</td>
-                    </tr>
-                </table>
+                <div class="sub-field">
+                    <h3 class="heading">Parents' Information</h3>
 
-                <table class="student-info-table">
-                    <tr>
-                        <th>District: </th>
-                        <td>{{$student->district}}</td>
-                        <th>Thana: </th>
-                        <td>{{$student->thana}}</td>
-                        <th>Postal Code: </th>
-                        <td>{{$student->postalCode}}</td>
-                    </tr>
-                </table>
+                    <table>
+                        <tr>
 
-                <p>
-                    Address: {{$student->address}}
-                </p>
+                            <th class="parent-info">Father's Information</th>
+                            <th class="parent-info">Mother's Information</th>
 
-                <center>
-                    <h3>Academic Information</h3>
-                </center>
+                        </tr>
 
-                <table class="student-info-table">
-                    <tr>
-                        <th>Current Grade: </th>
-                        <td>{{$student->classCurrentlyStudying}}</td>
-                        <th>Grade in 2016-2017: </th>
-                        <td>{{$student->classStudiedIn20152016}}</td>
-                        <th>Grade in 2015-2016 </th>
-                        <td>{{$student->classStudiedIn20142015}}</td>
-                    </tr>
-                </table>
+                    </table>
 
-                <table class="student-info-table">
-                    <tr>
-                        <th>Percentage marks(2017-18): </th>
-                        <td>{{$student->currentPercentageMarks}}</td>
-                        <th>Percentage marks(2016-17): </th>
-                        <td>{{$student->percentageMarksIn20152016}}</td>
-                        <th>Percentage marks(2015-16): </th>
-                        <td>{{$student->percentageMarksIn20142015}}</td>
-                    </tr>
-                </table>
+                    <table class="parent-info-table">
 
-                <table class="student-info-table">
-                    <tr>
-                        <th>Transcripts:</th>
-                        <td><a href="{{$student->transcriptCurrent}}">{{$student->classCurrentlyStudying}}</a></td>
-                        <td><a href="{{$student->transcript2015}}">{{$student->classStudiedIn20152016}}</a></td>
-                        <td><a href="{{$student->transcript2014}}">{{$student->classStudiedIn20142015}}</a></td>
-                    </tr>
-                </table>
+                        <tr>
+                            <th>Name: </th>
+                            <td>{{$student->fatherFirstName}} {{$student->fatherMiddleName}} {{$student->fatherLastName}}</td>
+                            <th>Name: </th>
+                            <td>{{$student->motherFirstName}} {{$student->motherMiddleName}} {{$student->motherLastName}}</td>
+                        </tr>
 
-                <center>
-                    <h3>School Information</h3>
-                </center>
+                        <tr>
+                            <th>Phone Number: </th>
+                            <td>{{$student->fatherContact}}</td>
+                            <th>Phone Number: </th>
+                            <td>{{$student->motherContact}}</td>
+                        </tr>
 
-                <table class="student-info-table">
-                    <tr>
-                        <th>School Name: </th>
-                        <td>{{$student->schoolName}}</td>
-                        <th>School's phone number: </th>
-                        <td>{{$student->schoolPhone}}</td>
-                    </tr>
-                </table>
+                        <tr>
+                            <th>Email address: </th>
+                            <td>{{$student->fatherEmailID}}</td>
+                            <th>Email address: </th>
+                            <td>{{$student->motherEmailID}}</td>
+                        </tr>
 
-                <table class="student-info-table">
-                    <tr>
-                        <th>School's address: </th>
-                        <td>{{$student->schoolAddress}}</td>
-                    </tr>
-                </table>
+                        <tr>
+                            <th>Office phone: </th>
+                            <td>{{$student->fatherOfficePhone}}</td>
+                            <th>Office phone: </th>
+                            <td>{{$student->motherOfficePhone}}</td>
+                        </tr>
 
-                <center>
-                    <h3>Parents' Information</h3>
-                </center>
+                        <tr>
+                            <th>Occupation: </th>
+                            <td>{{$student->fatherOccupation}}</td>
+                            <th>Occupation: </th>
+                            <td>{{$student->motherOccupation}}</td>
+                        </tr>
+                    </table>
+                </div>
 
+                <div class="sub-field">
+                    <h3 class="heading">Essay Write Ups</h3>
 
-                <table class="student-info-table">
-                    <tr>
+                    <table>
+                        <tr>
+                            <th class="parent-info">Write up about community service</th>
+                            <th class="parent-info">Write up about "yourself"</th>
+                        </tr>
 
-                        <th>Father's Information</th>
-                        <th>Mother's Information</th>
+                        <tr>
+                            <td class="parent-info">{{$student->about_community_work}}</td>
+                            <td class="parent-info">{{$student->about_yourself}}</td>
+                        </tr>
+                    </table>
+                </div>
 
-                    </tr>
+                <div class="sub-field">
+                    <h3 class="heading">Travel Information</h3>
 
-                </table>
+                    <table>
+                        <tr>
+                            <th>US visit: </th>
+                            <td>{{$student->visitedUS5}}</td>
+                            <th>Stay duration: </th>
+                            <td>{{$student->visitedUS5HowLong}}</td>
+                        </tr>
 
-                <table class="student-info-table">
+                        <tr>
+                            <th>Purpose of visit: </th>
+                            <td>{{$student->visitedUS5Purpose}}</td>
+                            <th>Visit place and time: </th>
+                            <td>{{$student->visitedUS5WhenAndWhere}}</td>
+                        </tr>
 
-                    <tr>
-                        <th>Name: </th>
-                        <td>{{$student->fatherFirstName}} {{$student->fatherMiddleName}} {{$student->fatherLastName}}</td>
-                        <th>Name: </th>
-                        <td>{{$student->motherFirstName}} {{$student->motherMiddleName}} {{$student->motherLastName}}</td>
-                    </tr>
+                        <tr>
+                            <th>Green Card holder in family: </th>
+                            <td>{{$student->familyGreenCard}}</td>
+                            <th>Family immigration status: </th>
+                            <td>{{$student->familyImmigration}}</td>
+                        </tr>
 
-                    <tr>
-                        <th>Phone Number: </th>
-                        <td>{{$student->fatherContact}}</td>
-                        <th>Phone Number: </th>
-                        <td>{{$student->motherContact}}</td>
-                    </tr>
+                        <tr>
+                            <th>Family in US: </th>
+                            <td>{{$student->familyLivingInUSA}}</td>
+                            <th>Holds US visa: </th>
+                            <td>{{$student->holdUSVisa}}</td>
+                        </tr>
 
-                    <tr>
-                        <th>Email address: </th>
-                        <td>{{$student->fatherEmailID}}</td>
-                        <th>Email address: </th>
-                        <td>{{$student->motherEmailID}}</td>
-                    </tr>
+                        <tr>
+                            <th>Visa expiration: </th>
+                            <td>{{$student->holdUSVisaExpiry}}</td>
+                        </tr>
+                    </table>
 
-                    <tr>
-                        <th>Office phone: </th>
-                        <td>{{$student->fatherOfficePhone}}</td>
-                        <th>Office phone: </th>
-                        <td>{{$student->motherOfficePhone}}</td>
-                    </tr>
+                    <table>
+                        <tr>
+                            <th>Relative in US: </th>
+                            <td>{{$student->relativesLivingInUSA}}</td>
+                            <th>State of residence: </th>
+                            <td>{{$student->relativesLivingInUSAState}}</td>
+                        </tr>
+                    </table>
+                </div>
 
-                    <tr>
-                        <th>Occupation: </th>
-                        <td>{{$student->fatherOccupation}}</td>
-                        <th>Occupation: </th>
-                        <td>{{$student->motherOccupation}}</td>
-                    </tr>
-                </table>
-
-                <center>
-                    <h3>Essay Write Ups</h3>
-                </center>
-
-                <table class="student-info-table">
-                    <tr>
-                        <th>Write up about community service</th>
-                    </tr>
-
-                    <tr>
-                        <td>{{$student->aboutCommunityWork}}</td>
-                    </tr>
-
-                    <tr>
-                        <th>Write up about "yourself"</th>
-                    </tr>
-
-                    <tr>
-                        <td>{{$student->aboutYourself}}</td>
-                    </tr>
-                </table>
-
-                <center>
-                    <h3>Travel Information</h3>
-                </center>
-
-
-                <table class="student-info-table">
-                    <tr>
-                        <th>US visit: </th>
-                        <td>{{$student->visitedUS5}}</td>
-                        <th>Stay duration: </th>
-                        <td>{{$student->visitedUS5HowLong}}</td>
-                    </tr>
-
-                    <tr>
-                        <th>Purpose of visit: </th>
-                        <td>{{$student->visitedUS5Purpose}}</td>
-                        <th>Visit place and time: </th>
-                        <td>{{$student->visitedUS5WhenAndWhere}}</td>
-                    </tr>
-
-                    <tr>
-                        <th>Green Card holder in family: </th>
-                        <td>{{$student->familyGreenCard}}</td>
-                        <th>Family immigration status: </th>
-                        <td>{{$student->familyImmigration}}</td>
-                    </tr>
-
-                    <tr>
-                        <th>Family in US: </th>
-                        <td>{{$student->familyLivingInUSA}}</td>
-                        <th>Holds US visa: </th>
-                        <td>{{$student->holdUSVisa}}</td>
-                        <th>Visa expiration: </th>
-                        <td>{{$student->holdUSVisaExpiry}}</td>
-                    </tr>
-                </table>
-
-                <table class="student-info-table">
-                    <tr>
-                        <th>Relative in US: </th>
-                        <td>{{$student->relativesLivingInUSA}}</td>
-                        <th>State of residence: </th>
-                        <td>{{$student->relativesLivingInUSAState}}</td>
-                    </tr>
-                </table>
-
-                <h4>Additional Note</h4>
+                <h4 class="heading">Additional Note</h4>
                 <p>{{$student->note}}</p>
 
                 <div align="right">Created on: {{$student->created_at}}</div>

@@ -103,7 +103,7 @@
                 url, null,
                 function(data) {
                     if(data.success == true){
-                        console.log("Student synced");
+                        alert("Student synced");
                     }
 
                 }
@@ -112,7 +112,7 @@
         }
 
         function importAll(){
-            confirm("Do you want to import all students");
+            confirm("Do you want to import all students? It will take some time.");
             var url = "/api/sync/all";
             console.log(url);
             $.get(
