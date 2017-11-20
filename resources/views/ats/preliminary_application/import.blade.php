@@ -37,6 +37,7 @@
         }</style>
     <div class="row">
         <div class="col-md-12">
+            <button onclick="fetchAll()">Fetch All</button>
             <button onclick="importAll()">Sync All</button>
             <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
 
@@ -57,42 +58,43 @@
 
     <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase.js"></script>
     <script>
+        function fetchAll() {
+            // Initialize Firebase
+            var config = {
+                apiKey: "{{env('FIREBASE_API_KEY')}}",
+                authDomain: "{{ env('FIREBASE_AUTH_DOMAIN') }}",
+                databaseURL: "{{env('FIREBASE_DATBASE_URL')}}",
+                projectId: "{{env('FIREBASE_PROJECT_ID')}}",
+                storageBucket: "",
+                messagingSenderId: "{{env('FIREBASE_MESSAGING_SENDER_ID')}}"
+            };
+            firebase.initializeApp(config);
 
-        // Initialize Firebase
-        var config = {
-            apiKey: "{{env('FIREBASE_API_KEY')}}",
-            authDomain: "{{ env('FIREBASE_AUTH_DOMAIN') }}",
-            databaseURL: "{{env('FIREBASE_DATBASE_URL')}}",
-            projectId: "{{env('FIREBASE_PROJECT_ID')}}",
-            storageBucket: "",
-            messagingSenderId: "{{env('FIREBASE_MESSAGING_SENDER_ID')}}"
-        };
-        firebase.initializeApp(config);
 
+            // Get a reference to the /users/ada node
 
-        // Get a reference to the /users/ada node
-
-        var leadsRef = firebase.database().ref("applicants");
-        leadsRef.on('value', function(snapshot) {
-            snapshot.forEach(function(childSnapshot) {
-                var childData = childSnapshot.val();
-                var function_name =  "childData('"+childSnapshot.key+"')";
-                $("#student_table").find('tbody')
-                    .append($('<tr>')
-                        .append($('<td>').text(childData.applicant_id)
-                        )
-                        .append($('<td>').text(childData.first_name
+            var leadsRef = firebase.database().ref("applicants");
+            leadsRef.on('value', function(snapshot) {
+                snapshot.forEach(function(childSnapshot) {
+                    var childData = childSnapshot.val();
+                    var function_name =  "childData('"+childSnapshot.key+"')";
+                    $("#student_table").find('tbody')
+                        .append($('<tr>')
+                            .append($('<td>').text(childData.applicant_id)
                             )
-                        )
-                        .append($('<td>')
-                            .append($('<button>').text('Sync').attr('onClick', function_name)
+                            .append($('<td>').text(childData.first_name
+                                )
                             )
-                        )
-                    );
+                            .append($('<td>')
+                                .append($('<button>').text('Sync').attr('onClick', function_name)
+                                )
+                            )
+                        );
 
 
+                });
             });
-        });
+        }
     </script>
     <script>
         function childData(input) {
