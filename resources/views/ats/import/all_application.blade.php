@@ -60,15 +60,14 @@
 
         // Initialize Firebase
         var config = {
-            apiKey: env('FIREBASE_API_KEY'),
-            authDomain: env('FIREBASE_AUTH_DOMAIN'),
-            databaseURL: env('FIREBASE_DATBASE_URL'),
-            projectId: env('FIREBASE_PROJECT_ID'),
+            apiKey: "{{env('FIREBASE_API_KEY')}}",
+            authDomain: "{{ env('FIREBASE_AUTH_DOMAIN') }}",
+            databaseURL: "{{env('FIREBASE_DATBASE_URL')}}",
+            projectId: "{{env('FIREBASE_PROJECT_ID')}}",
             storageBucket: "",
-            messagingSenderId: env('FIREBASE_MESSAGING_SENDER_ID')
+            messagingSenderId: "{{env('FIREBASE_MESSAGING_SENDER_ID')}}"
         };
         firebase.initializeApp(config);
-
 
         // Get a reference to the /users/ada node
 
