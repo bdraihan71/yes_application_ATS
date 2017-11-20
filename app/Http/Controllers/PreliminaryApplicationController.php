@@ -24,7 +24,7 @@ class PreliminaryApplicationController extends Controller
         $student_ids_failed = array_pluck($score_sheets_failed, 'student_id');
         $students_failed = Student::whereIn('id', $student_ids_failed)->get();
 
-        $query = Student::where('batch_id', 2)->whereNotIn('id',array_merge($student_ids_passed, $student_ids_failed) );
+        $query = Student::where('batch_id',  env('AKASH_BATCH'))->whereNotIn('id',array_merge($student_ids_passed, $student_ids_failed) );
         $not_scored_count = $query->count();
         $not_scored = $query->get();
 
@@ -50,11 +50,11 @@ class PreliminaryApplicationController extends Controller
     }
 
     public function publish(){
-        $students = Student::where('batch_id', 2)->get();
+        $students = Student::where('batch_id',  env('AKASH_BATCH'))->get();
 
         $pdf = PDF::loadView('ats.preliminary_application.pdf.result', compact('students'));
 
-        return $pdf->download('preliminary_application_result_2018_19.pdf');
+        return $pdf->download(env('AKASH_PDF_PRELIMINARY_RESULT_NAME'));
     }
 
     private function getAllData()
@@ -69,7 +69,7 @@ class PreliminaryApplicationController extends Controller
         $students_failed = Student::whereIn('id', $student_failed_ids)->get();
 
         $criterion = Criteria::where('stage_id', 1)->get();
-        $not_scored = Student::where('batch_id', 2)->whereNotIn('id',array_merge($student_ids, $student_failed_ids) )->get();
+        $not_scored = Student::where('batch_id',  env('AKASH_BATCH'))->whereNotIn('id',array_merge($student_ids, $student_failed_ids) )->get();
 
         return [
             'account' => $account,
@@ -91,7 +91,7 @@ class PreliminaryApplicationController extends Controller
         $criterion = $data['criterion'];
 
         $stage = 1;
-        $batch = 2;
+        $batch =  env('AKASH_BATCH');
 
         Excel::create('Filename', function ($excel) use ($students_failed, $criterion, $students, $account, $stage, $batch, $not_scored) {
 

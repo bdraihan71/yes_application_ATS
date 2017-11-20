@@ -18,9 +18,9 @@
                             $stages = \App\Stage::all();
                         @endphp
                         @foreach($stages as $stage)
-                            <a href="/ats/batch/2/account/1/stage/{{$stage->id}}">{{$stage->name}} {{$stage->details}}</a>
+                            <a href="/ats/batch/{{env('AKASH_BATCH')}}/account/1/stage/{{$stage->id}}">{{$stage->name}} {{$stage->details}}</a>
                         @endforeach
-                        <a href="/ats/backup/batch/2/account/1/stage/1">Backup</a>
+                        <a href="/ats/backup/batch/{{env('AKASH_BATCH')}}/account/1/stage/1">Backup</a>
                         <a href="/ats/import">Import</a>
                     </li>
                 </ul>

@@ -38,7 +38,7 @@ class ApiController extends Controller
             $student = Student::create($output);
         }
 
-        $student->batch_id = 2;
+        $student->batch_id =  env('AKASH_BATCH');
         $student->save();
 
         return response()->json(['success'=>true]);
@@ -76,7 +76,7 @@ class ApiController extends Controller
                 $student = Student::create($output);
             }
 
-            $student->batch_id = 2;
+            $student->batch_id =  env('AKASH_BATCH');
             $student->stage = 1;
             $student->save();
 
