@@ -10,7 +10,7 @@ use App\Http\Requests;
 class ApiController extends Controller
 {
     public function syncData($firebase_id){
-        $url = env('FIREBASE_AUTH_DOMAIN') . "/applicants/" . $firebase_id. ".json";
+        $url = env('FIREBASE_DATBASE_URL') . "/applicants/" . $firebase_id. ".json";
 
         // create curl resource
         $ch = curl_init();
@@ -46,7 +46,7 @@ class ApiController extends Controller
     }
 
     public function syncAll(){
-        $url = env('FIREBASE_AUTH_DOMAIN') . "/applicants.json";
+        $url = env('FIREBASE_DATBASE_URL') . "/applicants.json";
 
         // create curl resource
         $ch = curl_init();
