@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Criteria;
+use App\District;
 use App\Student;
 use PDF;
 use Illuminate\Http\Request;
@@ -105,4 +106,19 @@ class PreliminaryApplicationController extends Controller
         return redirect()->back();
     }
 
+    public function improviseData(){
+        $students = Student::all()->groupBy('district');
+        $districts = District::all();
+        return view('ats.preliminary_application.improvise-data', compact('students', 'districts'));
+    }
+
+    public function processImproviseData(Request $request){
+        $district = District::find($request->rename_to_district_id);
+        foreach($request->student_ids as $id){
+            $student = Student::find($id);
+            $student->district = $district->name;
+            $student->save();
+        }
+        return redirect()->back();
+    }
 }

@@ -26,6 +26,8 @@ Route::get('/ats/preliminary_application/import', 'PreliminaryApplicationControl
 Route::get('/ats/preliminary_application/result', 'PreliminaryApplicationController@result')->middleware('auth');
 Route::get('/ats/preliminary_application/result/publish', 'PreliminaryApplicationController@publish')->middleware('auth');
 Route::get('/ats/preliminary_application/backup', 'PreliminaryApplicationController@backup')->middleware('auth');
+Route::get('/ats/preliminary_application/improvise', 'PreliminaryApplicationController@improviseData')->middleware('auth');
+Route::post('/ats/preliminary_application/improvise', 'PreliminaryApplicationController@processImproviseData')->middleware('auth');
 
 
 
