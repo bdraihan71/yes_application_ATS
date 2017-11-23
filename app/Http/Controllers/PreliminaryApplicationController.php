@@ -51,7 +51,7 @@ class PreliminaryApplicationController extends Controller
     }
 
     public function publish(){
-        $students = Student::where('batch_id',  env('AKASH_BATCH'))->get();
+        $students = Student::where('batch_id',  env('AKASH_BATCH'))->orderBy('first_name')->get();
 
         $pdf = PDF::loadView('ats.preliminary_application.pdf.result', compact('students'));
 
