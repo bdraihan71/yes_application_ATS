@@ -39,7 +39,7 @@ class PreliminaryApplicationController extends Controller
 
     public function result()
     {
-        ini_set('memory_limit', '-1');
+//        ini_set('memory_limit', '-1');
         $data = $this->getAllData();
 
         $students = $data['students'];
