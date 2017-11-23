@@ -39,6 +39,7 @@ class PreliminaryApplicationController extends Controller
 
     public function result()
     {
+        ini_set('memory_limit', '-1');
         $data = $this->getAllData();
 
         $students = $data['students'];
@@ -51,6 +52,7 @@ class PreliminaryApplicationController extends Controller
     }
 
     public function publish(){
+        ini_set('memory_limit', '-1');
         $students = Student::where('batch_id',  env('AKASH_BATCH'))->orderBy('first_name')->get();
 
         $pdf = PDF::loadView('ats.preliminary_application.pdf.result', compact('students'));
@@ -93,6 +95,7 @@ class PreliminaryApplicationController extends Controller
 
         $stage = 1;
         $batch =  env('AKASH_BATCH');
+
 
         Excel::create('Filename', function ($excel) use ($students_failed, $criterion, $students, $account, $stage, $batch, $not_scored) {
 
