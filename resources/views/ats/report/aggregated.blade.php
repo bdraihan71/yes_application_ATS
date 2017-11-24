@@ -2,7 +2,7 @@
 
 <!-- Main Content -->
 @section('preliminary_application_content')
-    <a href="/ats/report/">Districtwise</a>
+    <a class="btn btn-default" href="/ats/report/">Districtwise</a><br>
     <div class="row">
        <div>
            <table class="table table-responsive table-striped table-bordered">
