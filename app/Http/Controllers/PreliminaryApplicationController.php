@@ -116,10 +116,9 @@ class PreliminaryApplicationController extends Controller
     }
 
     public function processImproviseData(Request $request){
-        $district = District::find($request->rename_to_district_id);
         foreach($request->student_ids as $id){
             $student = Student::find($id);
-            $student->district = $district->name;
+            $student->district = $request->rename_to_district_name;
             $student->save();
         }
         return redirect()->back();

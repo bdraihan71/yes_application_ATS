@@ -2,9 +2,9 @@
 
 <!-- Main Content -->
 @section('preliminary_application_content')
-    <h4>The following students have district names that are not actual district. Please rename them.</h4>
-    @foreach($students as $district=>$student)
-        @if(!isActualDistrict($district))
+        <h4>The following students have district names that are not actual district. Please rename them.</h4>
+        @foreach($students as $district=>$student)
+            @if(!isActualDistrict($district))
         <form action="" method="post">
             {{csrf_field()}}
             <div class="panel panel-default">
@@ -19,11 +19,12 @@
                 </div>
 
                 <div class="panel-footer">
-                    <select name="rename_to_district_id">
+                    <input list="browsers" name="rename_to_district_name">
+                    <datalist id="browsers">
                         @foreach($districts as $district)
-                            <option value="{{$district->id}}">{{$district->name}}</option>
+                            <option value="{{$district->name}}">
                         @endforeach
-                    </select>
+                    </datalist>
                     <button type="submit">Rename</button>
                 </div>
             </div>

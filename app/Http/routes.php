@@ -28,6 +28,8 @@ Route::get('/ats/preliminary_application/result/publish', 'PreliminaryApplicatio
 Route::get('/ats/preliminary_application/backup', 'PreliminaryApplicationController@backup')->middleware('auth');
 Route::get('/ats/preliminary_application/improvise', 'PreliminaryApplicationController@improviseData')->middleware('auth');
 Route::post('/ats/preliminary_application/improvise', 'PreliminaryApplicationController@processImproviseData')->middleware('auth');
+Route::get('/ats/report', 'ReportController@home')->middleware('auth');
+Route::get('/ats/report/aggregated', 'ReportController@aggregated')->middleware('auth');
 
 
 
