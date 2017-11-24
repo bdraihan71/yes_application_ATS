@@ -19,4 +19,8 @@ class Student extends Model
     public function notes(){
         return $this->hasMany('App\Note');
     }
+
+    public function getFirstNameAttribute($value){
+        return $value . ' ' .$this->middle_name . ' ';
+    }
 }
