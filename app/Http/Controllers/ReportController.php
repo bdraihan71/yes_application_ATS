@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\DB;
 
 class ReportController extends Controller
 {
-    public function home(Request $request){
+    public function districtwise(Request $request){
 
             $query = "SELECT district,
   count(*) total, sum(case when sex = 'male' then 1 else 0 end) males,
@@ -21,7 +21,7 @@ class ReportController extends Controller
   
 FROM  students group by district";
         $query = DB::select($query);
-        return view('ats.report.home', compact('query'));
+        return view('ats.report.districtwise', compact('query'));
     }
 
     public function aggregated(){

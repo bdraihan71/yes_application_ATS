@@ -1,8 +1,8 @@
-@extends('ats.preliminary_application.layout')
+@extends('ats.report.layout')
 
 <!-- Main Content -->
 @section('preliminary_application_content')
-    <a class="btn btn-default" href="/ats/report/aggregated">Aggregated</a><br>
+    <h1>Districtwise</h1>
     <div class="row">
        <div>
            <table id="myTable" class="table table-responsive table-striped table-bordered">
