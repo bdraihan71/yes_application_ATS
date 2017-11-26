@@ -118,7 +118,7 @@
                                                         }
                                                     @endphp
                                                     {{--                                        <td><input class="big-checkbox" name="score[{{$criteria->id}}]" type="checkbox" {!!$score?"checked":"unchecked"!!}></td>--}}
-                                                    <td><input class="form-control" name="score[{{$criteria->id}}]" type="number" min="1" max="{{$criteria->full_score}}" value="{{$score}}"></td>
+                                                    <td><input class="form-control" name="score[{{$criteria->id}}]" type="number" min="0" max="{{$criteria->full_score}}" value="{{$score}}"></td>
                                                 @endforeach
                                                 <td><button class="btn btn-xs" type="submit">Save</button></td>
                                             </tr>
