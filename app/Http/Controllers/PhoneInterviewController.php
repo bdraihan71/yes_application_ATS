@@ -104,8 +104,7 @@ class PhoneInterviewController extends Controller
 
     public function scoreSheet()
     {
-
-
+        ini_set('memory_limit', '-1');
         $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',1)->orderBy('applicant_id')->get();
 
 //        return view('ats.phone_interview.pdf.score_sheet', compact('students'));
