@@ -3,10 +3,20 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     </head>
+    <style>
+        td{
+            padding: .05in
+        }
+
+        .page-break {
+            page-break-after: always;
+        }
+    </style>
     <body>
+
         @foreach($students as $student)
             <div>
-                <table border="1">
+                <table border="1" style="border-collapse: collapse;">
                     <tr>
                         <td colspan="2" >KL Youth Exchange and Study (Academic Year: 2018-19)</td>
                     </tr>
@@ -57,7 +67,7 @@
                 <br>
                 <hr>
                 <br>
-                <table border="1">
+                <table border="1" style="border-collapse: collapse;">
                     <tr>
                         <td colspan="2" >KL Youth Exchange and Study (Academic Year: 2018-19)</td>
                     </tr>
@@ -105,9 +115,11 @@
                         <td style="height:.5in">                </td>
                     </tr>
                 </table>
+                <br>
+                <hr>
+                <br>
             </div>
-
-            <div style="page-break-after: always;"></div>
+            <div class="page-break"></div>
         @endforeach
     </body>
 </html>
