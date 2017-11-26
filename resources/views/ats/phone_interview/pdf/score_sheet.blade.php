@@ -6,7 +6,7 @@
     <body>
         @foreach($students as $student)
             <div>
-                <table border="1" style="border-collapse: collapse;">
+                <table border="1">
                     <tr>
                         <td colspan="2" >KL Youth Exchange and Study (Academic Year: 2018-19)</td>
                     </tr>
@@ -57,7 +57,7 @@
                 <br>
                 <hr>
                 <br>
-                <table border="1" style="border-collapse: collapse;">
+                <table border="1">
                     <tr>
                         <td colspan="2" >KL Youth Exchange and Study (Academic Year: 2018-19)</td>
                     </tr>
