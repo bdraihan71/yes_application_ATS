@@ -4,7 +4,6 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     </head>
     <body>
-
         @foreach($students as $student)
             <div>
                 <table border="1" style="border-collapse: collapse;">
