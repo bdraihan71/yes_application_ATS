@@ -12,12 +12,16 @@
             $score = 0;
             }
         @endphp
-        <td>{!!$score?"✓":"×"!!}</td>
+        @if($score==0)
+            <td>"×"</td>
+        @else
+            <td>{{$score}}</td>
+        @endif
     @endforeach
     <td>
         <ul>
             @foreach($student->notes as $item)
-                <p>{{$item->user->name}} - {{$item->body}}</p>
+                <p>Stage: {{$item->stage}}, {{$item->user->name}} - {{$item->body}}</p>
             @endforeach
         </ul>
     </td>

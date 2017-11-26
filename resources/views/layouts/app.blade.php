@@ -89,6 +89,12 @@
 
     <div class="container">
         <div class="row">
+            @if(Session::has('message'))
+                <div class="alert {{ Session::get('alert-class', 'alert-info') }} alert-block">
+                    <button type="button" class="close" data-dismiss="alert">×</button>
+                    <strong>{{ Session::get('message') }}</strong>
+                </div>
+            @endif
             @yield('content')
         </div>
     </div>

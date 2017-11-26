@@ -31,6 +31,12 @@ Route::post('/ats/preliminary_application/improvise', 'PreliminaryApplicationCon
 
 //phone interview
 Route::get('/ats/phone_interview', 'PhoneInterviewController@home')->middleware('auth');
+Route::get('/ats/phone_interview/result', 'PhoneInterviewController@result')->middleware('auth');
+Route::get('/ats/phone_interview/result/publish', 'PhoneInterviewController@publish')->middleware('auth');
+Route::get('/ats/phone_interview/backup', 'PhoneInterviewController@backup')->middleware('auth');
+Route::get('/ats/phone_interview/score_sheet', 'PhoneInterviewController@scoreSheet')->middleware('auth');
+
+
 
 
 
@@ -51,7 +57,7 @@ Route::get('/ats/import', 'ImportController@studentList')->middleware('auth');
 Route::get('/ats/backup/batch/{batch}/account/{account}/stage/{stage}', 'AtsController@downloadBackup')->middleware('auth');
 Route::get('/ats/student/{student}/account/{account}', 'AtsController@studentPage')->middleware('auth');
 Route::get('/ats/report/batch/{batch}/account/{account}/stage/{stage}', 'AtsController@stageReport')->middleware('auth');
-Route::post('/ats/{student}/note', 'AtsController@addNote')->middleware('auth');
+Route::post('/ats/{student}/note/{stage}', 'AtsController@addNote')->middleware('auth');
 Route::get('/ats/student', 'AtsController@student')->middleware('auth');
 Route::get('/ats/file', 'AtsController@student_file_location')->middleware('auth');
 Route::get('/ats/batch/{batch}/account/{account}/stage/{stage}', 'AtsController@stage')->middleware('auth');

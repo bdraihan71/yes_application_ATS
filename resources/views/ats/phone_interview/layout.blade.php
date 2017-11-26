@@ -14,6 +14,9 @@
         <div class="col-md-2">
             <ul class="nav nav-pills nav-stacked">
                 <li><a href="/ats/phone_interview/">Stacks</a></li>
+                <li><a href="/ats/phone_interview/result">Result</a></li>
+                <li><a href="/ats/phone_interview/backup">Backup</a></li>
+                <li><a href="/ats/phone_interview/score_sheet">Score Sheet</a></li>
             </ul>
         </div>
         <div class="col-md-9">

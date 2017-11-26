@@ -9,9 +9,6 @@
             <a href="/ats/student?batch_id={{$batch->id}}">{{$batch->id}} {{$batch->name}} {{$batch->details}} </a><br>
         @endforeach
 
-
-
-
         <div class="panel-body">
             <h3>Students</h3>
             @foreach($students as $student)
