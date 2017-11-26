@@ -146,7 +146,11 @@
                     $score = 0;
                     }
                 @endphp
-                <td>{!!$score?"Yes":"No"!!}</td>
+            @if($score==0)
+                    <td>No</td>
+                @else
+                    <td>{{$score}}</td>
+                @endif
             @endforeach
             <td>
                 <ul>

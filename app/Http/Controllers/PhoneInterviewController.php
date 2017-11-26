@@ -56,7 +56,7 @@ class PhoneInterviewController extends Controller
         $students_failed = Student::whereIn('id', $student_failed_ids)->get();
 
         $criterion = Criteria::where('stage_id', 2)->get();
-        $not_scored = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage', '>', 1)->whereNotIn('id',array_merge($student_ids, $student_failed_ids) )->get();
+        $not_scored = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage', 1)->where('has_passed', true)->whereNotIn('id',array_merge($student_ids, $student_failed_ids) )->get();
 
         return [
             'account' => $account,
@@ -104,6 +104,8 @@ class PhoneInterviewController extends Controller
 
     public function scoreSheet()
     {
+
+
         $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',1)->orderBy('applicant_id')->get();
 
 //        return view('ats.phone_interview.pdf.score_sheet', compact('students'));
