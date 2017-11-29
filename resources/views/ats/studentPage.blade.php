@@ -59,11 +59,7 @@
                                                 @endphp
                                                 <td><input class="big-checkbox" name="score[{{$criteria->id}}]" type="checkbox" {!!$score?"checked":"unchecked"!!}></td>
                                             @endforeach
-                                            @if($student->stage==1)
-                                                <td><button class="btn btn-xs" type="submit">Save</button></td>
-                                            @else
                                                 <td><button class="btn btn-xs" type="submit" disabled>Save</button></td>
-                                            @endif
                                         </tr>
                                     </form>
                                     </tbody>
