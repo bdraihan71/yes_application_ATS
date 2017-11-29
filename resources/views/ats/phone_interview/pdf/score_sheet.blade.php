@@ -25,7 +25,7 @@
                     </tr>
                     <tr>
                         <td>Interviewer</td>
-                        <td>Gulshan Jubaed Prince</td>
+                        <td></td>
                     </tr>
                     <tr>
                         <td>Applicant ID</td>
@@ -53,10 +53,6 @@
                     </tr>
                     <tr>
                         <td>Cultural Awareness (1-4)</td>
-                        <td>                </td>
-                    </tr>
-                    <tr>
-                        <td>Total (16)</td>
                         <td>                </td>
                     </tr>
                     <tr>
