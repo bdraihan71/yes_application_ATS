@@ -6,6 +6,7 @@
         @foreach($criterion as $criteria)
             <td>{{$criteria->label}} </td>
         @endforeach
+        <td>Total</td>
         <td>Notes</td>
     </tr>
     </thead>

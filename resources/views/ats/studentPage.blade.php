@@ -99,7 +99,7 @@
                                             @foreach($criterion2 as $criteria)
                                                 <td>{{$criteria->label}} </td>
                                             @endforeach
-                                            <td>Action</td>
+                                            <td>Total</td>
                                         </tr>
                                         </thead>
 
@@ -108,11 +108,15 @@
                                             {{csrf_field()}}
                                             <tr>
                                                 <input type="hidden" name="student_id" value="{{$student->id}}">
+                                                @php
+                                                $total = 0;
+                                                @endphp
                                                 @foreach($criterion2 as $criteria)
                                                     @php
                                                         $criteriawise_score = \App\CriteriawiseScore::where('student_id', $student->id)->where('criteria_id', $criteria->id)->where('score_account_id', $account)->first();
                                                         if($criteriawise_score){
                                                         $score = $criteriawise_score->score;
+                                                        $total = $total + $score;
                                                         }else{
                                                         $score = 0;
                                                         }
@@ -120,13 +124,15 @@
                                                     {{--                                        <td><input class="big-checkbox" name="score[{{$criteria->id}}]" type="checkbox" {!!$score?"checked":"unchecked"!!}></td>--}}
                                                     <td><input class="form-control" name="score[{{$criteria->id}}]" type="number" min="0" max="{{$criteria->full_score}}" value="{{$score}}"></td>
                                                 @endforeach
-                                                <td><button class="btn btn-xs" type="submit">Save</button></td>
+                                                <td>{{$total}}</td>
                                             </tr>
-                                        </form>
                                         </tbody>
                                     </table>
                                 </div>
+                                    <button class="pull-right btn btn-primary btn-xl" type="submit">Save</button>
+                                </form>
                             </div>
+
                             <div class="panel-footer">
                                 <form action="/ats/{{$student->id}}/note/2" method="post" >
                                     {{csrf_field()}}
