@@ -16,7 +16,7 @@
 
         @foreach($students as $student)
             <div>
-                <table width="50%" border="1" style="border-collapse: collapse;">
+                <table border="1" style="border-collapse: collapse;">
                     <tr>
                         <td colspan="2" >KL Youth Exchange and Study (Academic Year: 2018-19)</td>
                     </tr>
@@ -40,6 +40,10 @@
                         <td>{{$student->schoolName}}</td>
                     </tr>
                     <tr>
+                        <td>District</td>
+                        <td>{{$student->district}}</td>
+                    </tr>
+                    <tr>
                         <td>Social Skills (1-4)</td>
                         <td>                </td>
                     </tr>
@@ -56,6 +60,9 @@
                         <td>                </td>
                     </tr>
                     <tr>
+                        <td colspan="2"> ▢ Applicant is an access student</td>
+                    </tr>
+                    <tr>
                         <td>Signature</td>
                         <td style="height:.5in">                </td>
                     </tr>
@@ -63,7 +70,7 @@
                 <br>
                 <hr>
                 <br>
-                <table  width="50%"  border="1" style="border-collapse: collapse;">
+                <table border="1" style="border-collapse: collapse;">
                     <tr>
                         <td colspan="2" >KL Youth Exchange and Study (Academic Year: 2018-19)</td>
                     </tr>
@@ -72,7 +79,7 @@
                     </tr>
                     <tr>
                         <td>Interviewer</td>
-                        <td>Munif Khan</td>
+                        <td></td>
                     </tr>
                     <tr>
                         <td>Applicant ID</td>
@@ -87,6 +94,10 @@
                         <td>{{$student->schoolName}}</td>
                     </tr>
                     <tr>
+                        <td>District</td>
+                        <td>{{$student->district}}</td>
+                    </tr>
+                    <tr>
                         <td>Social Skills (1-4)</td>
                         <td>                </td>
                     </tr>
@@ -103,8 +114,7 @@
                         <td>                </td>
                     </tr>
                     <tr>
-                        <td>Total (16)</td>
-                        <td>                </td>
+                        <td colspan="2"> ▢ Applicant is an access student</td>
                     </tr>
                     <tr>
                         <td>Signature</td>
