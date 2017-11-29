@@ -125,6 +125,7 @@
                                         </tbody>
                                     </table>
                                 </div>
+                                    <input type="checkbox" name="is_access_student" {!! $student->is_access_student == true? "checked":""!!}> Applicant is an access student.
                                     <button class="pull-right btn btn-primary btn-xl" type="submit">Save</button>
                                 </form>
                             </div>

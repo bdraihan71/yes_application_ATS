@@ -225,6 +225,12 @@ class AtsController extends Controller
                 $student->stage = 2;
         }
 
+        if($request->is_access_student == "on"){
+            $student->is_access_student = true;
+        }else{
+            $student->is_access_student = false;
+        }
+
         $student->save();
         $request->session()->flash('message', 'Phone Interview Score Saved!');
 
