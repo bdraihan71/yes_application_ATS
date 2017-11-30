@@ -64,6 +64,7 @@
         <td>visitedUS5WhenAndWhere</td>
         <td>motherOfficePhone</td>
         <td>updated_at</td>
+        <td>Is Access Student</td>
         @foreach($criterion as $criteria)
             <td>{{$criteria->label}} </td>
         @endforeach
@@ -137,6 +138,7 @@
             <td>{{$student->visitedUS5WhenAndWhere}}</td>
             <td>{{$student->motherOfficePhone}}</td>
             <td>{{$student->updated_at}}</td>
+            <td>{{$student->is_access_student}}</td>
             @foreach($criterion as $criteria)
                 @php
                     $criteriawise_score = \App\CriteriawiseScore::where('student_id', $student->id)->where('criteria_id', $criteria->id)->where('score_account_id', $account)->first();
