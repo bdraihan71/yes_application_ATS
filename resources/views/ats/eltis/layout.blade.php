@@ -11,6 +11,7 @@
                 <li><a href="/ats/eltis/score_sheet">Score Sheet</a></li>
                 <li><a href="/ats/eltis/admit_card">Admit Card</a></li>
                 <li><a href="/ats/eltis/letter">Letter</a></li>
+                <li><a href="/ats/eltis/envelope">Envelope</a></li>
             </ul>
         </div>
         <div class="col-md-9">
