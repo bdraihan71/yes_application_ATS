@@ -44,32 +44,32 @@
                     <div>
                         <div>
                             <p>
-                                <b>Sub: Invitation to appear in English Language Test for International Students (ELTiS) and In-Class Essay stage of K-L YES Program for the 2018-2019 Academic year.</b>
+                                <b>Sub: Invitation to appear in English Language Test for International Students (ELTiS) and In-Class Essay stage of K-L YES Program for the academic year 2018-2019.</b>
                             </p>
                             <p>
                                 Dear <b>{{$student->first_name}},</b>
                             </p>
                             <p>
-                                Congratulations! You have qualified in the <b>Phone Interview</b> stage of the recruitment of <b>Kennedy Lugar Youth Exchange & Study Program</b> for <b>2018-19 Academic Year.</b> We are delighted to invite you to participate in <b>English Language Test for International Students (ELTiS) and In-Class Essay</b> stage of the recruitment.
+                                Congratulations! You have qualified in the <b>Phone Interview</b> stage of the recruitment of <b>Kennedy Lugar Youth Exchange & Study Program</b> for the academic year  <b> 2018-19.</b> We are delighted to invite you to participate in <b>English Language Test for International Students (ELTiS) and In-Class Essay</b> stage of the recruitment.
                             </p>
                             <p>
-                                The ELTiS & In-Class Essay will be held on <b>Friday, 8 December 2017</b> in exam hall of <b>FuturEd</b>, Ahmed Tower (6th Floor), 28 & 30 Kamal Ataturk Avenue, Banani, Dhaka-1213. If you need any assistance to locate venue, please feel free to contact us.
+                                The ELTiS & In-Class Essay Examination will be held on <b>Friday, 8 December 2017</b> in exam hall of <b>FuturEd</b>, Ahmed Tower (6th Floor), 28 & 30 Kamal Ataturk Avenue, Banani, Dhaka-1213. If you need any assistance to locate venue, please feel free to contact us.
                             </p>
                             <p>
                                 The reporting time for Applicant ID ________ to _____ is 08:15am. Exam time- 9:00 am - 11:00 am<br>
                                 The reporting time for Applicant ID ________ to _____ is 10:15am. Exam time- 11:00 am - 1:30 pm
                             </p>
                             <p>
-                                For more information on ELTiS, please follow the website resource: <b>www.eltistest.com/students/index.php</b>
+                                For more information on ELTiS, please follow the website resource: <b>www.eltistest.com/students</b>
                             </p>
                             <p>
                                 For updates regarding this whole selection process you may frequently visit our website: <b>www.iearnbd.org</b>
                             </p>
                             <p>
-                                You MUST report at the testing venue by the given time and enter the exam hall immediately. Failure to show up within reporting time will automatically disqualify you from the process.
+                                You MUST report at the examination venue by the given time and enter the exam hall immediately. Failure to show up within reporting time will automatically disqualify you from the process.
                             </p>
                             <p>
-                                No T.A./D.A. will be given for appearin in the ELTiS and In-Class Essay Round. <b>Please bring this letter with you at the time of the test, it is mandatory</b>
+                                No T.A./D.A. will be given for appearing in the ELTiS and In-Class Essay Round. <b>Please bring this letter with you at the time of the test, it is mandatory</b>
                             </p>
 
                         </div>
