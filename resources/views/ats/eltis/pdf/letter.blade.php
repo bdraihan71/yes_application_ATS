@@ -74,7 +74,8 @@
                     <p>
                         Good luck.
                     </p>
-                    <img src="/images/ats/wasi.png"><br>
+                    {{--<img src="/images/ats/wasi.png"><br>--}}
+                    <br><br>
                     Wasi Mahmud Moni <br>
                     Director <br>
                     iEARN-BD and K-L YES Program <br>
@@ -84,7 +85,7 @@
                     Address of Exam Venue:<br>
                     FutureED | (6th Floor) Ahmed Tower,<br>
                     28-30 Kamal Ataturk Avenue, Banani, Dhaka 1213<br>
-                    <img width="350px" src="/images/ats/map.png">
+                    <img width="300px" src="/images/ats/map.png">
                 </div>
             </div>
 
