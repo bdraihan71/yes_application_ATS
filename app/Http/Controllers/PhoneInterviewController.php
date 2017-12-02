@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Criteria;
+use App\Note;
+use App\ScoreSheet;
 use App\Student;
 use Maatwebsite\Excel\Facades\Excel;
 use PDF;
@@ -111,6 +113,32 @@ class PhoneInterviewController extends Controller
         $pdf = PDF::loadView('ats.phone_interview.pdf.score_sheet', compact('students'));
 
         return $pdf->stream(env('AKASH_PDF_PHONE_INTERVIEW_SCORE_SHEET_NAME'));
+    }
+
+    public function withdraw()
+    {
+        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',1)->orderBy('applicant_id')->get();
+        return view('ats.phone_interview.withdraw', compact('students'));
+    }
+
+    public function processWithdraw(Request $request)
+    {
+        $student = Student::find($request->student_id);
+        $student->stage = 2;
+        $student->save();
+
+        $score_sheet = ScoreSheet::where('student_id', $request->student_id)->where('stage_id', '>=', 2)->where('score_account_id', 1)->get()->first();
+        $score_sheet->has_passed = false;
+        $score_sheet->has_withdrawn = true;
+        $score_sheet->save();
+        Note::create([
+            'student_id'=> $request->student_id,
+            'user_id'=> auth()->user()->id,
+            'stage'=> 2,
+            'body'=> "Student withdrawn",
+        ]);
+        $request->session()->flash('message', 'Student has been withdrawn.');
+        return redirect()->back();
     }
 
 }

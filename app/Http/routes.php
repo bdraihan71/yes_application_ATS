@@ -35,6 +35,8 @@ Route::get('/ats/phone_interview/result', 'PhoneInterviewController@result')->mi
 Route::get('/ats/phone_interview/result/publish', 'PhoneInterviewController@publish')->middleware('auth');
 Route::get('/ats/phone_interview/backup', 'PhoneInterviewController@backup')->middleware('auth');
 Route::get('/ats/phone_interview/score_sheet', 'PhoneInterviewController@scoreSheet')->middleware('auth');
+Route::get('/ats/phone_interview/withdraw', 'PhoneInterviewController@withdraw')->middleware('auth');
+Route::post('/ats/phone_interview/withdraw', 'PhoneInterviewController@processWithdraw')->middleware('auth');
 
 
 
