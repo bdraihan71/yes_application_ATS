@@ -40,6 +40,15 @@ Route::post('/ats/phone_interview/withdraw', 'PhoneInterviewController@processWi
 
 
 
+//eltis
+Route::get('/ats/eltis', 'EltisController@home')->middleware('auth');
+Route::get('/ats/eltis/result', 'EltisController@result')->middleware('auth');
+Route::get('/ats/eltis/result/publish', 'EltisController@publish')->middleware('auth');
+Route::get('/ats/eltis/backup', 'EltisController@backup')->middleware('auth');
+Route::get('/ats/eltis/score_sheet', 'EltisController@scoreSheet')->middleware('auth');
+Route::get('/ats/eltis/admit_card', 'EltisController@admitCard')->middleware('auth');
+Route::get('/ats/eltis/letter', 'EltisController@letter')->middleware('auth');
+
 
 
 //report
