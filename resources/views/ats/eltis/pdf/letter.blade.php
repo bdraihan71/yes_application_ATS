@@ -86,7 +86,7 @@
                         Good luck.
                     </p>
                     <img src="/images/ats/wasi.png"><br>
-                    <br><br>
+                    {{--<br><br>--}}
                     Wasi Mahmud Moni <br>
                     Director <br>
                     iEARN-BD and K-L YES Program <br>
