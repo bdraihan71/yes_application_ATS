@@ -56,8 +56,8 @@
                                 The ELTiS & In-Class Essay Examination will be held on <b>Friday, 8 December 2017</b> in exam hall of <b>FuturEd</b>, Ahmed Tower (6th Floor), 28 & 30 Kamal Ataturk Avenue, Banani, Dhaka-1213. If you need any assistance to locate venue, please feel free to contact us.
                             </p>
                             <p>
-                                The reporting time for Applicant ID 18190005 to 18190375 is 08:15am. Exam time- 9:00 am - 11:00 am<br>
-                                The reporting time for Applicant ID 18190377 to 18190773 is 10:45am. Exam time- 11:30 am - 1:30 pm
+                                The reporting time for Applicant ID 18190005 to 18190370 is 08:15am. Exam time- 9:00 am - 11:00 am<br>
+                                The reporting time for Applicant ID 18190375 to 18190773 is 10:45am. Exam time- 11:30 am - 1:30 pm
                             </p>
                             <p>
                                 For more information on ELTiS, please follow the website resource: <b>www.eltistest.com/students</b>
