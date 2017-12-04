@@ -42,8 +42,9 @@ class EltisController extends Controller
 
     }
 
-    public function admitCard(){
-
+    public function idcard(){
+        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',2)->orderBy('applicant_id')->get();
+        return view('ats.eltis.pdf.idcard', compact('students'));
     }
 
     public function letter(){
