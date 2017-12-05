@@ -12,6 +12,7 @@
                 <li><a href="/ats/eltis/id_card">ID Card</a></li>
                 <li><a href="/ats/eltis/letter">Letter</a></li>
                 <li><a href="/ats/eltis/envelope">Envelope</a></li>
+                <li><a href="/ats/eltis/attendance">Attendance</a></li>
             </ul>
         </div>
         <div class="col-md-9">
