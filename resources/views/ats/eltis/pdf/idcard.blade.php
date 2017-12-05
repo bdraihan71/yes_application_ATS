@@ -55,7 +55,7 @@
                     <img src="/images/ats/iearnbd_logo.png" width="75px">
                     <h4>International Education and Resource Network</h4>
                     <h3>Kennedy-Lugar Youth Exchange and Study Program</h3>
-                    <h4>Academic Year 2017-2018</h4>
+                    <h4>Academic Year 2018-2019</h4>
                 </div>
                 <div>
                     <h1>ELTiS Test Round</h1>
