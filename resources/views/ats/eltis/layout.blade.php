@@ -13,6 +13,7 @@
                 <li><a href="/ats/eltis/letter">Letter</a></li>
                 <li><a href="/ats/eltis/envelope">Envelope</a></li>
                 <li><a href="/ats/eltis/attendance">Attendance</a></li>
+                <li><a href="/ats/eltis/sit_sticker">Sit Sticker</a></li>
             </ul>
         </div>
         <div class="col-md-9">

@@ -64,4 +64,9 @@ class EltisController extends Controller
         $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',2)->orderBy('applicant_id')->get();
         return view('ats.eltis.pdf.attendance', compact('students'));
     }
+
+    public function sitSticker(){
+        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',2)->orderBy('applicant_id')->get();
+        return view('ats.eltis.pdf.sit-sticker', compact('students'));
+    }
 }
