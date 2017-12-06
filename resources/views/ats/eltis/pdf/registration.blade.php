@@ -26,7 +26,7 @@
     @endphp
 
 
-    @include('ats.eltis.pdf.partial.attendance_header')
+    @include('ats.eltis.pdf.partial.registration_header')
 
     @foreach($students as $student)
         <div>
@@ -46,7 +46,7 @@
         @endphp
         @if($count==9)
             <div class="page-break"></div>
-            @include('ats.eltis.pdf.partial.attendance_header')
+            @include('ats.eltis.pdf.partial.registration_header')
             @php
                 $count = 0;
             @endphp

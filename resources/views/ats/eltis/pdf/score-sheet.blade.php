@@ -48,7 +48,7 @@
         @php
             $count = $count + 1;
         @endphp
-        @if($count==11)
+        @if($count==12)
             <div class="page-break"></div>
             @include('ats.eltis.pdf.partial.score_sheet_header')
             @php

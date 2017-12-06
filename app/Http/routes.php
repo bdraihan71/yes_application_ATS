@@ -49,6 +49,7 @@ Route::get('/ats/eltis/score_sheet', 'EltisController@scoreSheet')->middleware('
 Route::get('/ats/eltis/id_card', 'EltisController@idcard')->middleware('auth');
 Route::get('/ats/eltis/letter', 'EltisController@letter')->middleware('auth');
 Route::get('/ats/eltis/attendance', 'EltisController@attendance')->middleware('auth');
+Route::get('/ats/eltis/registration', 'EltisController@registration')->middleware('auth');
 Route::get('/ats/eltis/envelope', 'EltisController@envelope')->middleware('auth');
 Route::get('/ats/eltis/sit_sticker', 'EltisController@sitSticker')->middleware('auth');
 
