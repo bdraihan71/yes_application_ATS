@@ -1,29 +1,13 @@
 <style>
-    h4 {
+    h4, h3, p {
         display: block;
         -webkit-margin-before: 0px;
         -webkit-margin-after: 2px ;
         -webkit-margin-start: 2px;
         -webkit-margin-end: 0px;
-        font-weight: bold;
     }
-
-    h3 {
-        display: block;
-        font-size: 1.17em;
-        -webkit-margin-before: 0px;
-        -webkit-margin-after: 2px;
-        -webkit-margin-start: 2px;
-        -webkit-margin-end: 0px;
+    h3, h4 {
         font-weight: bold;
-    }
-
-    p {
-        display: block;
-        -webkit-margin-before: 2px;
-        -webkit-margin-after: 2px;
-        -webkit-margin-start: 0px;
-        -webkit-margin-end: 0px;
     }
 </style>
 
