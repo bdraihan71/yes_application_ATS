@@ -9,6 +9,7 @@
                 <li><a href="/ats/eltis/result">Result</a></li>
                 <li><a href="/ats/eltis/backup">Backup</a></li>
                 <li><a href="/ats/eltis/score_sheet">Score Sheet</a></li>
+                <li><a href="/ats/eltis/in_class_essary_score_sheet">In Class Essay - Score Sheet</a></li>
                 <li><a href="/ats/eltis/id_card">ID Card</a></li>
                 <li><a href="/ats/eltis/letter">Letter</a></li>
                 <li><a href="/ats/eltis/envelope">Envelope</a></li>

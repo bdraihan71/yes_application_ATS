@@ -43,6 +43,11 @@ class EltisController extends Controller
         return view('ats.eltis.pdf.score-sheet', compact('students'));
     }
 
+    public function inClassEssayScoreSheet(){
+        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',2)->orderBy('applicant_id')->get();
+        return view('ats.eltis.pdf.in-class-essay-score-sheet', compact('students'));
+    }
+
     public function idcard(){
         $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',2)->orderBy('applicant_id')->get();
         return view('ats.eltis.pdf.idcard', compact('students'));
