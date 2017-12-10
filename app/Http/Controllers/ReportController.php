@@ -42,7 +42,7 @@ FROM  students ";
     }
 
     public function school(Request $request){
-        $query = "select `id`, `applicant_id`, `schoolName`, `district`  from students where stage=" . (!empty($request->stage)?$request->stage:1 ) . " order by district, schoolName";
+        $query = "select `id`, `applicant_id`, `schoolName`, `district`  from students where stage>=" . $request->stage;
         $query = DB::select($query);
         return view('ats.report.school', compact('query'));
     }
