@@ -28,6 +28,7 @@ Route::get('/ats/preliminary_application/result/publish', 'PreliminaryApplicatio
 Route::get('/ats/preliminary_application/backup', 'PreliminaryApplicationController@backup')->middleware('auth');
 Route::get('/ats/preliminary_application/improvise', 'PreliminaryApplicationController@improviseData')->middleware('auth');
 Route::post('/ats/preliminary_application/improvise', 'PreliminaryApplicationController@processImproviseData')->middleware('auth');
+Route::get('/ats/preliminary_application/sync', 'PreliminaryApplicationController@syncScore')->middleware('auth');
 
 //phone interview
 Route::get('/ats/phone_interview', 'PhoneInterviewController@home')->middleware('auth');

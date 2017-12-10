@@ -15,11 +15,11 @@ class ReportController extends Controller
   count(*) total, sum(case when sex = 'male' then 1 else 0 end) males,
   sum(case when sex = 'female' then 1 else 0 end) females,
   
-  sum(case when stage='2' then 1 else 0 end) total2 , sum(case when sex = 'male' and stage='2' then 1 else 0 end) males2,
-  sum(case when sex = 'female' and stage='2' then 1 else 0 end) females2,
+  sum(case when stage>1 then 1 else 0 end) total2 , sum(case when sex = 'male' and stage>1 then 1 else 0 end) males2,
+  sum(case when sex = 'female' and stage>1 then 1 else 0 end) females2,
   
-  sum(case when stage='3' then 1 else 0 end) total3 , sum(case when sex = 'male' and stage='3' then 1 else 0 end) males3,
-  sum(case when sex = 'female' and stage='3' then 1 else 0 end) females3
+  sum(case when stage>2 then 1 else 0 end) total3 , sum(case when sex = 'male' and stage>2 then 1 else 0 end) males3,
+  sum(case when sex = 'female' and stage>2 then 1 else 0 end) females3
   
   
 FROM  students group by district";

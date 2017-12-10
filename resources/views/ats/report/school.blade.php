@@ -25,7 +25,7 @@
                <tbody>
                @foreach($query as $row)
                    <tr>
-                       <td><a href="/ats/student/{{$row->id}}/account/1"></a>{{$row->applicant_id}}</td>
+                       <td><a href="/ats/student/{{$row->id}}/account/1">{{$row->applicant_id}}</a></td>
                        <td>{{$row->schoolName}}</td>
                        <td>{{$row->district}}</td>
                    </tr>
