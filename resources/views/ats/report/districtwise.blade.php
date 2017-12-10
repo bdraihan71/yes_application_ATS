@@ -15,6 +15,9 @@
                    <th>Phone Interview Total</th>
                    <th>Phone Interview Male</th>
                    <th>Phone Interview Female</th>
+                   <th>ELTiS Total</th>
+                   <th>ELTiS Male</th>
+                   <th>ELTiS Female</th>
                </tr>
                </thead>
 
@@ -27,6 +30,9 @@
                    <th>Phone Interview Total</th>
                    <th>Phone Interview Male</th>
                    <th>Phone Interview Female</th>
+                   <th>ELTiS Total</th>
+                   <th>ELTiS Male</th>
+                   <th>ELTiS Female</th>
                </tr>
                </tfoot>
 
@@ -40,6 +46,9 @@
                        <td>{{$row->total2}}</td>
                        <td>{{$row->males2}}</td>
                        <td>{{$row->females2}}</td>
+                       <td>{{$row->total3}}</td>
+                       <td>{{$row->males3}}</td>
+                       <td>{{$row->females3}}</td>
                    </tr>
                @endforeach
                </tbody>
