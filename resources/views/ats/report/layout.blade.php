@@ -14,6 +14,9 @@
         <div class="col-md-2">
             <ul class="nav nav-pills nav-stacked">
                 <li><a href="/ats/report/districtwise">Districtwise</a></li>
+                <li><a href="/ats/report/school?stage=1">Preliminary Schools</a></li>
+                <li><a href="/ats/report/school?stage=2">Phone Interview Schools</a></li>
+                <li><a href="/ats/report/school?stage=3">ELTiS Schools</a></li>
                 <li><a href="/ats/report/aggregated">Aggregated</a></li>
             </ul>
         </div>

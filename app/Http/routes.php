@@ -58,6 +58,7 @@ Route::get('/ats/eltis/sit_sticker', 'EltisController@sitSticker')->middleware('
 
 //report
 Route::get('/ats/report/districtwise', 'ReportController@districtwise')->middleware('auth');
+Route::get('/ats/report/school', 'ReportController@school')->middleware('auth');
 Route::get('/ats/report/aggregated', 'ReportController@aggregated')->middleware('auth');
 
 
