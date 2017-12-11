@@ -126,12 +126,48 @@
                                     </table>
                                 </div>
                                     <input type="checkbox" name="is_access_student" {!! $student->is_access_student == true? "checked":""!!}> Applicant is an access student.
-                                    <button class="pull-right btn btn-primary btn-xl" type="submit">Save</button>
+                                    <button class="pull-right btn btn-primary btn-xl" type="submit" disabled>Save</button>
                                 </form>
                             </div>
 
                             <div class="panel-footer">
                                 <form action="/ats/{{$student->id}}/note/2" method="post" >
+                                    {{csrf_field()}}
+                                    <input type="text" name="body" class="form-control"><br>
+                                    <button class="btn btn-default" type="submit">Add Note</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            @endif
+
+            @if($student->stage>2)
+                <div class="row">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">ELTiS</div>
+
+                        <div class="panel-body">
+                            <div class="row">
+                                <div>
+                                    <table class="table table-bordered table-sm">
+                                        <thead>
+                                        <tr>
+                                            <td>ELTiS Score</td>
+                                        </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr>
+                                                <td>{{$student->getEltisScore()}}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="panel-footer">
+                                <form action="/ats/{{$student->id}}/note/3" method="post" >
                                     {{csrf_field()}}
                                     <input type="text" name="body" class="form-control"><br>
                                     <button class="btn btn-default" type="submit">Add Note</button>

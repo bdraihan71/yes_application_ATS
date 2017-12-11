@@ -54,6 +54,8 @@ Route::get('/ats/eltis/attendance', 'EltisController@attendance')->middleware('a
 Route::get('/ats/eltis/registration', 'EltisController@registration')->middleware('auth');
 Route::get('/ats/eltis/envelope', 'EltisController@envelope')->middleware('auth');
 Route::get('/ats/eltis/sit_sticker', 'EltisController@sitSticker')->middleware('auth');
+Route::get('/ats/eltis/score_now', 'EltisController@scoreNow')->middleware('auth');
+Route::post('/ats/eltis/save_score', 'EltisController@processScore')->middleware('auth');
 
 
 

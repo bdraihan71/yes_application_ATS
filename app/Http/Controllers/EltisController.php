@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\ScoreSheet;
 use App\Student;
 use Illuminate\Http\Request;
 
@@ -78,5 +79,20 @@ class EltisController extends Controller
     public function sitSticker(){
         $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',2)->orderBy('applicant_id')->get();
         return view('ats.eltis.pdf.sit-sticker', compact('students'));
+    }
+
+    public function scoreNow(){
+        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',2)->orderBy('applicant_id')->get();
+        return view('ats.eltis.score-now', compact('students'));
+    }
+
+    public function processScore(Request $request){
+        foreach ($request->eltis as $student_id=>$score){
+            $student = Student::find($student_id);
+            $student->saveEltisScore($score);
+        }
+
+        $request->session()->flash('message', 'ELTiS Score Updated');
+        return redirect()->back();
     }
 }

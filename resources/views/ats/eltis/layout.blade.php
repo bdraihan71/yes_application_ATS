@@ -16,6 +16,7 @@
                 <li><a href="/ats/eltis/attendance">Attendance</a></li>
                 <li><a href="/ats/eltis/registration">Registration</a></li>
                 <li><a href="/ats/eltis/sit_sticker">Sit Sticker</a></li>
+                <li><a href="/ats/eltis/score_now">Score Now!</a></li>
             </ul>
         </div>
         <div class="col-md-9">
