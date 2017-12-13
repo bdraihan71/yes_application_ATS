@@ -33,6 +33,9 @@
                    <th>ELTiS Total</th>
                    <th>ELTiS Male</th>
                    <th>ELTiS Female</th>
+                   <th>Final Application Total</th>
+                   <th>Final Application Male</th>
+                   <th>Final Application Female</th>
                </tr>
                </tfoot>
 
@@ -49,6 +52,9 @@
                        <td>{{$row->total3}}</td>
                        <td>{{$row->males3}}</td>
                        <td>{{$row->females3}}</td>
+                       <td>{{$row->total4}}</td>
+                       <td>{{$row->males4}}</td>
+                       <td>{{$row->females4}}</td>
                    </tr>
                @endforeach
                </tbody>
