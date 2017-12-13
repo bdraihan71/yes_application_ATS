@@ -36,7 +36,11 @@ class Student extends Model
 
     public function saveEltisScore($score){
         $scoreSheet = ScoreSheet::where('stage_id', 3)->where('student_id', $this->id)->first();
-        $threshold = Constant::where('key', 'ELTiS Qualifying Mark')->first()->value;
+        if($this->district == "DHAKA"){
+            $threshold = Constant::where('key', 'ELTiS Qualifying Mark Dhaka')->first()->value;
+        }else{
+            $threshold = Constant::where('key', 'ELTiS Qualifying Mark Outside Dhaka')->first()->value;
+        }
         if($score >= $threshold){
             $passed = true;
             $this->stage = $this->stage + 1;
