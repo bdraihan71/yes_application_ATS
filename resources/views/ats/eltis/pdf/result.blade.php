@@ -6,12 +6,12 @@
     <body style="margin-top: 1.65in; margin-bottom: .6in">
 
         <table border="1" style="border-collapse: collapse;">
-            <tr>
-                <td>ID</td>
-                <td>Name</td>
-                <td>School</td>
-                <td>Status</td>
-            </tr>
+            {{--<tr>--}}
+                {{--<td>ID</td>--}}
+                {{--<td>Name</td>--}}
+                {{--<td>School</td>--}}
+                {{--<td>Status</td>--}}
+            {{--</tr>--}}
 
             @foreach($students as $student)
                 <tr>

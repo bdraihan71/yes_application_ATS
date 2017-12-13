@@ -43,7 +43,7 @@ class Student extends Model
         }
         if($score >= $threshold){
             $passed = true;
-            $this->stage = $this->stage + 1;
+            $this->stage = 4;
             $this->save();
         }else{
             $passed = false;
