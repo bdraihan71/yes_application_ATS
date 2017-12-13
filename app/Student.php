@@ -46,6 +46,7 @@ class Student extends Model
             $this->stage = 4;
             $this->save();
         }else{
+            $this->stage = 3;
             $passed = false;
 
         }
