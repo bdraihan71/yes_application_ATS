@@ -18,6 +18,9 @@
                    <th>ELTiS Total</th>
                    <th>ELTiS Male</th>
                    <th>ELTiS Female</th>
+                   <th>Final Application Total</th>
+                   <th>Final Application Male</th>
+                   <th>Final Application Female</th>
                </tr>
                </thead>
 
