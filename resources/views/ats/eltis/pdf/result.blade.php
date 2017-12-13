@@ -18,7 +18,7 @@
                     <td>{{$student->applicant_id}}</td>
                     <td>{{$student->first_name}} {!! !empty($student->middle_name)?$student->middle_name:'' !!} {{$student->last_name}}</td>
                     <td>{{$student->schoolName}}</td>
-                    <td>{!! $student->stage == 3 ? 'Successful' : 'Unsuccessful' !!}</td>
+                    <td>{!! $student->stage == 4 ? 'Successful' : 'Unsuccessful' !!}</td>
                 </tr>
             @endforeach
         </table>

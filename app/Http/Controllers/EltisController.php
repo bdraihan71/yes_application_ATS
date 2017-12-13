@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\ScoreSheet;
 use App\Student;
+use PDF;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -27,16 +28,38 @@ class EltisController extends Controller
         return view('ats.eltis.home', compact('students_passed', 'students_failed', 'not_scored', 'not_scored_count'));
     }
 
-    public function result(){
-
-    }
 
     public function publish(){
+        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',2)->orderBy('first_name')->get();
 
+        $pdf = PDF::loadView('ats.eltis.pdf.result', compact('students'));
+
+        return $pdf->download(env('AKASH_PDF_ELTIS_RESULT_NAME'));
     }
 
     public function backup(){
+        $data = $this->getAllData();
 
+        $students = $data['students'];
+        $account = $data['account'];
+        $students_failed = $data['students_failed'];
+        $not_scored = $data['not_scored'];
+        $criterion = $data['criterion'];
+
+        $stage = 2;
+        $batch =  env('AKASH_BATCH');
+
+
+        Excel::create('Filename', function ($excel) use ($students_failed, $criterion, $students, $account, $stage, $batch, $not_scored) {
+
+            $excel->sheet('Sheetname', function ($sheet) use ($not_scored, $students_failed, $criterion, $students, $account, $stage, $batch) {
+
+                $sheet->loadView('ats.phone_interview.excel.student', compact('students', 'account', 'students_failed', 'not_scored', 'criterion'));
+            });
+
+        })->download('xls');
+
+        return redirect()->back();
     }
 
     public function scoreSheet(){
@@ -95,4 +118,6 @@ class EltisController extends Controller
         $request->session()->flash('message', 'ELTiS Score Updated');
         return redirect()->back();
     }
+
+
 }
