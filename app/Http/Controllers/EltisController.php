@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\ScoreSheet;
 use App\Student;
+use Maatwebsite\Excel\Facades\Excel;
 use PDF;
 use Illuminate\Http\Request;
 
@@ -46,7 +47,7 @@ class EltisController extends Controller
         $not_scored = $data['not_scored'];
         $criterion = $data['criterion'];
 
-        $stage = 2;
+        $stage = 3;
         $batch =  env('AKASH_BATCH');
 
 
@@ -119,5 +120,27 @@ class EltisController extends Controller
         return redirect()->back();
     }
 
+    private function getAllData()
+    {
+        $account = 1;
+        $score_sheets = DB::table('score_sheets')->where('score_account_id', 1)->where('stage_id', 3)->where('has_passed', true)->get();
+        $student_ids = array_pluck($score_sheets, 'student_id');
+        $students = Student::whereIn('id', $student_ids)->get();
+
+        $score_sheets_failed = DB::table('score_sheets')->where('score_account_id', 1)->where('stage_id', 3)->where('has_passed', false)->get();
+        $student_failed_ids = array_pluck($score_sheets_failed, 'student_id');
+        $students_failed = Student::whereIn('id', $student_failed_ids)->get();
+
+        $criterion = [];
+        $not_scored = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage', 3)->whereNotIn('id',array_merge($student_ids, $student_failed_ids) )->get();
+
+        return [
+            'account' => $account,
+            'students' => $students,
+            'students_failed' => $students_failed,
+            'criterion' => $criterion,
+            'not_scored' => $not_scored
+        ];
+    }
 
 }
