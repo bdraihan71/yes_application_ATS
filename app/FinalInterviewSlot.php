@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
 class FinalInterviewSlot extends Model
@@ -25,6 +26,13 @@ class FinalInterviewSlot extends Model
         'individual_5_end_time',
         'individual_6_end_time',
     ];
+
+    public function getReportingTimeAttribute($value)
+    {
+        //reporting time will be 10 minutes before
+        $carbon = new Carbon($value);
+        return $carbon->subMinute(10);
+    }
 
     public function getStudent_1(){
         return $this->hasOne(Student::class, 'id', 'student_1');
