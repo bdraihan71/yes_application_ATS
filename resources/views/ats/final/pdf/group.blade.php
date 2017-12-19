@@ -97,7 +97,8 @@
     <div style="clear: both;"></div>
     <div class="interview-info">
         <div class="info-left">
-            <h3>Group: </h3>
+            <h5>Group Interview Date: {{$slot->group_interview_start_time->toDateString()}} </h5>
+            <h5>Group Interview Time: {{$slot->group_interview_start_time->format('h:i A')}} - {{$slot->group_interview_end_time->format('h:i A')}}</h5>
             <div>Interviewer's Name:</div>
         </div>
         <div class="info-right">
