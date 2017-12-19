@@ -44,38 +44,26 @@
                     <div>
                         <div>
                             <p>
-                                <b>Sub: Invitation to participate in Step 4: Final Application & Interview Round of K-LYES Program 2018-19.</b>
+                                <b>Sub: Invitation to participate in Step 4: Final Application & Interview Round of K-L YES Program 2018-19.</b>
                             </p>
                             <p>
                                 Dear <b>{{$student->first_name}} {{$student->last_name}},</b>
                             </p>
                             <p>
-                                Congratulations! You have qualified in <b>ELTiS and In-Class Essay</b> of the <b>Kennedy Lugar Youth Exchange & Study Program</b> for <b>Academic Year 2018-2019</b>. We are delighted to invite you to participate in <b>Final Application & Interview Round</b> of the recruitment.
+                                Congratulations! You have qualified in <b>ELTiS and In-Class Essay</b> of <b>Kennedy Lugar Youth Exchange & Study Program</b> for <b>Academic Year 2018-2019</b>. We are delighted to invite you to participate in <b>Final Application & Interview Round</b> of the recruitment.
                             </p>
 
                             <p>
-                                Your YES program Final Application has been received and you have been to participate in the next phase, which is the <b>Group and Individual Interview</b>. The interview will be held at the <b>American Center</b>, Dhaka; Progati Sharoni, Plot 1, J-Block, Dhaka 1212.
+                                Your YES program Final Application has been received and you have been selected to participate in the next phase, which is the <b>Interview Round</b>. The interview will be held at the <b>American Center</b>, Dhaka; Progati Sharoni, Plot 1, J-Block, Dhaka 1212.
                             </p>
 
                             <p>
-                                You are requested to be present at the venue sharp at the time allocated for you. It is <b>absolutely mandatory</b> for one of your parents to be present with you on the day of your interview, please ensure the parent whose name you have provided, come with you to the interview. Parents and applicants are <b>required</b> to carry a photo ID (e.g. passport/ national ID/ Office ID or any ID that has photo and name) with them on the day of the interview. For security reasons, only the designated person mentioned in the online form will be allowed to enter.
+                                You and your parent, <b>{{$student->parent_for_interview}}</b> are requested to be present at the venue sharp on <b>{{$student->reporting_time()}}</b>. It is <b>absolutely mandatory</b> for {{$student->parent_for_interview}} to be present with you. Parents and applicants are <b>required</b> to carry a photo ID (e.g. passport/ national ID/ school ID  that has photo and name) with them on the day of the interview. For security reasons, only you and {{$student->parent_for_interview}} will be allowed to enter the venue.
                             </p>
 
                             <p>
                                 You <b>must</b> also bring all your <b>original supporting documents</b> (Birth certificate, Passport, Transcripts, Vaccination Records and Achievement Certificate) that you have submitted along with your Final Application for verification.
                             </p>
-
-                            <p>
-                                The time slot for your interview is as follows:
-                            </p>
-                            <p>
-                                <b>{{$student->finalInterviewTime()}}</b>
-                            </p>
-
-                            <p>
-                                <b>Your parent, {{$student->parent_for_interview}} will be attending the parent session. Parent will be required to display national id in the gate of the American Centre, Dhaka.</b>
-                            </p>
-
 
                         </div>
                     </div>
@@ -85,7 +73,7 @@
             <div>
                 <div style="width: 300px; display: inline-table">
                     <p>
-                        Good luck.
+                        Good luck!
                     </p>
                     {{--<img src="/images/ats/wasi.png"><br>--}}
                     <br><br>
