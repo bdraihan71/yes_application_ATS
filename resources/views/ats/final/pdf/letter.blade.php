@@ -83,7 +83,7 @@
                     in Bangladesh
                 </div>
                 <div style="width: 350px; display: inline-table" >
-                    Address of American Center, Dhaka<br>
+                    <b>Address of American Center, Dhaka</b><br>
                     Progati Sharoni, Plot 1,<br>
                     J-Block, Dhaka 1212<br>
                     <img width="350px" src="/images/ats/am_center_map.png">
