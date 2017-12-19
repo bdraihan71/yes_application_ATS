@@ -122,7 +122,7 @@
             <div style="width: 8%">{{empty($slot->getStudent_1)?"unassigned" :$slot->getStudent_1->applicant_id}}</div>
             <div style="width: 15%; overflow-wrap: break-word;">{{empty($slot->getStudent_1)?"unassigned" :$slot->getStudent_1->first_name}}</div>
             <div style="width: 5%"><img style="width: 90%" src="/images/ats/eltis_students/{{empty($slot->getStudent_1)?"unassigned" :$slot->getStudent_1->applicant_id}}.jpg"></div>
-            <div style="width: 6%">Score (0-5)</div>
+            <div style="width: 6%"></div>
             <div style="width: 32%"></div>
             <div style="width: 32%;"></div>
         </div>
@@ -130,7 +130,7 @@
             <div style="width: 8%">{{empty($slot->getStudent_2)?"unassigned" : $slot->getStudent_2->applicant_id}}</div>
             <div style="width: 15%; overflow-wrap: break-word;">{{empty($slot->getStudent_2)?"unassigned" : $slot->getStudent_2->first_name}}</div>
             <div style="width: 5%"><img style="width: 90%" src="/images/ats/eltis_students/{{empty($slot->getStudent_2)?"unassigned" : $slot->getStudent_2->applicant_id}}.jpg"></div>
-            <div style="width: 6%">Score (0-5)</div>
+            <div style="width: 6%"></div>
             <div style="width: 32%"></div>
             <div style="width: 32%"></div>
         </div>
@@ -138,7 +138,7 @@
             <div style="width: 8%">{{empty($slot->getStudent_3)?"unassigned" : $slot->getStudent_3->applicant_id}}</div>
             <div style="width: 15%; overflow-wrap: break-word;">{{empty($slot->getStudent_3)?"unassigned" : $slot->getStudent_3->first_name}}</div>
             <div style="width: 5%"><img style="width: 90%" src="/images/ats/eltis_students/{{empty($slot->getStudent_3)?"unassigned" : $slot->getStudent_3->applicant_id}}.jpg"></div>
-            <div style="width: 6%">Score (0-5)</div>
+            <div style="width: 6%"></div>
             <div style="width: 32%"></div>
             <div style="width: 32%;"></div>
         </div>
@@ -146,7 +146,7 @@
             <div style="width: 8%">{{empty($slot->getStudent_4)?"unassigned" : $slot->getStudent_4->applicant_id}}</div>
             <div style="width: 15%; overflow-wrap: break-word;">{{empty($slot->getStudent_4)?"unassigned" : $slot->getStudent_4->first_name}}</div>
             <div style="width: 5%"><img style="width: 90%" src="/images/ats/eltis_students/{{empty($slot->getStudent_4)?"unassigned" : $slot->getStudent_4->applicant_id}}.jpg"></div>
-            <div style="width: 6%">Score (0-5)</div>
+            <div style="width: 6%"></div>
             <div style="width: 32%"></div>
             <div style="width: 32%"></div>
         </div>
@@ -154,7 +154,7 @@
             <div style="width: 8%">{{empty($slot->getStudent_5)?"unassigned" : $slot->getStudent_5->applicant_id}}</div>
             <div style="width: 15%; overflow-wrap: break-word;">{{empty($slot->getStudent_5)?"unassigned" : $slot->getStudent_5->first_name}}</div>
             <div style="width: 5%"><img style="width: 90%" src="/images/ats/eltis_students/{{empty($slot->getStudent_5)?"unassigned" : $slot->getStudent_5->applicant_id}}.jpg"></div>
-            <div style="width: 6%">Score (0-5)</div>
+            <div style="width: 6%"></div>
             <div style="width: 32%"></div>
             <div style="width: 32%;"></div>
         </div>
@@ -162,7 +162,7 @@
             <div style="width: 8%">{{empty($slot->getStudent_6)?"unassigned" : $slot->getStudent_6->applicant_id}}</div>
             <div style="width: 15%; overflow-wrap: break-word;">{{empty($slot->getStudent_6)?"unassigned" : $slot->getStudent_6->first_name}}</div>
             <div style="width: 5%"><img style="width: 90%" src="/images/ats/eltis_students/{{empty($slot->getStudent_6)?"unassigned" : $slot->getStudent_6->applicant_id}}.jpg"></div>
-            <div style="width: 6%">Score (0-5)</div>
+            <div style="width: 6%"></div>
             <div style="width: 32%"></div>
             <div style="width: 32%"></div>
         </div>
