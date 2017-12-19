@@ -2,13 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\FinalInterviewDay;
+use App\Constant;
 use App\FinalInterviewSlot;
 use App\Student;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
-
-use App\Http\Requests;
 use Illuminate\Support\Facades\DB;
 
 class FinalApplicationController extends Controller
@@ -118,5 +116,16 @@ class FinalApplicationController extends Controller
         }
         $request->session()->flash('message', 'Parent name updated');
         return redirect()->back();
+    }
+
+    public function group(){
+        $slots = FinalInterviewSlot::all();
+        return view('ats.final.pdf.group', compact('slots'));
+    }
+
+    public function individual($interviewer){
+        $interviewer = Constant::where('key', "Individual Interviewer 1 ".$interviewer)->first()->value;
+        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',3)->orderBy('applicant_id')->get();
+        return view('ats.final.pdf.individual', compact('students','interviewer'));
     }
 }

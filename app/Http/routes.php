@@ -64,6 +64,9 @@ Route::post('/ats/final/parent', 'FinalApplicationController@processParent')->mi
 Route::get('/ats/final/invitation', 'FinalApplicationController@invitation')->middleware('auth');
 Route::get('/ats/final/interview-schedule', 'FinalApplicationController@interviewSchedule')->middleware('auth');
 Route::get('/ats/final/slot/{slot}', 'FinalApplicationController@showSlot')->middleware('auth');
+Route::get('/ats/final/group/score_sheet', 'FinalApplicationController@group')->middleware('auth');
+Route::get('/ats/final/individual/score_sheet/{interviewer}', 'FinalApplicationController@individual')->middleware('auth');
+
 
 Route::post('/ats/final/slot/{slot}/assign', 'FinalApplicationController@assign')->middleware('auth');
 

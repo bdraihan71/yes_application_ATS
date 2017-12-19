@@ -47,7 +47,7 @@ class Student extends Model
             ->orWhere('student_6', $this->id)->first();
 
         if($slot){
-            return "Reporting Time: " . $slot->reporting_time->toDateTimeString() . " End Time: " . $slot->individual_6_end_time->toTimeString() ;
+            return "Reporting Time: " . $slot->reporting_time->toDayDateTimeString() . " End Time: " . $slot->individual_6_end_time->format('h:i:s A') ;
         }else{
             return "No slot allocated";
         }
@@ -84,6 +84,21 @@ class Student extends Model
                 'score_account_id' => 1,
             ]);
             ActionLog::create(['action_id' => '12', 'action_by_user_id' => Auth::user()->id, 'action_on_student_id' => $this->id, 'content' => 'none']);
+        }
+    }
+
+    public function reporting_time(){
+        $slot = FinalInterviewSlot::where('student_1', $this->id)
+            ->orWhere('student_2', $this->id)
+            ->orWhere('student_3', $this->id)
+            ->orWhere('student_4', $this->id)
+            ->orWhere('student_5', $this->id)
+            ->orWhere('student_6', $this->id)->first();
+
+        if($slot){
+            return $slot->reporting_time->toDayDateTimeString();
+        }else{
+            return "No slot allocated";
         }
     }
 }

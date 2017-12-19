@@ -10,8 +10,10 @@
                 <li><a href="/ats/final/backup">Backup</a></li>
                 <li><a href="/ats/final/interview-schedule">Interview Scheduling</a></li>
                 <li><a href="/ats/final/registration">Registration</a></li>
-                <li><a href="/ats/final/letter">Group Interview Score Sheet</a></li>
-                <li><a href="/ats/final/letter">Individual Interview Score Sheet</a></li>
+                <li><a href="/ats/final/group/score_sheet">Group Interview Score Sheet</a></li>
+                <li><a href="/ats/final/individual/score_sheet/1">Individual Interview Score Sheet 1</a></li>
+                <li><a href="/ats/final/individual/score_sheet/2">Individual Interview Score Sheet 2</a></li>
+                <li><a href="/ats/final/individual/score_sheet/3">Individual Interview Score Sheet 3</a></li>
                 <li><a href="/ats/final/sit_sticker">Sit Sticker</a></li>
                 <li><a href="/ats/final/id_card">ID Card</a></li>
                 <li><a href="/ats/final/invitation">Invitation Letter</a></li>
