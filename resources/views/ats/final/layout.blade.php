@@ -14,11 +14,10 @@
                 <li><a href="/ats/final/individual/score_sheet/1">Individual Interview Score Sheet 1</a></li>
                 <li><a href="/ats/final/individual/score_sheet/2">Individual Interview Score Sheet 2</a></li>
                 <li><a href="/ats/final/individual/score_sheet/3">Individual Interview Score Sheet 3</a></li>
-                <li><a href="/ats/final/sit_sticker">Sit Sticker</a></li>
                 <li><a href="/ats/final/id_card">ID Card</a></li>
                 <li><a href="/ats/final/invitation">Invitation Letter</a></li>
                 <li><a href="/ats/final/parent">Parent</a></li>
-                <li><a href="#">Envelope</a></li>
+                <li><a href="/ats/final/envelope">Envelope</a></li>
                 <li><a href="#">Score Now!</a></li>
             </ul>
         </div>

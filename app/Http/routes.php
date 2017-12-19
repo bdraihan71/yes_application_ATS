@@ -61,7 +61,10 @@ Route::post('/ats/eltis/save_score', 'EltisController@processScore')->middleware
 Route::get('/ats/final', 'FinalApplicationController@home')->middleware('auth');
 Route::get('/ats/final/parent', 'FinalApplicationController@parent')->middleware('auth');
 Route::post('/ats/final/parent', 'FinalApplicationController@processParent')->middleware('auth');
+Route::get('/ats/final/envelope', 'FinalApplicationController@envelope')->middleware('auth');
+Route::get('/ats/final/id_card', 'FinalApplicationController@idcard')->middleware('auth');
 Route::get('/ats/final/invitation', 'FinalApplicationController@invitation')->middleware('auth');
+Route::get('/ats/final/registration', 'FinalApplicationController@registration')->middleware('auth');
 Route::get('/ats/final/interview-schedule', 'FinalApplicationController@interviewSchedule')->middleware('auth');
 Route::get('/ats/final/slot/{slot}', 'FinalApplicationController@showSlot')->middleware('auth');
 Route::get('/ats/final/group/score_sheet', 'FinalApplicationController@group')->middleware('auth');

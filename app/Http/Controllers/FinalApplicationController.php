@@ -124,8 +124,23 @@ class FinalApplicationController extends Controller
     }
 
     public function individual($interviewer){
-        $interviewer = Constant::where('key', "Individual Interviewer 1 ".$interviewer)->first()->value;
+        $interviewer = Constant::where('key', "Individual Interviewer ".$interviewer)->first()->value;
         $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',3)->orderBy('applicant_id')->get();
         return view('ats.final.pdf.individual', compact('students','interviewer'));
+    }
+
+    public function envelope(){
+        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',3)->orderBy('applicant_id')->get();
+        return view('ats.final.pdf.envelope', compact('students'));
+    }
+
+    public function idcard(){
+        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',3)->orderBy('applicant_id')->get();
+        return view('ats.final.pdf.idcard', compact('students'));
+    }
+
+    public function registration(){
+        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',3)->orderBy('applicant_id')->get();
+        return view('ats.final.pdf.registration', compact('students'));
     }
 }
