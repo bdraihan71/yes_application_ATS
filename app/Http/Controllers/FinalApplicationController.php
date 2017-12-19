@@ -143,4 +143,9 @@ class FinalApplicationController extends Controller
         $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',3)->orderBy('applicant_id')->get();
         return view('ats.final.pdf.registration', compact('students'));
     }
+
+    public function schedule(){
+        $slots = FinalInterviewSlot::all();
+        return view('ats.final.pdf.schedule', compact('slots'));
+    }
 }

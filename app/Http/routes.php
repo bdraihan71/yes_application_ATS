@@ -59,6 +59,7 @@ Route::post('/ats/eltis/save_score', 'EltisController@processScore')->middleware
 
 //final
 Route::get('/ats/final', 'FinalApplicationController@home')->middleware('auth');
+Route::get('/ats/final/schedule', 'FinalApplicationController@schedule')->middleware('auth');
 Route::get('/ats/final/parent', 'FinalApplicationController@parent')->middleware('auth');
 Route::post('/ats/final/parent', 'FinalApplicationController@processParent')->middleware('auth');
 Route::get('/ats/final/envelope', 'FinalApplicationController@envelope')->middleware('auth');
