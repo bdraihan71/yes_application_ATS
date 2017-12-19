@@ -83,10 +83,10 @@
     </div>
 
     <div class="information">
-        <div class="interviewer" style="font-size: 0.7em; float: left;width: 60%">Interviewer's Name:</div>
+        <div class="interviewer" style="font-size: 0.7em; float: left;width: 50%">Interviewer's Name:</div>
         <div class="student" style="font-size: 0.7em; float: left;width: 38%">Student's Information</div>
         <div style="clear: both"></div>
-        <div class="interviewer-name-post" style="float: left;width: 60%; font-size: 0.9em">{{$interviewer}}</div>
+        <div class="interviewer-name-post" style="float: left;width: 50%; font-size: 0.9em">{{$interviewer}}</div>
         <div class="student-info-img">
             <img  style="margin:2px; width: 60px;border: 1px solid black; float: left" src="/images/ats/eltis_students/{{$student->applicant_id}}.jpg">
             <div class="student-info" style="float: left;">
