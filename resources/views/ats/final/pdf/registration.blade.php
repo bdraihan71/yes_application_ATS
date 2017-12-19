@@ -58,7 +58,7 @@
             <h3>Kennedy Lugar Youth Exchange and Study (YES) Program</h3>
             <h4>Academic Year 2018-19</h4>
             <h3>Registration Sheet: Final Application & Interview Round</h3>
-            <p>Date: 7-9 January 2018</p>
+            <p>Date: 7,8 & 9 January 2018</p>
         </div>
         <img  style="width:100px; background-color: blue ; float: left" src="/images/ats/iearnbd_logo.png">
     </div>

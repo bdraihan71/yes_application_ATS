@@ -52,12 +52,16 @@
                 </div>
                 <div>
                     <h1 style="color: darkblue;">Final Application & Interview Round</h1>
-                    <h3>Friday, 08 December 2017</h3>
+                    <h3>7, 8 & 9 January 2018</h3>
                     <img width="100px" src="/images/ats/eltis_students/{{$student->applicant_id}}.jpg"><br>
                     <b>{{$student->first_name}} {{$student->last_name}}</b><br>
                     {{$student->schoolName}},
                     {{$student->district}}
                     <p id="app-id">Applicant ID: {{$student->applicant_id}}</p>
+                </div>
+                <div>
+                    <h3>Reporting Time:</h3>
+                    <p>{{$student->reporting_time()}}</p>
                 </div>
             </div>
 
