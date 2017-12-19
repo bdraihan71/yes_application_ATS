@@ -57,18 +57,23 @@ Route::get('/ats/eltis/score_now', 'EltisController@scoreNow')->middleware('auth
 Route::post('/ats/eltis/save_score', 'EltisController@processScore')->middleware('auth');
 
 
+//final
+Route::get('/ats/final', 'FinalApplicationController@home')->middleware('auth');
+Route::get('/ats/final/parent', 'FinalApplicationController@parent')->middleware('auth');
+Route::post('/ats/final/parent', 'FinalApplicationController@processParent')->middleware('auth');
+Route::get('/ats/final/invitation', 'FinalApplicationController@invitation')->middleware('auth');
+Route::get('/ats/final/interview-schedule', 'FinalApplicationController@interviewSchedule')->middleware('auth');
+Route::get('/ats/final/slot/{slot}', 'FinalApplicationController@showSlot')->middleware('auth');
+
+Route::post('/ats/final/slot/{slot}/assign', 'FinalApplicationController@assign')->middleware('auth');
+
+Route::post('/ats/final/add/slot', 'FinalApplicationController@addSlot')->middleware('auth');
+Route::post('/ats/final/delete/slot', 'FinalApplicationController@deleteSlot')->middleware('auth');
 
 //report
 Route::get('/ats/report/districtwise', 'ReportController@districtwise')->middleware('auth');
 Route::get('/ats/report/school', 'ReportController@school')->middleware('auth');
 Route::get('/ats/report/aggregated', 'ReportController@aggregated')->middleware('auth');
-
-
-
-
-
-
-
 
 
 

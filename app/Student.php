@@ -25,12 +25,31 @@ class Student extends Model
         return $value . ' ' .$this->middle_name . ' ';
     }
 
+    public function getFullInfo(){
+        return $this->first_name . ' ' . $this->last_name . ' (' . $this->sex . ') - ' . $this->schoolName . ' | ' .$this->district;
+    }
+
     public function getEltisScore(){
         $scoreSheet = ScoreSheet::where('stage_id', 3)->where('student_id', $this->id)->first();
         if($scoreSheet){
             return $scoreSheet->score;
         }else{
             return 0;
+        }
+    }
+
+    public function finalInterviewTime(){
+        $slot = FinalInterviewSlot::where('student_1', $this->id)
+            ->orWhere('student_2', $this->id)
+            ->orWhere('student_3', $this->id)
+            ->orWhere('student_4', $this->id)
+            ->orWhere('student_5', $this->id)
+            ->orWhere('student_6', $this->id)->first();
+
+        if($slot){
+            return "Reporting Time: " . $slot->reporting_time->toDateTimeString() . " End Time: " . $slot->individual_6_end_time->toTimeString() ;
+        }else{
+            return "No slot allocated";
         }
     }
 

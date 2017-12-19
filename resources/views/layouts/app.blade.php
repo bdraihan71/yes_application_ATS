@@ -17,6 +17,7 @@
 
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
 
+    @yield('head')
     <style>
         body {
             font-family: 'Lato';
@@ -62,6 +63,7 @@
                     <li><a href="{{ url('/ats/preliminary_application') }}">Preliminary Application</a></li>
                     <li><a href="{{ url('/ats/phone_interview') }}">Phone Interview</a></li>
                     <li><a href="{{ url('/ats/eltis') }}">Eltis</a></li>
+                    <li><a href="{{ url('/ats/final') }}">Final Application</a></li>
                     <li><a href="{{ url('/ats/report/districtwise') }}">Report</a></li>
                 </ul>
 
