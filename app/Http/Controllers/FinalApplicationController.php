@@ -148,4 +148,9 @@ class FinalApplicationController extends Controller
         $slots = FinalInterviewSlot::all();
         return view('ats.final.pdf.schedule', compact('slots'));
     }
+
+    public function parentQuestionnaire(){
+        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',3)->orderBy('applicant_id')->get();
+        return view('ats.final.pdf.parentQuestionnaire', compact('students'));
+    }
 }
