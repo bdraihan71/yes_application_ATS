@@ -47,24 +47,22 @@
         }
     </style>
 
-    @php
-        $count = 0;
-    @endphp
+    @foreach($slots as $slot)
 
-    <div style="height: 1in; width: 100%;">
-        <img src="/images/ats/yes_logo.png"  style="margin-top:13px; width:10% ; float: left">
-        <div style="margin-top:15px; width: 700px; text-align: center; float: left">
+        <div style="height: 1in; width: 100%;">
+            <img src="/images/ats/yes_logo.png"  style="margin-top:13px; width:10% ; float: left">
+            <div style="margin-top:15px; width: 400px; text-align: center; float: left">
 
-            <h3>Kennedy Lugar Youth Exchange and Study (YES) Program</h3>
-            <h4>Academic Year 2018-19</h4>
-            <h3>Interview Schedule</h3>
-            <p>Date: 7,8 & 9 January 2018</p>
+                <h3>Kennedy Lugar Youth Exchange and Study (YES) Program</h3>
+                <h4>Academic Year 2018-19</h4>
+            </div>
+            <img  style="width:100px; background-color: blue ; float: left" src="/images/ats/iearnbd_logo.png">
         </div>
-        <img  style="width:100px; background-color: blue ; float: left" src="/images/ats/iearnbd_logo.png">
-    </div>
 
 
-    <div style="clear: left">
+        <h2>{{$slot->reporting_time->format('d-M-Y')}}</h2>
+        <h3>Reporting Time: {{$slot->reporting_time->format('g:i A')}}</h3>
+        <h4>Group Interview Time: {{$slot->group_interview_start_time->format('g:i A')}} - {{$slot->group_interview_end_time->format('g:i A')}}</h4>
         <table border="1" cellspacing="0">
             <tr>
                 <td>Applicant ID</td>
@@ -72,15 +70,9 @@
                 <td>Name of Parent</td>
                 <td>School/College</td>
                 <td>District</td>
-                <td>Reporting Time</td>
-                <td>Group Interview Start</td>
-                <td>Group Interview End</td>
                 <td>Individual Interview Start</td>
                 <td>Individual Interview End</td>
             </tr>
-    </div>
-
-    @foreach($slots as $slot)
         @if(!empty($slot->getStudent_1))
             <tr>
             <td>{{$slot->getStudent_1->applicant_id}}</td>
@@ -88,9 +80,6 @@
             <td>{{$slot->getStudent_1->parent_for_interview}}</td>
             <td>{{$slot->getStudent_1->schoolName}}</td>
             <td>{{$slot->getStudent_1->district}}</td>
-            <td>{{$slot->getStudent_1->reporting_time()}}</td>
-            <td>{{$slot->group_interview_start_time->format('g:i A')}}</td>
-            <td>{{$slot->group_interview_end_time->format('g:i A')}}</td>
             <td>{{$slot->individual_1_start_time->format('g:i A')}}</td>
             <td>{{$slot->individual_1_end_time->format('g:i A')}}</td>
         </tr>
@@ -102,9 +91,6 @@
             <td>{{$slot->getStudent_2->parent_for_interview}}</td>
             <td>{{$slot->getStudent_2->schoolName}}</td>
             <td>{{$slot->getStudent_2->district}}</td>
-            <td>{{$slot->getStudent_2->reporting_time()}}</td>
-            <td>{{$slot->group_interview_start_time->format('g:i A')}}</td>
-            <td>{{$slot->group_interview_end_time->format('g:i A')}}</td>
             <td>{{$slot->individual_2_start_time->format('g:i A')}}</td>
             <td>{{$slot->individual_2_end_time->format('g:i A')}}</td>
         </tr>
@@ -116,9 +102,6 @@
             <td>{{$slot->getStudent_3->parent_for_interview}}</td>
             <td>{{$slot->getStudent_3->schoolName}}</td>
             <td>{{$slot->getStudent_3->district}}</td>
-            <td>{{$slot->getStudent_3->reporting_time()}}</td>
-            <td>{{$slot->group_interview_start_time->format('g:i A')}}</td>
-            <td>{{$slot->group_interview_end_time->format('g:i A')}}</td>
             <td>{{$slot->individual_3_start_time->format('g:i A')}}</td>
             <td>{{$slot->individual_3_end_time->format('g:i A')}}</td>
         </tr>
@@ -130,9 +113,6 @@
             <td>{{$slot->getStudent_4->parent_for_interview}}</td>
             <td>{{$slot->getStudent_4->schoolName}}</td>
             <td>{{$slot->getStudent_4->district}}</td>
-            <td>{{$slot->getStudent_4->reporting_time()}}</td>
-            <td>{{$slot->group_interview_start_time->format('g:i A')}}</td>
-            <td>{{$slot->group_interview_end_time->format('g:i A')}}</td>
             <td>{{$slot->individual_4_start_time->format('g:i A')}}</td>
             <td>{{$slot->individual_4_end_time->format('g:i A')}}</td>
         </tr>
@@ -144,9 +124,6 @@
             <td>{{$slot->getStudent_5->parent_for_interview}}</td>
             <td>{{$slot->getStudent_5->schoolName}}</td>
             <td>{{$slot->getStudent_5->district}}</td>
-            <td>{{$slot->getStudent_5->reporting_time()}}</td>
-            <td>{{$slot->group_interview_start_time->format('g:i A')}}</td>
-            <td>{{$slot->group_interview_end_time->format('g:i A')}}</td>
             <td>{{$slot->individual_5_start_time->format('g:i A')}}</td>
             <td>{{$slot->individual_5_end_time->format('g:i A')}}</td>
         </tr>
@@ -158,13 +135,13 @@
             <td>{{$slot->getStudent_6->parent_for_interview}}</td>
             <td>{{$slot->getStudent_6->schoolName}}</td>
             <td>{{$slot->getStudent_6->district}}</td>
-            <td>{{$slot->getStudent_6->reporting_time()}}</td>
-            <td>{{$slot->group_interview_start_time->format('g:i A')}}</td>
-            <td>{{$slot->group_interview_end_time->format('g:i A')}}</td>
             <td>{{$slot->individual_6_start_time->format('g:i A')}}</td>
             <td>{{$slot->individual_6_end_time->format('g:i A')}}</td>
         </tr>
         @endif
+
+        </table>
+        <div class="page-break"></div>
     @endforeach
     </body>
     </table>

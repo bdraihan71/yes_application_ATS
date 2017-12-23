@@ -10,6 +10,7 @@
                 <li><a href="/ats/final/backup">Backup</a></li>
                 <li><a href="/ats/final/interview-schedule">Interview Scheduling</a></li>
                 <li><a href="/ats/final/schedule">Schedule</a></li>
+                <li><a href="/ats/final/schedule-group">Schedule Group</a></li>
                 <li><a href="/ats/final/registration">Registration</a></li>
                 <li><a href="/ats/final/group/score_sheet">Group Interview Score Sheet</a></li>
                 <li><a href="/ats/final/individual/score_sheet/1">Individual Interview Score Sheet 1</a></li>
