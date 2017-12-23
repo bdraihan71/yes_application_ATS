@@ -51,7 +51,7 @@
 
         <div style="height: 1in; width: 100%;">
             <img src="/images/ats/yes_logo.png"  style="margin-top:13px; width:10% ; float: left">
-            <div style="margin-top:15px; width: 400px; text-align: center; float: left">
+            <div style="margin-top:15px; width: 500px; text-align: center; float: left">
 
                 <h3>Kennedy Lugar Youth Exchange and Study (YES) Program</h3>
                 <h4>Academic Year 2018-19</h4>
