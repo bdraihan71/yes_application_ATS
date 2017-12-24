@@ -8,6 +8,7 @@ use App\Student;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Maatwebsite\Excel\Facades\Excel;
 
 class FinalApplicationController extends Controller
 {
@@ -157,5 +158,22 @@ class FinalApplicationController extends Controller
     public function scheduleGroup(){
         $slots = FinalInterviewSlot::orderBy('reporting_time')->get();
         return view('ats.final.pdf.scheduleGroup', compact('slots'));
+    }
+
+    public function security(){
+
+        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',3)->orderBy('applicant_id')->get();
+
+
+        Excel::create('Filename', function ($excel) use ( $students) {
+
+            $excel->sheet('Sheetname', function ($sheet) use ( $students) {
+
+                $sheet->loadView('ats.final.excel.security', compact('students'));
+            });
+
+        })->download('xls');
+
+        return redirect()->back();
     }
 }

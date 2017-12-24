@@ -8,6 +8,7 @@
                 <li><a href="/ats/final/">Stacks</a></li>
                 <li><a href="#">Get Publishable Result</a></li>
                 <li><a href="/ats/final/backup">Backup</a></li>
+                <li><a href="/ats/final/security">Security</a></li>
                 <li><a href="/ats/final/interview-schedule">Interview Scheduling</a></li>
                 <li><a href="/ats/final/schedule">Schedule</a></li>
                 <li><a href="/ats/final/schedule-group">Schedule Group</a></li>
