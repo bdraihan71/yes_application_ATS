@@ -59,25 +59,46 @@ Route::post('/ats/eltis/save_score', 'EltisController@processScore')->middleware
 
 //final
 Route::get('/ats/final', 'FinalApplicationController@home')->middleware('auth');
-Route::get('/ats/final/schedule', 'FinalApplicationController@schedule')->middleware('auth');
-Route::get('/ats/final/schedule-group', 'FinalApplicationController@scheduleGroup')->middleware('auth');
-Route::get('/ats/final/parent', 'FinalApplicationController@parent')->middleware('auth');
-Route::post('/ats/final/parent', 'FinalApplicationController@processParent')->middleware('auth');
-Route::get('/ats/final/envelope', 'FinalApplicationController@envelope')->middleware('auth');
-Route::get('/ats/final/id_card', 'FinalApplicationController@idcard')->middleware('auth');
-Route::get('/ats/final/invitation', 'FinalApplicationController@invitation')->middleware('auth');
-Route::get('/ats/final/registration', 'FinalApplicationController@registration')->middleware('auth');
-Route::get('/ats/final/interview-schedule', 'FinalApplicationController@interviewSchedule')->middleware('auth');
-Route::get('/ats/final/slot/{slot}', 'FinalApplicationController@showSlot')->middleware('auth');
-Route::get('/ats/final/group/score_sheet', 'FinalApplicationController@group')->middleware('auth');
-Route::get('/ats/final/individual/score_sheet/{interviewer}', 'FinalApplicationController@individual')->middleware('auth');
-Route::get('/ats/final/parent_questionnaire', 'FinalApplicationController@parentQuestionnaire')->middleware('auth');
-Route::get('/ats/final/security', 'FinalApplicationController@security')->middleware('auth');
 
-Route::post('/ats/final/slot/{slot}/assign', 'FinalApplicationController@assign')->middleware('auth');
+Route::get('/ats/final/score-sheet', 'FinalApplicationController@scoreSheet')->middleware('auth');
+Route::post('/ats/final/score-sheet', 'FinalApplicationController@processScoreSheet')->middleware('auth');
 
-Route::post('/ats/final/add/slot', 'FinalApplicationController@addSlot')->middleware('auth');
-Route::post('/ats/final/delete/slot', 'FinalApplicationController@deleteSlot')->middleware('auth');
+
+
+
+
+
+//final interview
+Route::get('/ats/final-interview', 'FinalInterviewController@home')->middleware('auth');
+Route::get('/ats/final-interview/schedule', 'FinalInterviewController@schedule')->middleware('auth');
+Route::get('/ats/final-interview/schedule-group', 'FinalInterviewController@scheduleGroup')->middleware('auth');
+Route::get('/ats/final-interview/parent', 'FinalInterviewController@parent')->middleware('auth');
+Route::post('/ats/final-interview/parent', 'FinalInterviewController@processParent')->middleware('auth');
+Route::get('/ats/final-interview/envelope', 'FinalInterviewController@envelope')->middleware('auth');
+Route::get('/ats/final-interview/id_card', 'FinalInterviewController@idcard')->middleware('auth');
+Route::get('/ats/final-interview/parent_id_card', 'FinalInterviewController@parentIdcard')->middleware('auth');
+Route::get('/ats/final-interview/invitation', 'FinalInterviewController@invitation')->middleware('auth');
+Route::get('/ats/final-interview/registration', 'FinalInterviewController@registration')->middleware('auth');
+Route::get('/ats/final-interview/interview-schedule', 'FinalInterviewController@interviewSchedule')->middleware('auth');
+Route::get('/ats/final-interview/slot/{slot}', 'FinalInterviewController@showSlot')->middleware('auth');
+Route::get('/ats/final-interview/group/score_sheet', 'FinalInterviewController@group')->middleware('auth');
+Route::get('/ats/final-interview/individual/score_sheet/{interviewer}', 'FinalInterviewController@individual')->middleware('auth');
+Route::get('/ats/final-interview/parent_questionnaire', 'FinalInterviewController@parentQuestionnaire')->middleware('auth');
+Route::get('/ats/final-interview/security', 'FinalInterviewController@security')->middleware('auth');
+
+Route::post('/ats/final-interview/slot/{slot}/assign', 'FinalInterviewController@assign')->middleware('auth');
+
+Route::post('/ats/final-interview/add/slot', 'FinalInterviewController@addSlot')->middleware('auth');
+Route::post('/ats/final-interview/delete/slot', 'FinalInterviewController@deleteSlot')->middleware('auth');
+
+Route::get('/ats/final-interview/contact', 'FinalInterviewController@contactInformationGroup')->middleware('auth');
+
+Route::get('/ats/final-interview/hfletter-scoresheet', 'FinalInterviewController@hfletterScoresheet')->middleware('auth');
+Route::get('/ats/final-interview/teacher-recommendation-scoresheet', 'FinalInterviewController@teacherRecommendationScoresheet')->middleware('auth');
+Route::get('/ats/final-interview/activity-achievement-scoresheet', 'FinalInterviewController@activityAchievementScoresheet')->middleware('auth');
+Route::get('/ats/final-interview/overall-appraisal-scoresheet', 'FinalInterviewController@overallAppraisalScoresheet')->middleware('auth');
+
+
 
 //report
 Route::get('/ats/report/districtwise', 'ReportController@districtwise')->middleware('auth');

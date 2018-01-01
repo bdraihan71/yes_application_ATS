@@ -1,4 +1,4 @@
-@extends('ats.final.layout')
+@extends('ats.final-interview.layout')
 
 <!-- Main Content -->
 @section('final_content')

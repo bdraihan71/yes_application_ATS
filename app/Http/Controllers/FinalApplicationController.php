@@ -28,152 +28,25 @@ class FinalApplicationController extends Controller
         return view('ats.final.home', compact('students_passed', 'students_failed', 'not_scored', 'not_scored_count'));
     }
 
-    public function interviewSchedule(){
-        $final_interview_slots = FinalInterviewSlot::all();
-        return view('ats.final.interview-schedule', compact('final_interview_slots'));
+
+
+    public function scoreSheet(){
+        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',3)->orderBy('applicant_id')->get();
+        return view('ats.final.score-sheet', compact('students'));
     }
 
-    public function addSlot(Request $request){
-        $format = "yyyy-mm-ddThh:mm";
-        $reporting_time = new Carbon($request->datetime);
-        FinalInterviewSlot::create([
-            'reporting_time' => $reporting_time->format('Y-m-d H:i:s'),
-            'group_interview_start_time' => $reporting_time->addMinute(20)->format('Y-m-d H:i:s'),
-            'group_interview_end_time' => $reporting_time->addMinutes(30)->format('Y-m-d H:i:s'),
-            'individual_1_start_time' => $reporting_time->addMinutes(20)->format('Y-m-d H:i:s'),
-            'individual_1_end_time' => $reporting_time->addMinutes(10)->format('Y-m-d H:i:s'),
-            'individual_2_start_time' => $reporting_time->format('Y-m-d H:i:s'),
-            'individual_2_end_time' => $reporting_time->addMinutes(10)->format('Y-m-d H:i:s'),
-            'individual_3_start_time' => $reporting_time->format('Y-m-d H:i:s'),
-            'individual_3_end_time' => $reporting_time->addMinutes(10)->format('Y-m-d H:i:s'),
-            'individual_4_start_time' => $reporting_time->format('Y-m-d H:i:s'),
-            'individual_4_end_time' => $reporting_time->addMinutes(10)->format('Y-m-d H:i:s'),
-            'individual_5_start_time' => $reporting_time->format('Y-m-d H:i:s'),
-            'individual_5_end_time' => $reporting_time->addMinutes(10)->format('Y-m-d H:i:s'),
-            'individual_6_start_time' => $reporting_time->format('Y-m-d H:i:s'),
-            'individual_6_end_time' => $reporting_time->addMinutes(10)->format('Y-m-d H:i:s'),
-        ]);
-        $request->session()->flash('message', 'Final interview slot created');
-        return redirect()->back();
-    }
-
-    public function deleteSlot(Request $request){
-        FinalInterviewSlot::find($request->slot_id)->delete();
-
-        $request->session()->flash('message', 'Final interview slot deleted');
-        return redirect()->back();
-    }
-
-    public function showSlot(Request $request, FinalInterviewSlot $slot){
-        $students1 = FinalInterviewSlot::pluck('student_1')->toArray();
-        $students2 = FinalInterviewSlot::pluck('student_2')->toArray();
-        $students3 = FinalInterviewSlot::pluck('student_3')->toArray();
-        $students4 = FinalInterviewSlot::pluck('student_4')->toArray();
-        $students5 = FinalInterviewSlot::pluck('student_5')->toArray();
-        $students6 = FinalInterviewSlot::pluck('student_6')->toArray();
-
-        $students_id = array_merge($students1, $students2, $students3, $students4, $students5, $students6);
-        $students_id = array_filter($students_id);
-        $students = Student::where('stage', 4 )
-            ->whereNotIn('id', $students_id)->orderBy('first_name')
-            ->get();
-        return view('ats.final.slot.show', compact('slot', 'students'));
-    }
-
-    public function assign(Request $request, FinalInterviewSlot $slot){
-        $values = array_values($request->all());
-        $d = [];
-        foreach ($values as $value){
-            if($value == "0"){
-
-            }else{
-                array_push($d, $value);
-            }
+    public function processScoreSheet(Request $request){
+        $students = Student::whereIn('stage', [4,5])->get();
+        foreach($students as $student){
+           if($request[$student->id]==4){
+               $student->stage= 4;
+           }else{
+               $student->stage = 5;
+           }
+           $student->save();
         }
-        if(count(array_unique($d)) != count($d)){
-            $request->session()->flash('message', 'Sorry, You assigned one person in two time frame');
-            return redirect()->back();
-        }
-        $slot->update($request->all());
-        $request->session()->flash('message', 'Slot Updated.');
+        $request->session()->flash('message', 'Updated!');
         return redirect()->back();
     }
 
-    public function invitation(){
-        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',3)->orderBy('applicant_id')->get();
-        return view('ats.final.pdf.letter', compact('students'));
-    }
-
-    public function parent(){
-        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',3)->orderBy('first_name')->get();
-        return view('ats.final.parent', compact('students'));
-    }
-
-    public function processParent(Request $request){
-        foreach ($request->parent as $key=>$value){
-            $student = Student::find($key);
-            $student->parent_for_interview = $value;
-            $student->save();
-        }
-        $request->session()->flash('message', 'Parent name updated');
-        return redirect()->back();
-    }
-
-    public function group(){
-        $slots = FinalInterviewSlot::all();
-        return view('ats.final.pdf.group', compact('slots'));
-    }
-
-    public function individual($interviewer){
-        $interviewer = Constant::where('key', "Individual Interviewer ".$interviewer)->first()->value;
-        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',3)->orderBy('applicant_id')->get();
-        return view('ats.final.pdf.individual', compact('students','interviewer'));
-    }
-
-    public function envelope(){
-        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',3)->orderBy('applicant_id')->get();
-        return view('ats.final.pdf.envelope', compact('students'));
-    }
-
-    public function idcard(){
-        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',3)->orderBy('applicant_id')->get();
-        return view('ats.final.pdf.idcard', compact('students'));
-    }
-
-    public function registration(){
-        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',3)->orderBy('applicant_id')->get();
-        return view('ats.final.pdf.registration', compact('students'));
-    }
-
-    public function schedule(){
-        $slots = FinalInterviewSlot::all();
-        return view('ats.final.pdf.schedule', compact('slots'));
-    }
-
-    public function parentQuestionnaire(){
-        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',3)->orderBy('applicant_id')->get();
-        return view('ats.final.pdf.parentQuestionnaire', compact('students'));
-    }
-
-    public function scheduleGroup(){
-        $slots = FinalInterviewSlot::orderBy('reporting_time')->get();
-        return view('ats.final.pdf.scheduleGroup', compact('slots'));
-    }
-
-    public function security(){
-
-        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',3)->orderBy('applicant_id')->get();
-
-
-        Excel::create('Filename', function ($excel) use ( $students) {
-
-            $excel->sheet('Sheetname', function ($sheet) use ( $students) {
-
-                $sheet->loadView('ats.final.excel.security', compact('students'));
-            });
-
-        })->download('xls');
-
-        return redirect()->back();
-    }
 }
