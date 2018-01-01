@@ -68,8 +68,10 @@
     <div class="col" style="width: 9%;">Applicant ID</div>
     <div class="col" style="width: 9%; ">Name</div>
     <div class="col" style="width: 9%; ">Image</div>
-    <div class="col" style="width: 18%; ">Score</div>
-    <div class="col" style="width: 31%; ">Remark</div>
+    <div class="col" style="width: 9%; ">Activity</div>
+    <div class="col" style="width: 9%; ">Achievement</div>
+    <div class="col" style="width: 11%; ">Overall Impression</div>
+    <div class="col" style="width: 20%; ">Remark</div>
     <div class="col" style="width: 14%; ">Signature</div>
 </div>
 
@@ -80,8 +82,9 @@
         <div class="col" style="width: 9%; text-align: center;">
             <img  width="64px" src="/images/ats/eltis_students/{{$student->applicant_id}}.jpg">
         </div>
-        <div class="col" style="width: 18%; "></div>
-        <div class="col" style="width: 31%; "></div>
+        <div class="col" style="width: 9%; "></div>
+        <div class="col" style="width: 11%; "></div>
+        <div class="col" style="width: 20%; "></div>
         <div class="col" style="width: 14%; "></div>
     </div>
 
