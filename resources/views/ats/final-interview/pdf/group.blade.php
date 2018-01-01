@@ -83,7 +83,7 @@
 <div class="student">
     <div id="header">
         <div class="header-img">
-            <img src="/images/ats/iearnbd_logo.png" height="80" width="80">
+            <img src="/images/ats/yes_logo.png" height="80" width="80">
         </div>
         <div id="heading">
             <h4>International Education and Resource Network – Bangladesh (iEARN-BD)</h4>
@@ -91,7 +91,7 @@
             <h3>Group Interview Score Sheet</h3>
         </div>
         <div class="header-img">
-            <img src="/images/ats/yes_logo.png" height="80" width="80">
+            <img src="/images/ats/iearnbd_logo.png" height="80" width="80">
         </div>
     </div>
     <div style="clear: both;"></div>
