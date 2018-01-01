@@ -101,6 +101,17 @@
             </div>
             <img  style="width:100px; background-color: blue ; float: left" src="/images/ats/iearnbd_logo.png">
         </div>
+
+
+        <div style="clear: left">
+            <div class="col" style="width: 9%;">Applicant ID</div>
+            <div class="col" style="width: 9%; ">Name</div>
+            <div class="col" style="width: 9%; ">Image</div>
+            <div class="col" style="width: 18%; ">Score</div>
+            <div class="col" style="width: 31%; ">Remark</div>
+            <div class="col" style="width: 14%; ">Signature</div>
+        </div>
+
         @php
             $count = 0;
         @endphp
