@@ -56,15 +56,13 @@
                     {{--<img width="100px" src="/images/ats/eltis_students/{{$student->applicant_id}}.jpg"><br>--}}
                     <br>
                     <h2>{{$student->parent_for_interview}}</h2>
-                    <p>Parent of</p>
-                    <b>{{$student->first_name}} {{$student->last_name}}</b><br>
+                    <b>Parent of {{$student->first_name}} {{$student->last_name}}</b><br>
                     {{$student->schoolName}},
                     {{$student->district}}
                     <p id="app-id">Applicant ID: {{$student->applicant_id}}</p>
                 </div>
                 <div>
-                    <h3>Reporting Time:</h3>
-                    <p>{{$student->reporting_time()}}</p>
+                    <p>Reporting Time: {{$student->reporting_time()}}</p>
                 </div>
             </div>
 
