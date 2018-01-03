@@ -39,7 +39,7 @@
 
         @foreach($students as $student)
 
-            <div style="border:1px solid black; height: 718px; width: 320px; float: left;">
+            <div style="border:1px solid black; height: 700px; width: 340px; float: left;">
                 <div>
                     <br>
                     <img src="/images/ats/dos_logo.png" class="logo" width="75px">
