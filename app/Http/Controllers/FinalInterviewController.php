@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Constant;
 use App\FinalInterviewSlot;
 use App\Student;
+use PDF;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -205,5 +206,29 @@ class FinalInterviewController extends Controller
     public function overallAppraisalScoresheet(){
         $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',4)->orderBy('applicant_id')->get();
         return view('ats.final-interview.pdf.overall-appraisal-scoresheet', compact('students'));
+    }
+
+    public function publish(){
+        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>', 4)->orderBy('first_name')->get();
+
+        $pdf = PDF::loadView('ats.final-interview.pdf.result', compact('students'));
+
+        return $pdf->download(env('AKASH_PDF_FINAL_RESULT_NAME'));
+
+    }
+
+    public function scoreSheet(){
+        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',4)->orderBy('applicant_id')->get();
+        return view('ats.final-interview.score-sheet', compact('students'));
+    }
+
+    public function processScoreSheet(Request $request){
+        $students = Student::whereIn('stage', [5, 6, 7])->get();
+        foreach($students as $student){
+            $student->stage = $request[$student->id];
+            $student->save();
+        }
+        $request->session()->flash('message', 'Updated!');
+        return redirect()->back();
     }
 }

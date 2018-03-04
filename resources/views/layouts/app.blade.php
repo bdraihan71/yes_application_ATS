@@ -65,6 +65,7 @@
                     <li><a href="{{ url('/ats/eltis') }}">Eltis</a></li>
                     <li><a href="{{ url('/ats/final') }}">Final Application</a></li>
                     <li><a href="{{ url('/ats/final-interview') }}">Final Interview</a></li>
+                    <li><a href="{{ url('/ats/finalist') }}">Finalist</a></li>
                     <li><a href="{{ url('/ats/report/districtwise') }}">Report</a></li>
                 </ul>
 

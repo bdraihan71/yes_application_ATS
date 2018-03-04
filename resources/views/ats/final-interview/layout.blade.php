@@ -6,7 +6,7 @@
         <div class="col-md-2">
             <ul class="nav nav-pills nav-stacked">
                 <li><a href="/ats/final-interview/">Stacks</a></li>
-                <li><a href="#">Get Publishable Result</a></li>
+                <li><a href="/ats/final-interview/result/publish">Get Publishable Result</a></li>
                 <li><a href="/ats/final-interview/backup">Backup</a></li>
                 <li><a href="/ats/final-interview/security">Security</a></li>
                 <li><a href="/ats/final-interview/interview-schedule">Interview Scheduling</a></li>

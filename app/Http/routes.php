@@ -97,7 +97,16 @@ Route::get('/ats/final-interview/hfletter-scoresheet', 'FinalInterviewController
 Route::get('/ats/final-interview/teacher-recommendation-scoresheet', 'FinalInterviewController@teacherRecommendationScoresheet')->middleware('auth');
 Route::get('/ats/final-interview/activity-achievement-scoresheet', 'FinalInterviewController@activityAchievementScoresheet')->middleware('auth');
 Route::get('/ats/final-interview/overall-appraisal-scoresheet', 'FinalInterviewController@overallAppraisalScoresheet')->middleware('auth');
+Route::get('/ats/final-interview/result/publish', 'FinalInterviewController@publish')->middleware('auth');
 
+
+Route::get('/ats/final-interview/score-sheet', 'FinalInterviewController@scoreSheet')->middleware('auth');
+Route::post('/ats/final-interview/score-sheet', 'FinalInterviewController@processScoreSheet')->middleware('auth');
+
+//Finalist
+Route::get('/ats/finalist', 'FinalistController@home')->middleware('auth');
+Route::get('/ats/finalist/envelope', 'FinalistController@envelope')->middleware('auth');
+Route::get('/ats/finalist/letter', 'FinalistController@letter')->middleware('auth');
 
 
 //report
