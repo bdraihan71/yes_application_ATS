@@ -10,7 +10,7 @@
             @foreach($students as $student)
                 <tr>
                     <td>{{$student->applicant_id}}</td>
-                    <td>{{$student->first_name}} {!! !empty($student->middle_name)?$student->middle_name:'' !!} {{$student->last_name}}</td>
+                    <td>{{$student->first_name}} {{$student->last_name}}</td>
                     <td>{{$student->schoolName}}</td>
                     @if($student->stage == 7)
                         <td>Finalist</td>
