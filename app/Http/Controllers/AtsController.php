@@ -76,6 +76,7 @@ class AtsController extends Controller
 
     public function processStage(Request $request, $batch, $account, $stage)
     {
+        
         if ($stage == 1) {
             if ($request->score == null) {
                 $criterion = Criteria::where('stage_id', 1)->get();

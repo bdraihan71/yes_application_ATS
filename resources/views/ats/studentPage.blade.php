@@ -59,7 +59,7 @@
                                                 @endphp
                                                 <td><input class="big-checkbox" name="score[{{$criteria->id}}]" type="checkbox" {!!$score?"checked":"unchecked"!!}></td>
                                             @endforeach
-                                                <td><button class="btn btn-xs" type="submit" disabled>Save</button></td>
+                                                <td><button class="btn btn-xs" type="submit" >Save</button></td>
                                         </tr>
                                     </form>
                                     </tbody>
@@ -126,7 +126,7 @@
                                     </table>
                                 </div>
                                     <input type="checkbox" name="is_access_student" {!! $student->is_access_student == true? "checked":""!!}> Applicant is an access student.
-                                    <button class="pull-right btn btn-primary btn-xl" type="submit" disabled>Save</button>
+                                    <button class="pull-right btn btn-primary btn-xl" type="submit" >Save</button>
                                 </form>
                             </div>
 
