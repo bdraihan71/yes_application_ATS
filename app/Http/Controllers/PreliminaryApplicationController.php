@@ -126,10 +126,11 @@ class PreliminaryApplicationController extends Controller
     }
 
     public function syncScore(Request $request){
-        $students = Student::all();
+        $students = Student::where('stage_id', '<', 4);
         foreach ($students as $student){
             $score_sheet = ScoreSheet::where('student_id', $student->id)->orderBy('created_at', 'desc')->first();
-            if($score_sheet->has_passed==0 || $score_sheet->has_withdrawn ==1) {
+            
+            if($score_sheet->has_passed== 0 || $score_sheet->has_withdrawn ==1) {
                 $student->stage = $score_sheet->stage_id;
             }else if ($score_sheet->has_passed==1 && $score_sheet->has_withdrawn ==0){
                 $student->stage = $score_sheet->stage_id+1;
@@ -138,7 +139,6 @@ class PreliminaryApplicationController extends Controller
             }
             $student->save();
         }
-
         $request->session()->flash('message', 'All score synced!');
         return redirect()->back();
     }

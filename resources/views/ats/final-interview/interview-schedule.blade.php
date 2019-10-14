@@ -9,7 +9,7 @@
                     <h4>Add Slot</h4>
                 </div>
                 <div class="panel-body">
-                    <form action="/ats/final/add/slot" method="post">
+                    <form action="/ats/final-interview/add/slot" method="post">
                         {{csrf_field()}}
                         <label>Reporting Time:</label>
                         <input class="form-control" type="datetime-local" name="datetime" value="2018-01-07T08:40"><br>
@@ -43,12 +43,12 @@
                 <td>{{$slot->individual_1_start_time->toTimeString()}}</td>
                 <td>{{$slot->individual_6_end_time->toTimeString()}}</td>
                 <td>
-                    <form method="post" action="/ats/final/delete/slot">
+                    <form method="post" action="/ats/final-interview/delete/slot">
                         {{csrf_field()}}
                         <input type="hidden" name="slot_id" value="{{$slot->id}}">
                         <button type="submit">Delete</button>
                     </form>
-                    <a href="/ats/final/slot/{{$slot->id}}">Assign</a>
+                    <a href="/ats/final-interview/slot/{{$slot->id}}">Assign</a>
                 </td>
             </tr>
         @if(!empty($slot->getStudent_1))

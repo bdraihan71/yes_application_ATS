@@ -9,7 +9,7 @@
                 Reporting time: {{$slot->reporting_time->toTimeString()}}<br>
                 Group Interview Time Start: {{$slot->group_interview_start_time->toTimeString()}}<br>
                 Group Interview Time End: {{$slot->group_interview_end_time->toTimeString()}}<br>
-                <form method="post" action="/ats/final/slot/{{$slot->id}}/assign">
+                <form method="post" action="/ats/final-interview/slot/{{$slot->id}}/assign">
                     {{csrf_field()}}
                     Individual {{$slot->individual_1_start_time->toTimeString()}} - {{$slot->individual_1_end_time->toTimeString()}}
                     <select name="student_1">
