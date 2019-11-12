@@ -11,7 +11,14 @@
 |
 */
 
-Route::get('/', 'HomeController@formPage');
+// Route::get('/', 'HomeController@formPage');
+Route::get('/', function () {
+    if(Auth::check()) {
+        return redirect('ats/preliminary_application');
+    } else {
+        return view('auth.login');
+    }
+});
 
 Route::auth();
 
