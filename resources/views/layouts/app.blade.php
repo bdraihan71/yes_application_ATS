@@ -59,7 +59,7 @@
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    <li><a href="#">Online Application Dashboard</a></li>
+                    <li><a target="_blank" href="http://ec2-13-250-121-37.ap-southeast-1.compute.amazonaws.com/">Online Application Dashboard</a></li>
                     <li><a href="{{ url('/ats/preliminary_application') }}">Preliminary Application</a></li>
                     <li><a href="{{ url('/ats/phone_interview') }}">Phone Interview</a></li>
                     <li><a href="{{ url('/ats/eltis') }}">Eltis</a></li>
