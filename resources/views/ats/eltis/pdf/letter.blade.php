@@ -50,7 +50,7 @@
                                 Dear <b>{{$student->first_name}} {{$student->last_name}},</b>
                             </p>
                             <p>
-                                Congratulations! You have successfully completed the <b>Phone Interview</b> round of the recruitment of <b>Kennedy Lugar Youth Exchange & Study Program</b> for the academic year  <b> 2018-19.</b> We are delighted to invite you to participate in <b>English Language Test for International Students (ELTiS) and In-Class Essay</b> round of the recruitment.
+                                Congratulations! You have successfully completed the <b>Phone Interview</b> round of the recruitment of <b>Kennedy Lugar Youth Exchange & Study Program</b> for the academic year  <b> 2020-21.</b> We are delighted to invite you to participate in <b>English Language Test for International Students (ELTiS) and In-Class Essay</b> round of the recruitment.
                             </p>
                             <p>
                                 The ELTiS & In-Class Essay Examination will be held on <b>Friday, 8 December 2017</b> in exam hall of <b>FutureEd</b>, Ahmed Tower (6th Floor), 28 & 30 Kamal Ataturk Avenue, Banani, Dhaka-1213. If you need any assistance to locate venue, please feel free to contact us.

@@ -56,7 +56,7 @@
         <div style="margin-top:15px; width: 495px; text-align: center; float: left">
 
             <h3>Kennedy Lugar Youth Exchange and Study (YES) Program</h3>
-            <h4>Academic Year 2018-19</h4>
+            <h4>Academic Year 2020-21</h4>
             <h3>Score Sheet: Host Family Letter</h3>
             <p></p>
         </div>
@@ -95,7 +95,7 @@
                 <div style="margin-top:15px; width: 495px; text-align: center; float: left">
 
                     <h3>Kennedy Lugar Youth Exchange and Study (YES) Program</h3>
-                    <h4>Academic Year 2018-19</h4>
+                    <h4>Academic Year 2020-21</h4>
                     <h3>Score Sheet: Host Family Letter</h3>
                     <p></p>
                 </div>

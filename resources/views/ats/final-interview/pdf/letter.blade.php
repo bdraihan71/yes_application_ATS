@@ -44,7 +44,7 @@
                     <div>
                         <div>
                             <p>
-                                <b>Sub: Invitation to participate in Step 4: Final Application & Interview Round of K-L YES Program 2018-19.</b>
+                                <b>Sub: Invitation to participate in Step 4: Final Application & Interview Round of K-L YES Program 2020-21.</b>
                             </p>
                             <p>
                                 Dear <b>{{$student->first_name}} {{$student->last_name}},</b>

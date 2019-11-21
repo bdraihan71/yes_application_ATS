@@ -16,7 +16,7 @@
     <div style="margin-top:15px; width: 495px; text-align: center; float: left">
 
         <h3>Kennedy Lugar Youth Exchange and Study (YES) Program</h3>
-        <h4>Academic Year 2018-19</h4>
+        <h4>Academic Year 2020-21</h4>
         <h3>Score Sheet: ELTiS & In-Class Essay Round</h3>
         <p>Date: 08-12-2017</p>
     </div>
@@ -33,7 +33,7 @@
     {{--<div id="heading">--}}
 
         {{--<h3>Kennedy Lugar Youth Exchange and Study (YES) Program</h3>--}}
-        {{--<h3>Academic Year 2018-19</h3>--}}
+        {{--<h3>Academic Year 2020-21</h3>--}}
         {{--<h3>Score Sheet: ELTiS & In-Class Essay Round</h3>--}}
         {{--<p>Date: 08-12-2017</p>--}}
     {{--</div>--}}
