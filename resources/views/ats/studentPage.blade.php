@@ -182,41 +182,49 @@
             <div class="row">
                 <div class="panel panel-default">
                     <div class="panel-heading">Student Information</div>
-                    <div class="panel-body">
+                    <div class="panel-body bg-info">
                         <img src="{{$student->photo}}">
-                        <h2>Application ID: {{$student->applicant_id}}</h2>
-                        <h4>ID: {{$student->id}}</h4>
-                        <h4>Status: {{$student->status}}</h4>
+                        <h2 class="bg-white">Application ID: {{$student->applicant_id}}</h2>
+                        <h4 class="bg-white">ID: {{$student->id}}</h4>
+                        <h4 class="bg-white">Status: {{$student->status}}</h4>
 
                         <div class="sub-field">
-                            <h3 class="heading">Personal Information</h3>
-                            <h4>Applicant Name: {{$student->first_name}} {{$student->middle_name}} {{$student->last_name}}</h4>
-                            <table>
-                                <tr>
+                            <h3 class="heading bg-white">Personal Information</h3>
+                            <h4 class="bg-white">Applicant Name: {{$student->first_name}} {{$student->middle_name}} {{$student->last_name}}</h4>
+                            <table class="table">
+                                <tr class="bg-white">
                                     <th>Date of birth:</th>
                                     <td>{{$student->date_of_birth}}</td>
+                                </tr>
+                                <tr class="bg-white">
                                     <th>Age on 1st of August, 2018: </th>
                                     <td>{{$student->ageOnFirstAugust}}</td>
                                 </tr>
 
-                                <tr>
+                                <tr class="bg-white">
                                     <th>Citizenship: </th>
                                     <td>{{$student->citizenship}}</td>
+                                </tr>
+                                <tr class="bg-white">
                                     <th>Birth Certificate: </th>
                                     <td>{{$student->birthCertificate}}</td>
                                 </tr>
 
-                                <tr>
+                                <tr class="bg-white">
                                     <th>Gender: </th>
                                     <td>{{$student->sex}}</td>
+                                </tr>
+                                <tr class="bg-white">
                                     <th>Facebook URL: </th>
                                     <td>{{$student->facebookURL}}</td>
 
                                 </tr>
 
-                                <tr>
+                                <tr class="bg-white">
                                     <th>Twitter URL: </th>
                                     <td>{{$student->twitterHandle}}</td>
+                                </tr>
+                                <tr class="bg-white">
                                     <th>Instagram ID: </th>
                                     <td>{{$student->instagramID}}</td>
                                 </tr>
@@ -224,32 +232,31 @@
                         </div>
 
                         <div class="sub-field">
-                            <h3 class="heading">Contact Information</h3>
+                            <h3 class="heading bg-white">Contact Information</h3>
 
-                            <table>
-                                <tr>
+                            <table class="table">
+                                <tr class="bg-white">
                                     <th>Contact Number: </th>
                                     <td>{{$student->contact}}</td>
+                                </tr>
+                                <tr class="bg-white">
                                     <th>District: </th>
                                     <td>{{$student->district}}</td>
                                 </tr>
-                            </table>
 
-                            <table>
-                                <tr>
+                                <tr class="bg-white">
                                     <th>Thana: </th>
                                     <td>{{$student->thana}}</td>
+                                </tr>
+                                <tr class="bg-white">
                                     <th>Postal Code: </th>
                                     <td>{{$student->postalCode}}</td>
                                 </tr>
-                            </table>
-
-                            <table>
-                                <tr>
+                                <tr class="bg-white">
                                     <th>Email address: </th>
                                     <td class="address-field">{{$student->email}}</td>
                                 </tr>
-                                <tr>
+                                <tr class="bg-white">
                                     <th>Address: </th>
                                     <td class="address-field">{{$student->address}}</td>
                                 </tr>
@@ -257,38 +264,47 @@
                         </div>
 
                         <div class="sub-field">
-                            <h3 class="heading">Academic Information</h3>
+                            <h3 class="heading bg-white">Academic Information</h3>
 
-                            <table class="academic-info">
-                                <tr>
+                            <table class="academic-info table">
+                                <tr class="bg-white">
                                     <th>Current Grade: </th>
                                     <td>{{$student->classCurrentlyStudying}}</td>
+                                </tr>
+                                <tr class="bg-white">
                                     <th>Grade in 2016-2017: </th>
                                     <td>{{$student->classStudiedIn20152016}}</td>
+                                </tr>
+                                <tr class="bg-white">
                                     <th>Grade in 2015-2016: </th>
                                     <td>{{$student->classStudiedIn20142015}}</td>
                                 </tr>
-                            </table>
-
-                            <table class="academic-info">
-                                <tr>
+                                <tr class="bg-white">
                                     <th>Percentage marks(2017-18): </th>
                                     <td>{{$student->currentPercentageMarks}}</td>
+                                </tr>
+                                <tr class="bg-white">
                                     <th>Percentage marks(2016-17): </th>
                                     <td>{{$student->percentageMarksIn20152016}}</td>
+                                </tr>
+                                <tr class="bg-white">
                                     <th>Percentage marks(2015-16): </th>
                                     <td>{{$student->percentageMarksIn20142015}}</td>
                                 </tr>
                             </table>
 
-                            <h4>Transcripts:</h4>
+                            <h4 class="bg-white">Transcripts:</h4>
 
-                            <table class="academic-info">
-                                <tr>
+                            <table class="academic-info table">
+                                <tr class="bg-white">
                                     <th>Current year transcript:</th>
                                     <td><a href="{{$student->transcriptCurrent}}">{{$student->classCurrentlyStudying}}</a></td>
+                                </tr>
+                                <tr class="bg-white">
                                     <th>Transcript of 2016-2017:</th>
                                     <td><a href="{{$student->transcript2015}}">{{$student->classStudiedIn20152016}}</a></td>
+                                </tr>
+                                <tr class="bg-white">
                                     <th>Transcript of 2015-2016:</th>
                                     <td><a href="{{$student->transcript2014}}">{{$student->classStudiedIn20142015}}</a></td>
                                 </tr>
@@ -296,17 +312,19 @@
                         </div>
 
                         <div class="sub-field">
-                            <h3 class="heading">School Information</h3>
+                            <h3 class="heading bg-white">School Information</h3>
 
-                            <table>
-                                <tr>
+                            <table class="table">
+                                <tr class="bg-white">
                                     <th class="school-field-name">School Name: </th>
                                     <td class="school-address-field">{{$student->schoolName}}</td>
+                                </tr>
+                                <tr class="bg-white">
                                     <th class="school-field-name">School's phone number: </th>
                                     <td>{{$student->schoolPhone}}</td>
                                 </tr>
 
-                                <tr>
+                                <tr class="bg-white">
                                     <th class="school-field-name">School's address: </th>
                                     <td class="school-address-field">{{$student->schoolAddress}}</td>
                                 </tr>
@@ -314,49 +332,45 @@
                         </div>
 
                         <div class="sub-field">
-                            <h3 class="heading">Parents' Information</h3>
+                            <h3 class="heading bg-white">Parents' Information</h3>
 
-                            <table>
-                                <tr>
-
+                            <table class="parent-info-table table">
+                                <tr class="bg-white">
                                     <th class="parent-info">Father's Information</th>
+                                    <td></td>
                                     <th class="parent-info">Mother's Information</th>
-
+                                    <td></td>
                                 </tr>
 
-                            </table>
-
-                            <table class="parent-info-table">
-
-                                <tr>
+                                <tr class="bg-white">
                                     <th>Name: </th>
                                     <td>{{$student->fatherFirstName}} {{$student->fatherMiddleName}} {{$student->fatherLastName}}</td>
                                     <th>Name: </th>
                                     <td>{{$student->motherFirstName}} {{$student->motherMiddleName}} {{$student->motherLastName}}</td>
                                 </tr>
 
-                                <tr>
+                                <tr class="bg-white">
                                     <th>Phone Number: </th>
                                     <td>{{$student->fatherContact}}</td>
                                     <th>Phone Number: </th>
                                     <td>{{$student->motherContact}}</td>
                                 </tr>
 
-                                <tr>
+                                <tr class="bg-white">
                                     <th>Email address: </th>
                                     <td>{{$student->fatherEmailID}}</td>
                                     <th>Email address: </th>
                                     <td>{{$student->motherEmailID}}</td>
                                 </tr>
 
-                                <tr>
+                                <tr class="bg-white">
                                     <th>Office phone: </th>
                                     <td>{{$student->fatherOfficePhone}}</td>
                                     <th>Office phone: </th>
                                     <td>{{$student->motherOfficePhone}}</td>
                                 </tr>
 
-                                <tr>
+                                <tr class="bg-white">
                                     <th>Occupation: </th>
                                     <td>{{$student->fatherOccupation}}</td>
                                     <th>Occupation: </th>
@@ -366,15 +380,15 @@
                         </div>
 
                         <div class="sub-field">
-                            <h3 class="heading">Essay Write Ups</h3>
+                            <h3 class="heading bg-white">Essay Write Ups</h3>
 
-                            <table>
-                                <tr>
+                            <table class="table">
+                                <tr class="bg-white">
                                     <th class="parent-info">Write up about community service</th>
                                     <th class="parent-info">Write up about "yourself"</th>
                                 </tr>
 
-                                <tr>
+                                <tr class="bg-white">
                                     <td class="parent-info">{{$student->about_community_work}}</td>
                                     <td class="parent-info">{{$student->about_yourself}}</td>
                                 </tr>
@@ -382,58 +396,68 @@
                         </div>
 
                         <div class="sub-field">
-                            <h3 class="heading">Travel Information</h3>
+                            <h3 class="heading bg-white">Travel Information</h3>
 
-                            <table>
-                                <tr>
+                            <table class="table">
+                                <tr class="bg-white">
                                     <th>US visit: </th>
                                     <td>{{$student->visitedUS5}}</td>
+                                </tr>
+                                <tr class="bg-white">
                                     <th>Stay duration: </th>
                                     <td>{{$student->visitedUS5HowLong}}</td>
                                 </tr>
 
-                                <tr>
+                                <tr class="bg-white">
                                     <th>Purpose of visit: </th>
                                     <td>{{$student->visitedUS5Purpose}}</td>
+                                </tr>
+                                <tr class="bg-white">
                                     <th>Visit place and time: </th>
                                     <td>{{$student->visitedUS5WhenAndWhere}}</td>
                                 </tr>
 
-                                <tr>
+                                <tr class="bg-white">
                                     <th>Green Card holder in family: </th>
                                     <td>{{$student->familyGreenCard}}</td>
+                                </tr>
+                                <tr class="bg-white">
                                     <th>Family immigration status: </th>
                                     <td>{{$student->familyImmigration}}</td>
                                 </tr>
 
-                                <tr>
+                                <tr class="bg-white">
                                     <th>Family in US: </th>
                                     <td>{{$student->familyLivingInUSA}}</td>
+                                </tr>
+                                <tr class="bg-white">
                                     <th>Holds US visa: </th>
                                     <td>{{$student->holdUSVisa}}</td>
                                 </tr>
 
-                                <tr>
+                                <tr class="bg-white">
                                     <th>Visa expiration: </th>
                                     <td>{{$student->holdUSVisaExpiry}}</td>
                                 </tr>
                             </table>
 
-                            <table>
-                                <tr>
+                            <table class="table">
+                                <tr class="bg-white">
                                     <th>Relative in US: </th>
                                     <td>{{$student->relativesLivingInUSA}}</td>
+                                </tr>
+                                <tr class="bg-white">
                                     <th>State of residence: </th>
                                     <td>{{$student->relativesLivingInUSAState}}</td>
                                 </tr>
                             </table>
                         </div>
 
-                        <h4 class="heading">Additional Note</h4>
-                        <p>{{$student->note}}</p>
+                        <h4 class="heading bg-white">Additional Note</h4>
+                        <p class="bg-white">{{$student->note}}</p>
 
-                        <div align="right">Created on: {{$student->created_at}}</div>
-                        <div align="right">Last updated on: {{$student->updated_at}}</div>
+                        <div align="right" class="bg-white mb-2">Created on: {{$student->created_at}}</div>
+                        <div align="right" class="bg-white">Last updated on: {{$student->updated_at}}</div>
                     </div>
 
                 </div>
