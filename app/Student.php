@@ -101,4 +101,8 @@ class Student extends Model
             return "No slot allocated";
         }
     }
+
+    public function scoresheets(){
+        return $this->hasMany('App\ScoreSheet');
+    }
 }
