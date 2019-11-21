@@ -233,7 +233,7 @@ class AtsController extends Controller
         }
 
         $student->save();
-        $request->session()->flash('message', 'Phone Interview Score Saved!');
+        $request->session()->flash('message', 'Preliminary Application Information saved!');
 
         return redirect()->back() ;
     }
