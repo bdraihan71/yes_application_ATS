@@ -13,6 +13,8 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/css/style.css">
 {{--     <link href="{{ elixir('css/app.css') }}" rel="stylesheet">--}}
 
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
@@ -67,6 +69,7 @@
                     <li><a href="{{ url('/ats/final-interview') }}">Final Interview</a></li>
                     <li><a href="{{ url('/ats/finalist') }}">Finalist</a></li>
                     <li><a href="{{ url('/ats/report/districtwise') }}">Report</a></li>
+                    <li><a href="{{ url('/api/sync/all') }}"><span class="sync-btn">Sync</span></a></li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->
