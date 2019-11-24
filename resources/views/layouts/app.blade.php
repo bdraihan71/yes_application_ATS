@@ -60,6 +60,7 @@
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
+                @if(Auth::check())
                 <ul class="nav navbar-nav">
                     <li><a target="_blank" href="http://ec2-13-250-121-37.ap-southeast-1.compute.amazonaws.com/">Online Application Dashboard</a></li>
                     <li><a href="{{ url('/ats/preliminary_application') }}">Preliminary Application</a></li>
@@ -71,6 +72,7 @@
                     <li><a href="{{ url('/ats/report/districtwise') }}">Report</a></li>
                     <li><a href="{{ url('/api/sync/all') }}"><span class="sync-btn">Sync</span></a></li>
                 </ul>
+                @endif
 
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
