@@ -211,7 +211,8 @@
                                 </tr>
                                 <tr class="bg-white">
                                     <th>Birth Certificate: </th>
-                                    <td>{{$student->birthCertificate}}</td>
+                                    <img src="{{$student->birthCertificate}}">
+                                    {{-- <td>{{$student->birthCertificate}}</td> --}}
                                 </tr>
 
                                 <tr class="bg-white">
