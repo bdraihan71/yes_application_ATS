@@ -16,7 +16,7 @@
 
                     <div class="row">
                         <div class="col-md-1">
-                            <img  width="64px" src="/images/ats/eltis_students/{{$student->applicant_id}}.jpg">
+                            <img  width="64px" src="{{$student->photo}}">
                         </div>
                         <div class="col-md-2">
                            <a target="_blank" href="/ats/student/{{$student->id}}/account/1"> <h3>{{$student->applicant_id}}</h3></a>
