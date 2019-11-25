@@ -127,6 +127,18 @@ class ApiController extends Controller
                 $student->mother_income = $output['guardian']['mother_income'];
 
 
+                //school info
+                $student->schoolName = $output['school']['name'];
+                $student->schoolPhone = $output['school']['phone'];
+                $student->schoolAddress = $output['school']['street'];
+                $student->school_district = $output['school']['district'];
+                $student->school_postal = $output['school']['postal'];
+                $student->school_thana = $output['school']['thana'];
+                $student->school_principle = $output['school']['principle'];
+                $student->school_p_phone = $output['school']['p_phone'];
+
+
+
 
                 $student->application_file_id = $output['application']['location'];
                 // $student->school_type = $output[''];
@@ -141,6 +153,7 @@ class ApiController extends Controller
                 //$student->classStudiedIn20162017 = $output['academic']['previous'];
                 $student->currentPercentageMarks = $output['academic']['current_marks'];
                 
+
                
                 
                 // $student->familyGreenCard = $output[''];
@@ -159,10 +172,7 @@ class ApiController extends Controller
                 // $student->note = $output[''];
                 // $student->relativesLivingInUSA = $output[''];
                 // $student->relativesLivingInUSAState = $output[''];
-                $student->schoolAddress = $output['school']['street'];
-                $student->schoolName = $output['school']['name'];
                 // $student->created_at = $output[''];
-                // $student->schoolPhone = $output[''];
                 // $student->status = $output[''];
                 // $student->transcript2015 = $output[''];
                 // $student->fatherNameOfWorkplace = $output[''];
