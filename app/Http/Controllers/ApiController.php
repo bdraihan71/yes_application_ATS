@@ -165,6 +165,22 @@ class ApiController extends Controller
                 $student->question_other = $output['question']['other'];
 
 
+                //academic info
+                $student->classCurrentlyStudying = $output['academic']['current'];
+                $student->class_study_previous = $output['academic']['previous'];
+                $student->class_study_prior = $output['academic']['prior'];
+                $student->currentPercentageMarks = $output['academic']['current_marks'];
+                $student->percentageMarks_previous_marks = $output['academic']['previous_marks'];
+                $student->percentageMarks_prior_marks = $output['academic']['prior_marks'];
+                $student->transcriptCurrent = $output['academic']['current_transcript'];
+                $student->transcript_previous_transcript = $output['academic']['previous_transcript'];
+                $student->transcript_prior_transcript = $output['academic']['prior_transcript'];
+
+
+                //$student->classStudiedIn20162017 = $output['academic'];
+                //$student->classStudiedIn20162017 = $output['academic']['previous'];
+
+
 
 
                 // $student->visitedUS5WhenAndWhere = $output[''];
@@ -177,12 +193,7 @@ class ApiController extends Controller
                 // $student->aboutYourself = $output[''];
                 // $student->ageOnFirstAugust = $output[''];
                 $student->applicant_id = $output['id'];
-                $student->classCurrentlyStudying = $output['academic']['current'];
-                //$student->classStudiedIn20152016 = $output['academic'];
-                //$student->classStudiedIn20152016 = $output['academic']['prior];
-                //$student->classStudiedIn20162017 = $output['academic'];
-                //$student->classStudiedIn20162017 = $output['academic']['previous'];
-                $student->currentPercentageMarks = $output['academic']['current_marks'];
+               
                 
                 // $student->fatherLastName = $output[''];
                 // $student->fatherMiddleName = $output[''];
@@ -191,17 +202,13 @@ class ApiController extends Controller
              // $student->middle_name = $output[''];
                 // $student->motherLastName = $output[''];
                 // $student->motherMiddleName = $output[''];
-                // $student->percentageMarksIn20152016 = $output[''];
-                // $student->percentageMarksIn20162017 = $output[''];
+                
                 // $student->note = $output[''];
                 
                 // $student->created_at = $output[''];
                 // $student->status = $output[''];
-                // $student->transcript2015 = $output[''];
                 // $student->fatherNameOfWorkplace = $output[''];
                 // $student->motherNameOfWorkplace = $output[''];
-                // $student->transcript2016 = $output[''];
-                $student->transcriptCurrent = $output['academic']['current_transcript'];
                 
                 // $student->motherOfficePhone = $output[''];
                 // $student->updated_at = $output[''];
