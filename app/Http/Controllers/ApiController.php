@@ -138,6 +138,25 @@ class ApiController extends Controller
                 $student->school_p_phone = $output['school']['p_phone'];
 
 
+                //travel info
+                $student->visitedUS5 = $output['travel']['us_visit'];
+                $student->us_location = $output['travel']['location'];
+                $student->visitedUS5Purpose = $output['travel']['purpose'];
+                $student->visitedUS5HowLong = $output['travel']['duration'];
+                $student->familyImmigration = $output['travel']['immigration'];
+                $student->familyGreenCard = $output['travel']['green_card'];
+                $student->familyLivingInUSA = $output['travel']['living'];
+                $student->relativesLivingInUSA = $output['travel']['relative_living'];
+                $student->relativesLivingInUSAState = $output['travel']['relative_state'];
+                $student->holdUSVisa = $output['travel']['has_visa'];
+                $student->holdUSVisaExpiry = $output['travel']['expires_on'];
+                $student->us_other_visit = $output['travel']['other_visit'];
+                $student->us_other_visit_names = $output['travel']['names'];
+                $student->relative_participant = $output['travel']['relative_participant'];
+                $student->participant_details = $output['travel']['participant_details'];
+
+                // $student->visitedUS5WhenAndWhere = $output[''];
+
 
 
                 $student->application_file_id = $output['application']['location'];
@@ -153,25 +172,17 @@ class ApiController extends Controller
                 //$student->classStudiedIn20162017 = $output['academic']['previous'];
                 $student->currentPercentageMarks = $output['academic']['current_marks'];
                 
-
-               
-                
-                // $student->familyGreenCard = $output[''];
-                // $student->familyImmigration = $output[''];
-                // $student->familyLivingInUSA = $output[''];
                 // $student->fatherLastName = $output[''];
                 // $student->fatherMiddleName = $output[''];
                 // $student->fatherOfficePhone = $output[''];
-                // $student->holdUSVisa = $output[''];
-                // $student->holdUSVisaExpiry = $output[''];
+                
              // $student->middle_name = $output[''];
                 // $student->motherLastName = $output[''];
                 // $student->motherMiddleName = $output[''];
                 // $student->percentageMarksIn20152016 = $output[''];
                 // $student->percentageMarksIn20162017 = $output[''];
                 // $student->note = $output[''];
-                // $student->relativesLivingInUSA = $output[''];
-                // $student->relativesLivingInUSAState = $output[''];
+                
                 // $student->created_at = $output[''];
                 // $student->status = $output[''];
                 // $student->transcript2015 = $output[''];
@@ -179,10 +190,7 @@ class ApiController extends Controller
                 // $student->motherNameOfWorkplace = $output[''];
                 // $student->transcript2016 = $output[''];
                 $student->transcriptCurrent = $output['academic']['current_transcript'];
-                // $student->visitedUS5 = $output[''];
-                $student->visitedUS5HowLong = $output['travel']['duration'];
-                $student->visitedUS5Purpose = $output['travel']['purpose'];
-                // $student->visitedUS5WhenAndWhere = $output[''];
+                
                 // $student->motherOfficePhone = $output[''];
                 // $student->updated_at = $output[''];
                 // $student->parent_for_interview = $output[''];
