@@ -84,68 +84,91 @@ class ApiController extends Controller
                 //$student = Student::create($output);
                 $student = new Student;
 
+                //student info
                 $student->first_name = $output['f_name'];
-                $student->application_file_id = $output['application']['location'];
+                $student->last_name = $output['l_name'];
+                $student->email = $output['email'];
+                $student->date_of_birth = $output['student']['dob'];
+                $student->citizenship = $output['student']['citizenship'];
+                $student->other_citizenship = $output['student']['other_citizenship'];
+                $student->disability = $output['student']['disability'];
+                $student->explanation = $output['student']['explanation'];
+                $student->disability_description = $output['student']['disability_description'];
+                $student->sex = $output['student']['gender'];
+                $student->contact = $output['student']['phone'];
+                $student->address = $output['student']['street'];
                 $student->district = $output['student']['district'];
+                $student->postalCode = $output['student']['postal'];
+                $student->thana = $output['student']['thana'];
+                $student->passport_no = $output['student']['passport_no'];
+                $student->passport_expiry = $output['student']['expiry'];
+                $student->photo = $output['student']['photo'];
+                $student->birthCertificate = $output['student']['certification'];
+                $student->passport_image = $output['student']['passport'];
+                $student->birth_place = $output['student']['birth_place'];
+                $student->facebookURL = $output['student']['fb'];
+                $student->twitterHandle = $output['student']['twitter'];
+                $student->instagramID = $output['student']['instagram'];
+
+
+                //guardian info
+                $student->father_present = $output['guardian']['father_present'];
+                $student->fatherFirstName = $output['guardian']['father_name'];
+                $student->fatherContact = $output['guardian']['father_phone'];
+                $student->fatherEmailID = $output['guardian']['father_email'];
+                $student->fatherOccupation = $output['guardian']['father_occupation'];
+                $student->father_income = $output['guardian']['father_income'];
+                $student->mother_present = $output['guardian']['mother_present'];
+                $student->motherFirstName = $output['guardian']['mother_name'];
+                $student->motherContact = $output['guardian']['mother_phone'];
+                $student->motherEmailID = $output['guardian']['mother_email'];
+                $student->motherOccupation = $output['guardian']['mother_occupation'];
+                $student->mother_nid = $output['guardian']['mother_nid'];
+                $student->mother_income = $output['guardian']['mother_income'];
+
+
+
+                $student->application_file_id = $output['application']['location'];
                 // $student->school_type = $output[''];
                 $student->aboutCommunityWork = $output['question']['community'];
                 // $student->aboutYourself = $output[''];
-                $student->address = $output['student']['street'];
                 // $student->ageOnFirstAugust = $output[''];
                 $student->applicant_id = $output['id'];
-                $student->birthCertificate = $output['student']['certification'];
-                $student->citizenship = $output['student']['citizenship'];
                 $student->classCurrentlyStudying = $output['academic']['current'];
                 //$student->classStudiedIn20152016 = $output['academic'];
                 //$student->classStudiedIn20152016 = $output['academic']['prior];
                 //$student->classStudiedIn20162017 = $output['academic'];
                 //$student->classStudiedIn20162017 = $output['academic']['previous'];
-                $student->contact = $output['student']['phone'];
                 $student->currentPercentageMarks = $output['academic']['current_marks'];
-                $student->date_of_birth = $output['student']['dob'];
-                $student->email = $output['email'];
-                $student->facebookURL = $output['student']['fb'];
+                
+               
+                
                 // $student->familyGreenCard = $output[''];
                 // $student->familyImmigration = $output[''];
                 // $student->familyLivingInUSA = $output[''];
-                $student->fatherContact = $output['guardian']['father_phone'];
-                $student->fatherEmailID = $output['guardian']['father_email'];
-                $student->fatherFirstName = $output['guardian']['father_name'];
                 // $student->fatherLastName = $output[''];
                 // $student->fatherMiddleName = $output[''];
-                $student->fatherOccupation = $output['guardian']['father_occupation'];
                 // $student->fatherOfficePhone = $output[''];
                 // $student->holdUSVisa = $output[''];
                 // $student->holdUSVisaExpiry = $output[''];
-                $student->instagramID = $output['student']['instagram'];
-                // $student->last_name = $output[''];
-                // $student->middle_name = $output[''];
-                $student->motherContact = $output['guardian']['mother_phone'];
-                $student->motherEmailID = $output['guardian']['mother_email'];
-                $student->motherFirstName = $output['guardian']['mother_name'];
+             // $student->middle_name = $output[''];
                 // $student->motherLastName = $output[''];
                 // $student->motherMiddleName = $output[''];
-                $student->motherOccupation = $output['guardian']['mother_occupation'];
                 // $student->percentageMarksIn20152016 = $output[''];
                 // $student->percentageMarksIn20162017 = $output[''];
-                $student->photo = $output['student']['photo'];
                 // $student->note = $output[''];
-                $student->postalCode = $output['student']['postal'];
                 // $student->relativesLivingInUSA = $output[''];
                 // $student->relativesLivingInUSAState = $output[''];
                 $student->schoolAddress = $output['school']['street'];
                 $student->schoolName = $output['school']['name'];
                 // $student->created_at = $output[''];
                 // $student->schoolPhone = $output[''];
-                $student->sex = $output['student']['gender'];
                 // $student->status = $output[''];
-                $student->thana = $output['student']['thana'];
                 // $student->transcript2015 = $output[''];
                 // $student->fatherNameOfWorkplace = $output[''];
                 // $student->motherNameOfWorkplace = $output[''];
                 // $student->transcript2016 = $output[''];
                 $student->transcriptCurrent = $output['academic']['current_transcript'];
-                $student->twitterHandle = $output['student']['twitter'];
                 // $student->visitedUS5 = $output[''];
                 $student->visitedUS5HowLong = $output['travel']['duration'];
                 $student->visitedUS5Purpose = $output['travel']['purpose'];
