@@ -155,6 +155,18 @@ class ApiController extends Controller
                 $student->relative_participant = $output['travel']['relative_participant'];
                 $student->participant_details = $output['travel']['participant_details'];
 
+
+                //question info
+                $student->question_reason = $output['question']['reason'];
+                $student->question_culture = $output['question']['culture'];
+                $student->question_community = $output['question']['community'];
+                $student->question_mental = $output['question']['mental'];
+                $student->question_promotion = $output['question']['promotion'];
+                $student->question_other = $output['question']['other'];
+
+
+
+
                 // $student->visitedUS5WhenAndWhere = $output[''];
 
 
