@@ -187,11 +187,12 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Student Information</div>
                     <div class="panel-body bg-info">
-                        <img src="{{$student->photo}}">
+                        <h3 class="bg-white">Student Image:</h3>
+                        <img src="{{$student->photo}}" width="700px">
                         <h2 class="bg-white">Application ID: {{$student->applicant_id}}</h2>
                         <h4 class="bg-white">ID: {{$student->id}}</h4>
-                        <h4 class="bg-white">Status: {{$student->status}}</h4>
-
+                        {{-- <h4 class="bg-white">Status: {{$student->status}}</h4> --}}
+                        
                         <div class="sub-field">
                             <h3 class="heading bg-white">Personal Information</h3>
                             <h4 class="bg-white">Applicant Name: {{$student->first_name}} {{$student->middle_name}} {{$student->last_name}}</h4>
@@ -201,8 +202,14 @@
                                     <td>{{$student->date_of_birth}}</td>
                                 </tr>
                                 <tr class="bg-white">
-                                    <th>Age on 1st of August, 2018: </th>
-                                    <td>{{$student->ageOnFirstAugust}}</td>
+                                    <th>Age on 1st of August, 2020: </th>
+                                    <?php
+                                        $date1=date_create("2020-8-1");
+                                        $date2=date_create("$student->date_of_birth");
+                                        $diff=date_diff($date1,$date2);
+                                    ?>
+                                    {{-- {{dd($diff)}} --}}
+                                    <td>{{ $diff->format('%y years %m months %d days') }}</td>
                                 </tr>
 
                                 <tr class="bg-white">
@@ -210,14 +217,56 @@
                                     <td>{{$student->citizenship}}</td>
                                 </tr>
                                 <tr class="bg-white">
+                                    <th>Other Citizenship: </th>
+                                    @if ($student->other_citizenship == 2)
+                                        <td>Yes</td>
+                                    @else 
+                                        <td>No</td>
+                                    @endif
+                                </tr>
+                                <tr class="bg-white">
+                                    <th>Other Disability: </th>
+                                    @if ($student->disability == 2)
+                                        <td>Yes</td>
+                                    @else 
+                                        <td>No</td>
+                                    @endif
+                                </tr>
+                                <tr class="bg-white">
+                                    <th>Explanation: </th>
+                                    <td>{{$student->explanation}}</td>
+                                </tr>
+
+                                <tr class="bg-white">
+                                    <th>Disability Description: </th>
+                                    <td>{{$student->disability_description}}</td>
+                                </tr>
+
+                                <tr class="bg-white">
                                     <th>Birth Certificate: </th>
-                                    <img src="{{$student->birthCertificate}}">
+                                    <td><img src="{{$student->birthCertificate}}"  width="550px"></td>
                                     {{-- <td>{{$student->birthCertificate}}</td> --}}
                                 </tr>
 
                                 <tr class="bg-white">
                                     <th>Gender: </th>
                                     <td>{{$student->sex}}</td>
+                                </tr>
+                                <tr class="bg-white">
+                                    <th>Passport No: </th>
+                                    <td>{{$student->passport_no}}</td>
+                                </tr>
+                                <tr class="bg-white">
+                                    <th>Passport Expiry: </th>
+                                    <td>{{$student->passport_expiry}}</td>
+                                </tr>
+                                <tr class="bg-white">
+                                    <th>Passport: </th>
+                                    <td><img src="{{$student->passport_image}}"  width="550px"></td>
+                                </tr>
+                                <tr class="bg-white">
+                                    <th>Birth Place: </th>
+                                    <td>{{$student->birth_place}}</td>
                                 </tr>
                                 <tr class="bg-white">
                                     <th>Facebook URL: </th>
@@ -277,24 +326,24 @@
                                     <td>{{$student->classCurrentlyStudying}}</td>
                                 </tr>
                                 <tr class="bg-white">
-                                    <th>Grade in 2016-2017: </th>
-                                    <td>{{$student->classStudiedIn20152016}}</td>
+                                    <th>Previous Grade: </th>
+                                    <td>{{$student->class_study_previous}}</td>
                                 </tr>
                                 <tr class="bg-white">
-                                    <th>Grade in 2015-2016: </th>
-                                    <td>{{$student->classStudiedIn20142015}}</td>
+                                    <th>Prior Grade: </th>
+                                    <td>{{$student->class_study_prior}}</td>
                                 </tr>
                                 <tr class="bg-white">
-                                    <th>Percentage marks(2017-18): </th>
+                                    <th>Current marks: </th>
                                     <td>{{$student->currentPercentageMarks}}</td>
                                 </tr>
                                 <tr class="bg-white">
-                                    <th>Percentage marks(2016-17): </th>
-                                    <td>{{$student->percentageMarksIn20152016}}</td>
+                                    <th>Previous marks: </th>
+                                    <td>{{$student->percentageMarks_previous_marks}}</td>
                                 </tr>
                                 <tr class="bg-white">
-                                    <th>Percentage marks(2015-16): </th>
-                                    <td>{{$student->percentageMarksIn20142015}}</td>
+                                    <th>Prior marks: </th>
+                                    <td>{{$student->percentageMarks_prior_marks}}</td>
                                 </tr>
                             </table>
 
@@ -303,15 +352,15 @@
                             <table class="academic-info table">
                                 <tr class="bg-white">
                                     <th>Current year transcript:</th>
-                                    <td><a href="{{$student->transcriptCurrent}}">{{$student->classCurrentlyStudying}}</a></td>
+                                    <td><img src="{{$student->transcriptCurrent}}"  width="550px"></td>
                                 </tr>
                                 <tr class="bg-white">
-                                    <th>Transcript of 2016-2017:</th>
-                                    <td><a href="{{$student->transcript2015}}">{{$student->classStudiedIn20152016}}</a></td>
+                                    <th>Previous year transcript:</th>
+                                    <td><img src="{{$student->transcript_previous_transcript}}"  width="550px"></td>
                                 </tr>
                                 <tr class="bg-white">
-                                    <th>Transcript of 2015-2016:</th>
-                                    <td><a href="{{$student->transcript2014}}">{{$student->classStudiedIn20142015}}</a></td>
+                                    <th>Prior year transcript:</th>
+                                    <td><img src="{{$student->transcript_prior_transcript}}"  width="550px"></td>
                                 </tr>
                             </table>
                         </div>
@@ -333,6 +382,27 @@
                                     <th class="school-field-name">School's address: </th>
                                     <td class="school-address-field">{{$student->schoolAddress}}</td>
                                 </tr>
+
+                                <tr class="bg-white">
+                                    <th class="school-field-name">School's District: </th>
+                                    <td class="school-address-field">{{$student->school_district}}</td>
+                                </tr>
+                                <tr class="bg-white">
+                                    <th class="school-field-name">School's Postal: </th>
+                                    <td class="school-address-field">{{$student->school_postal}}</td>
+                                </tr>
+                                <tr class="bg-white">
+                                    <th class="school-field-name">School's Thana: </th>
+                                    <td class="school-address-field">{{$student->school_thana}}</td>
+                                </tr>
+                                <tr class="bg-white">
+                                    <th class="school-field-name">Principle Name: </th>
+                                    <td class="school-address-field">{{$student->school_principle}}</td>
+                                </tr>
+                                <tr class="bg-white">
+                                    <th class="school-field-name">Principle Phone: </th>
+                                    <td class="school-address-field">{{$student->school_p_phone}}</td>
+                                </tr>
                             </table>
                         </div>
 
@@ -345,6 +415,21 @@
                                     <td></td>
                                     <th class="parent-info">Mother's Information</th>
                                     <td></td>
+                                </tr>
+
+                                <tr class="bg-white">
+                                    <th>Father alive: </th>
+                                    @if ($student->father_present== 2)
+                                        <td>Yes</td>
+                                    @else 
+                                        <td>No</td>
+                                    @endif
+                                    <th>Mother alive: </th>
+                                    @if ($student->mother_present== 2)
+                                        <td>Yes</td>
+                                    @else 
+                                        <td>No</td>
+                                    @endif
                                 </tr>
 
                                 <tr class="bg-white">
@@ -369,10 +454,17 @@
                                 </tr>
 
                                 <tr class="bg-white">
-                                    <th>Office phone: </th>
-                                    <td>{{$student->fatherOfficePhone}}</td>
-                                    <th>Office phone: </th>
-                                    <td>{{$student->motherOfficePhone}}</td>
+                                    <th>Email address: </th>
+                                    <td>{{$student->mother_nid}}</td>
+                                    <th>Email address: </th>
+                                    <td>{{$student->mother_nid}}</td>
+                                </tr>
+
+                                <tr class="bg-white">
+                                    <th>Income: </th>
+                                    <td>{{$student->father_income}}</td>
+                                    <th>Income: </th>
+                                    <td>{{$student->mother_income}}</td>
                                 </tr>
 
                                 <tr class="bg-white">
@@ -389,14 +481,30 @@
 
                             <table class="table">
                                 <tr class="bg-white">
-                                    <th class="parent-info">Write up about community service</th>
-                                    <th class="parent-info">Write up about "yourself"</th>
+                                    <th class="school-field-name" width="200px">Why Apply YES program: </th>
+                                    <td class="school-address-field">{{$student->question_reason}}</td>
                                 </tr>
-
                                 <tr class="bg-white">
-                                    <td class="parent-info">{{$student->about_community_work}}</td>
-                                    <td class="parent-info">{{$student->about_yourself}}</td>
+                                    <th class="school-field-name" width="200px">About Bangladeshi culture: </th>
+                                    <td class="school-address-field">{{$student->question_culture}}</td>
                                 </tr>
+                                <tr class="bg-white">
+                                    <th class="school-field-name" width="200px"></th>About Community Work: </th>
+                                    <td class="school-address-field">{{$student->aboutCommunityWork}}</td>
+                                </tr>
+                                <tr class="bg-white">
+                                    <th class="school-field-name" width="200px">Visited a psychologist: </th>
+                                    @if ($student->question_mental== 2)
+                                        <td>Yes</td>
+                                    @else 
+                                        <td>No</td>
+                                    @endif
+                                </tr>
+                                <tr class="bg-white">
+                                    <th class="school-field-name" width="200px">How to know K-L YES Program: </th>
+                                    <td class="school-address-field">{{$student->question_promotion . $student->question_other}}</td>
+                                </tr>
+                                
                             </table>
                         </div>
 
@@ -406,7 +514,11 @@
                             <table class="table">
                                 <tr class="bg-white">
                                     <th>US visit: </th>
-                                    <td>{{$student->visitedUS5}}</td>
+                                    @if ($student->visitedUS5== 2)
+                                    <td>Yes</td>
+                                    @else 
+                                        <td>No</td>
+                                    @endif
                                 </tr>
                                 <tr class="bg-white">
                                     <th>Stay duration: </th>
@@ -418,44 +530,118 @@
                                     <td>{{$student->visitedUS5Purpose}}</td>
                                 </tr>
                                 <tr class="bg-white">
-                                    <th>Visit place and time: </th>
-                                    <td>{{$student->visitedUS5WhenAndWhere}}</td>
+                                    <th>Visit place: </th>
+                                    <td>{{$student->us_location}}</td>
                                 </tr>
 
                                 <tr class="bg-white">
                                     <th>Green Card holder in family: </th>
-                                    <td>{{$student->familyGreenCard}}</td>
+                                    @if ($student->familyGreenCard== 2)
+                                    <td>Yes</td>
+                                    @else 
+                                        <td>No</td>
+                                    @endif
                                 </tr>
                                 <tr class="bg-white">
                                     <th>Family immigration status: </th>
-                                    <td>{{$student->familyImmigration}}</td>
+                                    @if ($student->familyImmigration== 2)
+                                    <td>Yes</td>
+                                    @else 
+                                        <td>No</td>
+                                    @endif
                                 </tr>
 
                                 <tr class="bg-white">
                                     <th>Family in US: </th>
-                                    <td>{{$student->familyLivingInUSA}}</td>
+                                    @if ($student->familyLivingInUSA== 2)
+                                    <td>Yes</td>
+                                    @else 
+                                        <td>No</td>
+                                    @endif
                                 </tr>
                                 <tr class="bg-white">
                                     <th>Holds US visa: </th>
-                                    <td>{{$student->holdUSVisa}}</td>
+                                    @if ($student->holdUSVisa== 2)
+                                    <td>Yes</td>
+                                    @else 
+                                        <td>No</td>
+                                    @endif
                                 </tr>
 
                                 <tr class="bg-white">
                                     <th>Visa expiration: </th>
                                     <td>{{$student->holdUSVisaExpiry}}</td>
                                 </tr>
-                            </table>
-
-                            <table class="table">
                                 <tr class="bg-white">
                                     <th>Relative in US: </th>
-                                    <td>{{$student->relativesLivingInUSA}}</td>
+                                    @if ($student->relativesLivingInUSA== 2)
+                                    <td>Yes</td>
+                                    @else 
+                                        <td>No</td>
+                                    @endif
                                 </tr>
                                 <tr class="bg-white">
                                     <th>State of residence: </th>
                                     <td>{{$student->relativesLivingInUSAState}}</td>
                                 </tr>
+                                <tr class="bg-white">
+                                    <th>Visited any other country in the last 5 years: </th>
+                                    @if ($student->us_other_visit== 2)
+                                    <td>Yes</td>
+                                    @else 
+                                        <td>No</td>
+                                    @endif
+                                </tr>
+                                <tr class="bg-white">
+                                    <th>list the name of the countries : </th>
+                                    <td>{{$student->us_other_visit_names}}</td>
+                                </tr>
+                                <tr class="bg-white">
+                                    <th>Has anyone in your family participated in the K-L YES Program? : </th>
+                                    @if ($student->relative_participant== 2)
+                                    <td>Yes</td>
+                                    @else 
+                                        <td>No</td>
+                                    @endif
+                                </tr>
+                                <tr class="bg-white">
+                                    <th>who & when? : </th>
+                                    <td>{{$student->participant_details}}</td>
+                                </tr>
                             </table>
+
+                        </div>
+
+                        <div class="sub-field">
+                            <h3 class="heading bg-white">application Information</h3>
+
+                            <table class="table">
+                                <tr class="bg-white">
+                                    <th>Application Reviewed: </th>
+                                    @if ($student->application_reviewed== 2)
+                                    <td>Yes</td>
+                                    @else 
+                                        <td>No</td>
+                                    @endif
+                                </tr>
+                                <tr class="bg-white">
+                                    <th>Application Submitted: </th>
+                                    <td>{{$student->application_submitted}}</td>
+                                </tr>
+                                <tr class="bg-white">
+                                    <th>Application Generated: </th>
+                                    <td>{{$student->application_generated_at}}</td>
+                                </tr>
+                                <tr class="bg-white">
+                                    <th>Application Applied: </th>
+                                    @if ($student->application_applied== 2)
+                                    <td>Yes</td>
+                                    @else 
+                                        <td>No</td>
+                                    @endif
+                                </tr>
+                            </table>
+
                         </div>
 
                         <h4 class="heading bg-white">Additional Note</h4>
