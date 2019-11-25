@@ -159,7 +159,7 @@ class ApiController extends Controller
                 //question info
                 $student->question_reason = $output['question']['reason'];
                 $student->question_culture = $output['question']['culture'];
-                $student->question_community = $output['question']['community'];
+                $student->aboutCommunityWork = $output['question']['community'];
                 $student->question_mental = $output['question']['mental'];
                 $student->question_promotion = $output['question']['promotion'];
                 $student->question_other = $output['question']['other'];
@@ -177,39 +177,32 @@ class ApiController extends Controller
                 $student->transcript_prior_transcript = $output['academic']['prior_transcript'];
 
 
+                //application info
+                $student->application_reviewed = $output['application']['reviewed'];
+                $student->application_submitted = $output['application']['submitted'];
+                $student->application_generated_at = $output['application']['generated_at'];
+                $student->application_applied = $output['application']['applied'];
+                $student->application_file_id = $output['application']['location'];
+                $student->application_file_url = $output['application']['file_url'];
+
                 //$student->classStudiedIn20162017 = $output['academic'];
                 //$student->classStudiedIn20162017 = $output['academic']['previous'];
-
-
-
-
                 // $student->visitedUS5WhenAndWhere = $output[''];
-
-
-
-                $student->application_file_id = $output['application']['location'];
                 // $student->school_type = $output[''];
-                $student->aboutCommunityWork = $output['question']['community'];
                 // $student->aboutYourself = $output[''];
                 // $student->ageOnFirstAugust = $output[''];
                 $student->applicant_id = $output['id'];
-               
-                
                 // $student->fatherLastName = $output[''];
                 // $student->fatherMiddleName = $output[''];
                 // $student->fatherOfficePhone = $output[''];
-                
-             // $student->middle_name = $output[''];
+                // $student->middle_name = $output[''];
                 // $student->motherLastName = $output[''];
                 // $student->motherMiddleName = $output[''];
-                
                 // $student->note = $output[''];
-                
                 // $student->created_at = $output[''];
                 // $student->status = $output[''];
                 // $student->fatherNameOfWorkplace = $output[''];
                 // $student->motherNameOfWorkplace = $output[''];
-                
                 // $student->motherOfficePhone = $output[''];
                 // $student->updated_at = $output[''];
                 // $student->parent_for_interview = $output[''];
