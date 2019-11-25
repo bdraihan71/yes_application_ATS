@@ -185,6 +185,12 @@ class ApiController extends Controller
                 $student->application_file_id = $output['application']['location'];
                 $student->application_file_url = $output['application']['file_url'];
 
+
+                //signature info
+                $student->signature_form_img = $output['signature']['form_img'];
+
+
+
                 //$student->classStudiedIn20162017 = $output['academic'];
                 //$student->classStudiedIn20162017 = $output['academic']['previous'];
                 // $student->visitedUS5WhenAndWhere = $output[''];
