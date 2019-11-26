@@ -26,7 +26,7 @@ class PreliminaryApplicationController extends Controller
         $student_ids_failed = array_pluck($score_sheets_failed, 'student_id');
         $students_failed = Student::whereIn('id', $student_ids_failed)->get();
 
-        $query = Student::where('batch_id',  env('AKASH_BATCH'))->whereNotIn('id',array_merge($student_ids_passed, $student_ids_failed) );
+        $query = Student::where('batch_id',  env('AKASH_BATCH'))->whereNotIn('id',array_merge($student_ids_passed, $student_ids_failed) )->whereNotNull('application_submitted');
         $not_scored_count = $query->count();
         $not_scored = $query->get();
 

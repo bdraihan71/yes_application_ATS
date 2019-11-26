@@ -454,9 +454,9 @@
                                 </tr>
 
                                 <tr class="bg-white">
-                                    <th>Email address: </th>
+                                    <th>NID: </th>
                                     <td>{{$student->mother_nid}}</td>
-                                    <th>Email address: </th>
+                                    <th>NID: </th>
                                     <td>{{$student->mother_nid}}</td>
                                 </tr>
 
@@ -640,12 +640,29 @@
                                         <td>No</td>
                                     @endif
                                 </tr>
+                                @if(isset($student->application_file_url))
+                                <tr class="bg-white">
+                                    <th>Upload File: </th>
+                                    <td><a href="{{$student->application_file_url}}" target="_blank">PDF file!</a> </td>
+                                </tr>
+                                @endif
                             </table>
 
                         </div>
-
-                        <h4 class="heading bg-white">Additional Note</h4>
-                        <p class="bg-white">{{$student->note}}</p>
+                        <div class="sub-field">
+                            <h4 class="heading bg-white">Additional Note</h4>
+                            <table class="table">    
+                                <tr class="bg-white">
+                                    <th>Comment: </th>
+                                    <td>{{$student->note}}</td>
+                                </tr>
+                                <tr class="bg-white">
+                                    <th>Signature: </th>
+                                    <td><img src="{{$student->signature_form_img}}"  width="550px"></td>
+                                </tr>
+                            </table>
+                        </div>    
+                      
 
                         <div align="right" class="bg-white mb-2">Created on: {{$student->created_at}}</div>
                         <div align="right" class="bg-white">Last updated on: {{$student->updated_at}}</div>
