@@ -17,10 +17,19 @@
 
     <div class="row">
    
-        @if( $student->scoresheets->count() == null )
-            <a href="/ats/student/{{$student->id - 1}}/account/1" class="btn btn-default">Previous Application</a>
+         @if( $student->scoresheets->count() == 1 )
+            @if($pre_phone != null)
+                <a href="/ats/student/{{$pre_phone->id }}/account/1" class="btn btn-default">Previous Application</a>
+            @endif
+            @if($next_phone != null)
+                <a href="/ats/student/{{$next_phone->id}}/account/1" class="btn btn-default pull-right">Next Application</a>
+            @endif
+        @else
+            @if($pre != null)
+            <a href="/ats/student/{{$pre->id }}/account/1" class="btn btn-default">Previous Application</a>
+            @endif
             @if($next != null)
-            <a href="/ats/student/{{$next->id}}/account/1" class="btn btn-default pull-right">Next Application</a>
+                <a href="/ats/student/{{$next->id}}/account/1" class="btn btn-default pull-right">Next Application</a>
             @endif
         @endif 
         <!-- <a href="/ats/student/{{$student->id - 1}}/account/1" class="btn btn-default">Previous Application</a>

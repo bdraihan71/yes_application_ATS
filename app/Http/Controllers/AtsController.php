@@ -249,24 +249,28 @@ class AtsController extends Controller
         $score_sheets_passed = DB::table('score_sheets')->where('score_account_id', 1)->where('stage_id', 1)->where('has_passed', true)->get();
         $student_ids_passed = array_pluck($score_sheets_passed, 'student_id');
         $students_passed = Student::whereIn('id', $student_ids_passed)->get();
-
         $score_sheets_failed = DB::table('score_sheets')->where('score_account_id', 1)->where('stage_id', 1)->where('has_passed', false)->get();
         $student_ids_failed = array_pluck($score_sheets_failed, 'student_id');
         $students_failed = Student::whereIn('id', $student_ids_failed)->get();
-
         $query = Student::where('batch_id',  env('AKASH_BATCH'))->whereNotIn('id',array_merge($student_ids_passed, $student_ids_failed) )->whereNotNull('application_submitted');
-        $not_scored_count = $query->count();
-        $not_scored = $query->first();
-        $next = $query->where('id', '>', $student)->first();
-        $pre = $query->where('id', '<', $student)->first();
-        dd($pre);
+        $next = Student::where('batch_id',  env('AKASH_BATCH'))->whereNotIn('id',array_merge($student_ids_passed, $student_ids_failed) )->whereNotNull('application_submitted')->where('id', '>', $student)->first();
+        $pre = Student::where('batch_id',  env('AKASH_BATCH'))->whereNotIn('id',array_merge($student_ids_passed, $student_ids_failed) )->whereNotNull('application_submitted')->where('id', '<', $student)->first();
         
+        $score_sheets_passed_phone = DB::table('score_sheets')->where('score_account_id', 1)->where('stage_id', 2)->where('has_passed', true)->get();
+        $student_ids_passed_phone = array_pluck($score_sheets_passed_phone, 'student_id');
+        $students_passed = Student::whereIn('id', $student_ids_passed_phone)->get();
+        $score_sheets_failed_phone = DB::table('score_sheets')->where('score_account_id', 1)->where('stage_id', 2)->where('has_passed', false)->get();
+        $student_ids_failed_phone = array_pluck($score_sheets_failed_phone, 'student_id');
+        $students_failed_phone = Student::whereIn('id', $student_ids_failed_phone)->get();
+        $next_phone = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>', 1)->whereNotIn('id',array_merge($student_ids_passed_phone, $student_ids_failed_phone) )->where('id', '>', $student)->first();
+        $pre_phone = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>', 1)->whereNotIn('id',array_merge($student_ids_passed_phone, $student_ids_failed_phone) )->where('id', '<', $student)->orderBy('id', 'desc')->first();
+
         $criterion = Criteria::where('stage_id', 1)->get();
         $criterion2 = Criteria::where('stage_id', 2)->get();
         $student = Student::find($student);
         if($student){
             $action_logs = ActionLog::where('action_on_student_id',$student->id)->orderBy('created_at', 'DESC')->get();
-            return view('ats.studentPage', compact('student', 'account', 'criterion', 'criterion2', 'action_logs','not_scored','next'));
+            return view('ats.studentPage', compact('student', 'account', 'criterion', 'criterion2', 'action_logs','next','pre','next_phone','pre_phone'));
         }
         $request->session()->flash('message', 'No more application!');
         return redirect('/ats/preliminary_application');
