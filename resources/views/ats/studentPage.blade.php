@@ -16,9 +16,12 @@
 
 
     <div class="row">
+   
         @if( $student->scoresheets->count() == null )
             <a href="/ats/student/{{$student->id - 1}}/account/1" class="btn btn-default">Previous Application</a>
-            <a href="/ats/student/{{$student->id + 1}}/account/1" class="btn btn-default pull-right">Next Application</a>
+            @if($next != null)
+            <a href="/ats/student/{{$next->id}}/account/1" class="btn btn-default pull-right">Next Application</a>
+            @endif
         @endif 
         <!-- <a href="/ats/student/{{$student->id - 1}}/account/1" class="btn btn-default">Previous Application</a>
         <a href="/ats/student/{{$student->id + 1}}/account/1" class="btn btn-default pull-right">Next Application</a> -->
