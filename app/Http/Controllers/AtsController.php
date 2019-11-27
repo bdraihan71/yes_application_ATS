@@ -233,7 +233,7 @@ class AtsController extends Controller
         }
 
         $student->save();
-        $request->session()->flash('message', 'Preliminary Application Information saved!');
+        $request->session()->flash('message', 'Application saved!');
 
         return redirect()->back() ;
     }
@@ -253,8 +253,8 @@ class AtsController extends Controller
         $student_ids_failed = array_pluck($score_sheets_failed, 'student_id');
         $students_failed = Student::whereIn('id', $student_ids_failed)->get();
         $query = Student::where('batch_id',  env('AKASH_BATCH'))->whereNotIn('id',array_merge($student_ids_passed, $student_ids_failed) )->whereNotNull('application_submitted');
-        $next = Student::where('batch_id',  env('AKASH_BATCH'))->whereNotIn('id',array_merge($student_ids_passed, $student_ids_failed) )->whereNotNull('application_submitted')->where('id', '>', $student)->first();
-        $pre = Student::where('batch_id',  env('AKASH_BATCH'))->whereNotIn('id',array_merge($student_ids_passed, $student_ids_failed) )->whereNotNull('application_submitted')->where('id', '<', $student)->first();
+        $next = Student::where('batch_id',  env('AKASH_BATCH'))->whereNotNull('application_submitted')->where('id', '>', $student)->first();
+        $pre = Student::where('batch_id',  env('AKASH_BATCH'))->whereNotNull('application_submitted')->where('id', '<', $student)->orderBy('id', 'desc')->first();
         
         $score_sheets_passed_phone = DB::table('score_sheets')->where('score_account_id', 1)->where('stage_id', 2)->where('has_passed', true)->get();
         $student_ids_passed_phone = array_pluck($score_sheets_passed_phone, 'student_id');

@@ -16,22 +16,13 @@
 
 
     <div class="row">
-   
-         @if( $student->scoresheets->count() == 1 )
-            @if($pre_phone != null)
-                <a href="/ats/student/{{$pre_phone->id }}/account/1" class="btn btn-default">Previous Application</a>
-            @endif
-            @if($next_phone != null)
-                <a href="/ats/student/{{$next_phone->id}}/account/1" class="btn btn-default pull-right">Next Application</a>
-            @endif
-        @else
-            @if($pre != null)
-            <a href="/ats/student/{{$pre->id }}/account/1" class="btn btn-default">Previous Application</a>
-            @endif
-            @if($next != null)
-                <a href="/ats/student/{{$next->id}}/account/1" class="btn btn-default pull-right">Next Application</a>
-            @endif
-        @endif 
+        @if($pre != null)
+        <a href="/ats/student/{{$pre->id }}/account/1" class="btn btn-default">Previous Application</a>
+        @endif
+        @if($next != null)
+            <a href="/ats/student/{{$next->id}}/account/1" class="btn btn-default pull-right">Next Application</a>
+        @endif
+        
         <!-- <a href="/ats/student/{{$student->id - 1}}/account/1" class="btn btn-default">Previous Application</a>
         <a href="/ats/student/{{$student->id + 1}}/account/1" class="btn btn-default pull-right">Next Application</a> -->
         <hr>
@@ -202,7 +193,7 @@
                         <h3 class="bg-white">Student Image:</h3>
                         <img src="{{$student->photo}}" width="700px">
                         <h2 class="bg-white">Application ID: {{$student->applicant_id}}</h2>
-                        <h4 class="bg-white">ID: {{$student->id}}</h4>
+                        <!-- <h4 class="bg-white">ID: {{$student->id}}</h4> -->
                         {{-- <h4 class="bg-white">Status: {{$student->status}}</h4> --}}
                         
                         <div class="sub-field">
