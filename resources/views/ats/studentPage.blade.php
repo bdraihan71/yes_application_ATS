@@ -628,14 +628,14 @@
                             <h3 class="heading bg-white">application Information</h3>
 
                             <table class="table">
-                                <tr class="bg-white">
+                                <!-- <tr class="bg-white">
                                     <th>Application Reviewed: </th>
                                     @if ($student->application_reviewed== 2)
                                     <td>Yes</td>
                                     @else 
                                         <td>No</td>
                                     @endif
-                                </tr>
+                                </tr> -->
                                 <tr class="bg-white">
                                     <th>Application Submitted: </th>
                                     <td>{{$student->application_submitted}}</td>
@@ -644,14 +644,14 @@
                                     <th>Application Generated: </th>
                                     <td>{{$student->application_generated_at}}</td>
                                 </tr>
-                                <tr class="bg-white">
+                                <!-- <tr class="bg-white">
                                     <th>Application Applied: </th>
                                     @if ($student->application_applied== 2)
                                     <td>Yes</td>
                                     @else 
                                         <td>No</td>
                                     @endif
-                                </tr>
+                                </tr> -->
                                 @if(isset($student->application_file_url))
                                 <tr class="bg-white">
                                     <th>Upload File: </th>
