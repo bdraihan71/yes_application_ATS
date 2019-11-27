@@ -474,9 +474,9 @@
 
                                 <tr class="bg-white">
                                     <th>Income: </th>
-                                    <td>{{$student->father_income}}</td>
+                                    <td>{{$student->father_income == '-1' ? '0' : $student->father_income }}</td>
                                     <th>Income: </th>
-                                    <td>{{$student->mother_income}}</td>
+                                    <td>{{$student->mother_income == '-1' ? '0' : $student->mother_income}}</td>
                                 </tr>
 
                                 <tr class="bg-white">
