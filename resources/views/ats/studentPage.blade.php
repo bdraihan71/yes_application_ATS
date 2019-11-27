@@ -492,7 +492,7 @@
                                     <td class="school-address-field">{{$student->question_culture}}</td>
                                 </tr>
                                 <tr class="bg-white">
-                                    <th class="school-field-name" width="200px"></th>About Community Work: </th>
+                                    <th class="school-field-name">About Community Work: </th>
                                     <td class="school-address-field">{{$student->aboutCommunityWork}}</td>
                                 </tr>
                                 <tr class="bg-white">
