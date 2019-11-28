@@ -117,6 +117,7 @@ class ApiController extends Controller
                 $student->fatherContact = $output['guardian']['father_phone'];
                 $student->fatherEmailID = $output['guardian']['father_email'];
                 $student->fatherOccupation = $output['guardian']['father_occupation'];
+                $student->father_nid = $output['guardian']['father_nid'];
                 $student->father_income = $output['guardian']['father_income'];
                 $student->mother_present = $output['guardian']['mother_present'];
                 $student->motherFirstName = $output['guardian']['mother_name'];
