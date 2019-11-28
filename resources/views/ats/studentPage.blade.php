@@ -458,7 +458,7 @@
 
                                 <tr class="bg-white">
                                     <th>NID: </th>
-                                    <td>{{$student->mother_nid}}</td>
+                                    <td>{{$student->father_nid}}</td>
                                     <th>NID: </th>
                                     <td>{{$student->mother_nid}}</td>
                                 </tr>

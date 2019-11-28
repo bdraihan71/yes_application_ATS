@@ -117,7 +117,6 @@ class ApiController extends Controller
                 $student->fatherContact = $output['guardian']['father_phone'];
                 $student->fatherEmailID = $output['guardian']['father_email'];
                 $student->fatherOccupation = $output['guardian']['father_occupation'];
-                $student->father_nid = $output['guardian']['father_nid'];
                 $student->father_income = $output['guardian']['father_income'];
                 $student->mother_present = $output['guardian']['mother_present'];
                 $student->motherFirstName = $output['guardian']['mother_name'];
@@ -219,6 +218,48 @@ class ApiController extends Controller
             $student->batch_id =  env('AKASH_BATCH');
             $student->stage = 1;
             $student->is_access_student = false;
+            $student->save();
+
+        }
+
+        return response()->json(['success'=>true]);
+
+
+
+    }
+
+    public function  fatherNid(){
+        //$url = env('FIREBASE_DATBASE_URL') . "/applicants.json";
+        $url = env('FATHER_NID');
+
+        // create curl resource
+        $ch = curl_init();
+
+
+        // set url
+        curl_setopt($ch, CURLOPT_URL, $url);
+
+        //return the transfer as a string
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+
+        // $output contains the output string
+        $output = curl_exec($ch);
+
+        // close curl resource to free up system resources
+        curl_close($ch);
+
+        // dd($output);
+        $output = json_decode($output, true);
+
+        $output2 =($output);
+
+        //  dd($output2);
+        foreach($output2 as $key=>$output){
+            // echo '<pre>';
+            //     print_r('ID:'.$output['id']. '  NID:'. $output['guardian']['father_nid']);
+            // echo '</pre>';
+            $student = Student::where('applicant_id', $output['id'])->firstOrFail();;
+            $student->father_nid = $output['guardian']['father_nid'];
             $student->save();
 
         }
