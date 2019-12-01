@@ -136,5 +136,6 @@ Route::post('/ats/batch/{batch}/account/{account}/stage/{stage}', 'AtsController
 Route::get('/home', 'HomeController@dashboard')->middleware('auth');
 Route::get('/upload', 'HomeController@upload')->middleware('auth');
 Route::get('/student-details', 'HomeController@studentDetails')->middleware('auth');
+Route::delete('/studentDestroy/{id}', 'AtsController@studentDestroy')->middleware('auth')->name('student.destroy');
 // route registration attempts to home
 Route::any('/register','HomeController@dashboard');

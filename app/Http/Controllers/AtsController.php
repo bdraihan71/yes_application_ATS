@@ -18,6 +18,8 @@ use App\Http\Requests;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Maatwebsite\Excel\Facades\Excel;
+use Illuminate\Support\Facades\Redirect;
+
 
 class AtsController extends Controller
 {
@@ -341,5 +343,12 @@ class AtsController extends Controller
             });
 
         })->download('xls');
+    }
+
+    public function studentDestroy($id)
+    {
+        $student = Student::find($id);
+        $student->delete();
+        return redirect('ats/preliminary_application');
     }
 }

@@ -27,7 +27,11 @@
         <a href="/ats/student/{{$student->id + 1}}/account/1" class="btn btn-default pull-right">Next Application</a> -->
         <hr>
     </div>
-
+     <form action="{{ route('student.destroy', $student->id )}}" onclick="return confirm('Are you sure, you want to delete this student?')" method="post" style="display: inline;">
+       {{csrf_field()}}
+        <input name="_method" type="hidden" value="DELETE">
+       <button class="btn btn-danger">Delete</button>
+    </form>
     <h3> {{$student->applicant_id}}: {{$student->first_name}} {{$student->last_name}}</h3>
 
     <div class="row">
