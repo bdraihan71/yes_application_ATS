@@ -351,4 +351,23 @@ class AtsController extends Controller
         $student->delete();
         return redirect('ats/preliminary_application');
     }
+
+    public function edit($id)
+    {
+        $student = Student::find($id);
+        return view('ats.stages.student_edit', compact('student'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $student = Student::find($id);
+
+        $student->photo = $request->get('photo');
+        $student->first_name = $request->get('first_name');
+        $student->last_name = $request->get('last_name');
+        $student->district = $request->get('district');
+        $student->schoolName = $request->get('schoolName');
+        $student->save();
+        return redirect('ats/preliminary_application');
+    }
 }

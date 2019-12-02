@@ -32,6 +32,7 @@
         <input name="_method" type="hidden" value="DELETE">
        <button class="btn btn-danger">Delete</button>
     </form>
+    <a  class="btn btn-primary" href="{{route('student.edit', $student->id)}}" role="button">Edit</a>
     <h3> {{$student->applicant_id}}: {{$student->first_name}} {{$student->last_name}}</h3>
 
     <div class="row">

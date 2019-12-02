@@ -137,5 +137,7 @@ Route::get('/home', 'HomeController@dashboard')->middleware('auth');
 Route::get('/upload', 'HomeController@upload')->middleware('auth');
 Route::get('/student-details', 'HomeController@studentDetails')->middleware('auth');
 Route::delete('/studentDestroy/{id}', 'AtsController@studentDestroy')->middleware('auth')->name('student.destroy');
+Route::get('/student/edit/{id}', 'AtsController@edit')->middleware('auth')->name('student.edit');
+Route::post('/student/update/{id}', 'AtsController@update')->middleware('auth')->name('student.update');
 // route registration attempts to home
 Route::any('/register','HomeController@dashboard');
