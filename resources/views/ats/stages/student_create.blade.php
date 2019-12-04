@@ -22,6 +22,16 @@
     <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  name="first_name" placeholder = "First Name ">
   </div>
 
+  <div class="form-group">
+    <label for="exampleInputEmail1">Phone:</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  name="contact" placeholder = "Phone">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email:</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  name="email" placeholder = "Email">
+  </div>
+
    <div class="form-group">
     <label for="exampleInputEmail1">Last Name:</label>
     <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  name="last_name" placeholder = "Last Name ">

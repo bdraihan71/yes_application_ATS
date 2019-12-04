@@ -411,6 +411,8 @@ class AtsController extends Controller
         $student = new Student([
             'applicant_id' => $applicant->applicant_id + 1,
             'photo' =>  $request->photo,
+            'contact' =>  $request->contact,
+            'email' =>  $request->email,
             'first_name' => $request->first_name,
             'last_name' => $request->last_name,
             'district' => $request->district,

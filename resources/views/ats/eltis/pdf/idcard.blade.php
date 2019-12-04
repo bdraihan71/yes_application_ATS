@@ -43,7 +43,7 @@
                 <div class="vol-copy">
                     <br>
                     <div style="float:left; padding: 2%">
-                        <img  width="50px" src="/images/ats/eltis_students/{{$student->applicant_id}}.jpg">
+                        <img  width="50px" src="{{$student->photo}}">
                     </div>
                     <div style="text-align:left; font-size: 80%; padding: 2%">
                         <b>VOLUNTEER COPY: Give this part to volunteer before entering test-hall</b><br>
@@ -57,7 +57,7 @@
                 <div class="ans-copy">
                     <br>
                     <div style="float:left; padding: 2%">
-                        <img  width="50px" src="/images/ats/eltis_students/{{$student->applicant_id}}.jpg">
+                        <img  width="50px" src="{{$student->photo}}">
                     </div>
                     <div style="text-align:left; font-size: 80%; padding: 2%">
                         <b>ANSWER SHEET COPY: Attach this part to your ELTiS Answer Script</b><br>
@@ -76,11 +76,11 @@
                     <h4>International Education and Resource Network</h4>
                     <h3>Kennedy-Lugar Youth Exchange</h3>
                     <h3>and Study Program</h3>
-                    <h4>Academic Year 2018-2019</h4>
+                    <h4>Academic Year 2020-2021</h4>
                 </div>
                 <div>
                     <h1 style="color: darkblue;">ELTiS Test Round</h1>
-                    <h3>Friday, 08 December 2017</h3>
+                    <h3>Friday, 13 December 2019</h3>
                     <img width="100px" src="{{$student->photo}}"><br>
                     <b>{{$student->first_name}} {{$student->last_name}}</b><br>
                     {{$student->schoolName}},

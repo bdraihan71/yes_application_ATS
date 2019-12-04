@@ -78,7 +78,7 @@
             <div class="col" style="width: 9%;">{{$student->applicant_id}}</div>
             <div class="col" style="width: 9%; ">{{$student->first_name}} {{$student->last_name}}</div>
             <div class="col" style="width: 9%; text-align: center;">
-                <img  width="64px" src="/images/ats/eltis_students/{{$student->applicant_id}}.jpg">
+                <img  width="64px" src="{{$student->photo}}">
             </div>
             <div class="col" style="width: 18%; "></div>
             <div class="col" style="width: 31%; "></div>

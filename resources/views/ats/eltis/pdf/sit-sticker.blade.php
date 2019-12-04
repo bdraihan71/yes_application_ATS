@@ -29,7 +29,7 @@
             @while($counter<2)
                 <div style="border:1px solid black; width: 350px; height: 90px; float: left">
                     <div style="float:left; padding: 2%">
-                        <img  width="70px" src="/images/ats/eltis_students/{{$student->applicant_id}}.jpg">
+                        <img  width="70px" src="{{$student->photo}}">
                     </div>
                     <div style="text-align:left; font-size: 80%; padding: 2%">
                         <b></b>

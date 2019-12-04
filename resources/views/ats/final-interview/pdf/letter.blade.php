@@ -36,7 +36,7 @@
                     <div align="right" style="width: 200px;  display: inline-table" >
                         <div>
                             <p>Applicant ID: {{$student->applicant_id}}</p>
-                            <img width="100px" src="/images/ats/eltis_students/{{$student->applicant_id}}.jpg">
+                            <img width="100px" src="{{$student->photo}}">
                         </div>
                     </div>
                 </div>

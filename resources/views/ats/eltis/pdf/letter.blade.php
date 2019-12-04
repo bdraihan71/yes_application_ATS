@@ -20,7 +20,7 @@
                         <p>Ref: iEARN-BD/YES-16/ELTiS/2017-05</p><br>
                     </div>
                     <div align="right" style="width: 200px;  display: inline-table" >
-                        <p><b>03-Dec-2017</b></p>
+                        <p><b>13-Dec-2019</b></p>
                     </div>
                 </div>
                 <div>
@@ -36,7 +36,7 @@
                     <div align="right" style="width: 200px;  display: inline-table" >
                         <div>
                             <p>Applicant ID: {{$student->applicant_id}}</p>
-                            <img width="100px" src="/images/ats/eltis_students/{{$student->applicant_id}}.jpg">
+                            <img width="100px" src="{{$student->photo}}">
                         </div>
                     </div>
                 </div>
@@ -44,7 +44,7 @@
                     <div>
                         <div>
                             <p>
-                                <b>Sub: Invitation to appear in English Language Test for International Students (ELTiS) and In-Class Essay round of K-L YES Program for the academic year 2018-2019.</b>
+                                <b>Sub: Invitation to appear in English Language Test for International Students (ELTiS) and In-Class Essay round of K-L YES Program for the academic year 2020-2021.</b>
                             </p>
                             <p>
                                 Dear <b>{{$student->first_name}} {{$student->last_name}},</b>
@@ -53,7 +53,7 @@
                                 Congratulations! You have successfully completed the <b>Phone Interview</b> round of the recruitment of <b>Kennedy Lugar Youth Exchange & Study Program</b> for the academic year  <b> 2020-21.</b> We are delighted to invite you to participate in <b>English Language Test for International Students (ELTiS) and In-Class Essay</b> round of the recruitment.
                             </p>
                             <p>
-                                The ELTiS & In-Class Essay Examination will be held on <b>Friday, 8 December 2017</b> in exam hall of <b>FutureEd</b>, Ahmed Tower (6th Floor), 28 & 30 Kamal Ataturk Avenue, Banani, Dhaka-1213. If you need any assistance to locate venue, please feel free to contact us.
+                                The ELTiS & In-Class Essay Examination will be held on <b> 13 December 2019</b> in exam hall of <b>FutureEd</b>, Ahmed Tower (6th Floor), 28 & 30 Kamal Ataturk Avenue, Banani, Dhaka-1213. If you need any assistance to locate venue, please feel free to contact us.
                             </p>
                             <p>
                                 <b>
