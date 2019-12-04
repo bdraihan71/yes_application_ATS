@@ -13,6 +13,7 @@
 
         <div class="col-md-2">
             <ul class="nav nav-pills nav-stacked">
+                <li><a href="/student/create">Student Create</a></li>
                 <li><a href="/ats/preliminary_application/">Application Stacks</a></li>
                 <li><a href="/ats/preliminary_application/result">Result</a></li>
                 <li><a href="/ats/preliminary_application/backup">Backup</a></li>

@@ -370,4 +370,55 @@ class AtsController extends Controller
         $student->save();
         return redirect('ats/preliminary_application');
     }
+
+    public function create()
+    {
+        return view('ats.stages.student_create');
+    }
+
+    public function store(Request $request)
+    {
+        // $this->validate($request, [
+        //     'photo' => 'mimes:jpeg,bmp,png',
+        //     'application_file_url' => 'mimes:pdf',
+        // ]);
+
+        // dd($request->all());
+
+        if($request->hasFile('photo')){
+            $photo_url = $request->name . '-' .   '-photo-' .  time().'.'.request()->photo->getClientOriginalExtension();
+
+            $photo_location = '/images/photo/';
+
+            request()->photo->move(public_path('/images/photo/'), $photo_url);
+        }
+
+       
+        if($request->hasFile('application_file_url')){
+            $application_url = $request->name . '-' .   '-application-' .  time().'.'.request()->application_file_url->getClientOriginalExtension();
+
+            $application_location = '/images/application/';
+
+            request()->application_file_url->move(public_path('/images/application/'), $application_url);
+        }
+        // dd($application_location.$application_url);
+
+
+        $student = new Student([
+            'applicant_id' => $request->applicant_id,
+            'photo' =>  $photo_location.$photo_url,
+            'first_name' => $request->first_name,
+            'last_name' => $request->last_name,
+            'district' => $request->district,
+            'schoolName' => $request->schoolName,
+            'application_file_url' => $application_location.$application_url,
+        ]);
+
+        // dd($student);
+        $student->save();
+
+        return redirect('/application_location/preliminary_application');
+
+    }
+
 }
