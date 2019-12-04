@@ -15,6 +15,7 @@ use App\User;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Maatwebsite\Excel\Facades\Excel;
@@ -385,39 +386,44 @@ class AtsController extends Controller
 
         // dd($request->all());
 
-        if($request->hasFile('photo')){
-            $photo_url = $request->name . '-' .   '-photo-' .  time().'.'.request()->photo->getClientOriginalExtension();
+        // if($request->hasFile('photo')){
+        //     $photo_url = $request->name . '-' .   '-photo-' .  time().'.'.request()->photo->getClientOriginalExtension();
 
-            $photo_location = '/images/photo/';
+        //     $photo_location = '/images/photo/';
 
-            request()->photo->move(public_path('/images/photo/'), $photo_url);
-        }
+        //     request()->photo->move(public_path('/images/photo/'), $photo_url);
+        // }
 
        
-        if($request->hasFile('application_file_url')){
-            $application_url = $request->name . '-' .   '-application-' .  time().'.'.request()->application_file_url->getClientOriginalExtension();
+        // if($request->hasFile('application_file_url')){
+        //     $application_url = $request->name . '-' .   '-application-' .  time().'.'.request()->application_file_url->getClientOriginalExtension();
 
-            $application_location = '/images/application/';
+        //     $application_location = '/images/application/';
 
-            request()->application_file_url->move(public_path('/images/application/'), $application_url);
-        }
-        // dd($application_location.$application_url);
-
+        //     request()->application_file_url->move(public_path('/images/application/'), $application_url);
+        // }
+        // // dd($application_location.$application_url);
+        // 1872
+        $applicant = Student::all()->last();
+        $date = date("Y-m-d");
+        // dd($applicant->applicant_id);
 
         $student = new Student([
-            'applicant_id' => $request->applicant_id,
-            'photo' =>  $photo_location.$photo_url,
+            'applicant_id' => $applicant->applicant_id + 1,
+            'photo' =>  $request->photo,
             'first_name' => $request->first_name,
             'last_name' => $request->last_name,
             'district' => $request->district,
             'schoolName' => $request->schoolName,
-            'application_file_url' => $application_location.$application_url,
+            'application_file_url' => $request->application_file_url,
+            'application_submitted' => $date,
+            'batch_id' => 19
         ]);
 
         // dd($student);
         $student->save();
 
-        return redirect('/application_location/preliminary_application');
+        return redirect('ats/preliminary_application');
 
     }
 
