@@ -35,8 +35,8 @@
 
     @php
         $count = 0;
+        $serial = 1;
     @endphp
-
         @foreach($students as $student)
 
             <div style="border:1px solid black; height: 718px; width: 320px; float: left;">
@@ -48,7 +48,7 @@
                     <div style="text-align:left; font-size: 80%; padding: 2%">
                         <b>VOLUNTEER COPY: Give this part to volunteer before entering test-hall</b><br>
                         {{$student->first_name}} {{$student->last_name}}<br>
-                        Applicant ID: {{$student->applicant_id}}
+                        {{$student->schoolName}}
                         <br><br>
 
                     </div>
@@ -62,7 +62,7 @@
                     <div style="text-align:left; font-size: 80%; padding: 2%">
                         <b>ANSWER SHEET COPY: Attach this part to your ELTiS Answer Script</b><br>
                         {{$student->first_name}} {{$student->last_name}}<br>
-                        Applicant ID: {{$student->applicant_id}}
+                        {{$student->schoolName}}
                         <br><br>
                     </div>
                 </div>
@@ -85,7 +85,7 @@
                     <b>{{$student->first_name}} {{$student->last_name}}</b><br>
                     {{$student->schoolName}},
                     {{$student->district}}
-                    <p id="app-id">Applicant ID: {{$student->applicant_id}}</p>
+                    <!-- <p id="app-id">Applicant ID: {{$student->applicant_id}}</p> -->
                 </div>
             </div>
 

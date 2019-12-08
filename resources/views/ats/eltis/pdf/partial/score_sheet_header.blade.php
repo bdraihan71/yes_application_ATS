@@ -53,6 +53,6 @@
     <div class="col" style="width: 20%; ">School</div>
     <div class="col" style="width: 10%; ">District</div>
     <div class="col" style="width: 10%; ">ELTiS Score</div>
-    <div class="col" style="width: 10%; ">In Class Essay Score</div>
+    <div class="col" style="width: 10%; ">Remark</div>
     <div class="col" style="width: 15%; ">Signature</div>
 </div>
