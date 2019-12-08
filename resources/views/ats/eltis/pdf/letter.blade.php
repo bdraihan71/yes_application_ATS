@@ -83,7 +83,7 @@
                             <p>
                                 <i>Disclaimer: Do not provide any ORIGINAL transcript, birth certificate </i>- only provide attested copies. We will not take responsibility for the safekeeping of your original document(s). 
                             </p>
-                            <p>For any queries, please let us know via email us at yesinfo@iearnbd.org.</p>
+                            <p>For any queries, please email us at yesinfo@iearnbd.org.</p>
                         </div>
                     </div>
                 </div>
