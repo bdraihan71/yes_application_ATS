@@ -30,6 +30,12 @@
             border-top: 3px solid red;
             border-bottom: 3px solid red;
         }
+
+        @media print {
+            .id-card-eltis {
+                margin: 150px 15px 150px 15px ;
+            }
+        }
     </style>
     <body>
 
@@ -39,7 +45,7 @@
     @endphp
         @foreach($students as $student)
 
-            <div style="border:1px solid black; height: 718px; width: 320px; float: left;">
+            <div class="id-card-eltis" style="border:1px solid black; height: 718px; width: 320px; float: left;">
                 <div class="vol-copy">
                     <br>
                     <div style="float:left; padding: 2%">
