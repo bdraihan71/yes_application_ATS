@@ -42,7 +42,7 @@
 
 
 <div style="clear: left">
-    <div class="col" style="width: 9%;">Applicant ID</div>
+    <div class="col" style="width: 9%;">Serial</div>
     <div class="col" style="width: 9%; ">Name</div>
     <div class="col" style="width: 9%; ">Image</div>
     <div class="col" style="width: 18%; ">School, District</div>

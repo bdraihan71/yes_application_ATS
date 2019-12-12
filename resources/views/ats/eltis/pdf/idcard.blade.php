@@ -85,7 +85,7 @@
                     <b>{{$student->first_name}} {{$student->last_name}}</b><br>
                     {{$student->schoolName}},
                     {{$student->district}}
-                    <!-- <p id="app-id">Applicant ID: {{$student->applicant_id}}</p> -->
+                    <p id="app-id">Serial: {{$student->serial}}</p>
                 </div>
             </div>
 

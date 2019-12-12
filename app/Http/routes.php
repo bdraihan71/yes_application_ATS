@@ -63,6 +63,8 @@ Route::get('/ats/eltis/envelope', 'EltisController@envelope')->middleware('auth'
 Route::get('/ats/eltis/sit_sticker', 'EltisController@sitSticker')->middleware('auth');
 Route::get('/ats/eltis/score_now', 'EltisController@scoreNow')->middleware('auth');
 Route::post('/ats/eltis/save_score', 'EltisController@processScore')->middleware('auth');
+Route::get('/ats/eltis/serial_assignment', 'EltisController@serialAssignment')->middleware('auth');
+Route::post('/ats/eltis/serial_assignment', 'EltisController@processSerialAssignment')->middleware('auth');
 
 
 //final

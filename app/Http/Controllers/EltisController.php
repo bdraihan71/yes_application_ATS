@@ -64,49 +64,49 @@ class EltisController extends Controller
     }
 
     public function scoreSheet(){
-        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',2)->orderBy('first_name')->get();
+        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',2)->orderBy('serial')->get();
         return view('ats.eltis.pdf.score-sheet', compact('students'));
     }
 
     public function inClassEssayScoreSheet(){
-        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',2)->orderBy('first_name')->get();
+        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',2)->orderBy('serial')->get();
         return view('ats.eltis.pdf.in-class-essay-score-sheet', compact('students'));
     }
 
     public function idcard(){
-        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',2)->orderBy('first_name')->get();
+        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',2)->orderBy('serial')->get();
         return view('ats.eltis.pdf.idcard', compact('students'));
     }
 
     public function letter(){
-        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',2)->orderBy('first_name')->get();
+        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',2)->orderBy('serial')->get();
         return view('ats.eltis.pdf.letter', compact('students'));
     }
 
 
     public function envelope(){
-        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',2)->orderBy('first_name')->get();
+        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',2)->orderBy('serial')->get();
         return view('ats.eltis.pdf.envelope', compact('students'));
     }
 
 
     public function attendance(){
-        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',2)->orderBy('first_name')->get();
+        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',2)->orderBy('serial')->get();
         return view('ats.eltis.pdf.attendance', compact('students'));
     }
 
     public function registration(){
-        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',2)->orderBy('first_name')->get();
+        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',2)->orderBy('serial')->get();
         return view('ats.eltis.pdf.registration', compact('students'));
     }
 
     public function sitSticker(){
-        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',2)->orderBy('first_name')->get();
+        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',2)->orderBy('serial')->get();
         return view('ats.eltis.pdf.sit-sticker', compact('students'));
     }
 
     public function scoreNow(){
-        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',2)->orderBy('first_name')->get();
+        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',2)->orderBy('serial')->get();
         return view('ats.eltis.score-now', compact('students'));
     }
 
@@ -142,5 +142,21 @@ class EltisController extends Controller
             'not_scored' => $not_scored
         ];
     }
+
+    public function serialAssignment(){
+        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',2)->orderBy('first_name')->get();
+        return view('ats.eltis.serial-assignment', compact('students'));
+    }
+
+    public function processSerialAssignment(Request $request){
+        foreach ($request->serial as $student_id=>$serial){
+            $student = Student::find($student_id);
+            $student->saveSerial($serial);
+        }
+
+        $request->session()->flash('message', 'Serials Updated');
+        return redirect()->back();
+    }
+
 
 }

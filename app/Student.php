@@ -87,6 +87,11 @@ class Student extends Model
         }
     }
 
+    public function saveSerial($serial){
+        $this->serial = $serial;
+        $this->save();
+    }
+
     public function reporting_time(){
         $slot = FinalInterviewSlot::where('student_1', $this->id)
             ->orWhere('student_2', $this->id)

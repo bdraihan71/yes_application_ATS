@@ -35,7 +35,7 @@
                     </div>
                     <div align="right" style="width: 200px;  display: inline-table" >
                         <div>
-                            <!-- <p>Applicant ID: {{$student->applicant_id}}</p> -->
+                            <p>Serial: {{$student->serial}}</p>
                             <img width="80px" src="{{$student->photo}}">
                         </div>
                     </div>
