@@ -26,7 +26,7 @@
                 $counter = 0;
             @endphp
 
-            @while($counter<2)
+            @while($counter<1)
                 <div style="border:1px solid black; width: 350px; height: 90px; float: left">
                     <div style="float:left; padding: 2%">
                         <img  width="70px" src="{{$student->photo}}">
