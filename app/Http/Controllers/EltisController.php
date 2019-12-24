@@ -32,7 +32,20 @@ class EltisController extends Controller
 
     public function publish(){
         $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',2)->orderBy('first_name')->get();
+        $count = 1;
+        foreach($students as $student)
+        {
+            if($student->stage >= 4)
+            {
+                $student = Student::find($student->id);
+                $student->final_id = $count;
+                $student->save();
+                $count = $count + 1;
+            }
+           
 
+        }
+      
         $pdf = PDF::loadView('ats.eltis.pdf.result', compact('students'));
 
         return $pdf->download(env('AKASH_PDF_ELTIS_RESULT_NAME'));

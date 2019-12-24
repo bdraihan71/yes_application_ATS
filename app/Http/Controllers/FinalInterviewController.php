@@ -215,7 +215,7 @@ class FinalInterviewController extends Controller
     }
 
     public function publish(){
-        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>', 4)->orderBy('applicant_id')->get();
+        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>', 4)->orderBy('final_id')->get();
 
         $pdf = PDF::loadView('ats.final-interview.pdf.result', compact('students'));
 
