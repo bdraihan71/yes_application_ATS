@@ -10,7 +10,7 @@
                     {{csrf_field()}}
                     <tr>
                         <td>Did Not Submit</td>
-                        <td>Applicant ID</td>
+                        <td>Serial</td>
                         <td>Student Name</td>
                     </tr>
                     @php
@@ -20,7 +20,7 @@
                         @foreach($students as $student)
                             <tr>
                                 <td><input value="4" type="checkbox" name="{{$student->id}}" {!!($student->stage==4)?"checked":"unchecked"!!}></td>
-                                <td><a href="/ats/student/{{$student->id}}/account/1">{{$student->applicant_id}}</a></td>
+                                <td><a href="/ats/student/{{$student->id}}/account/1">{{$student->final_id}}</a></td>
                                 <td>{{$student->first_name}} {{$student->last_name}}</td>
                             </tr>
                             @php $count++ @endphp

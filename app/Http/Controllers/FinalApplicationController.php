@@ -23,7 +23,7 @@ class FinalApplicationController extends Controller
 
 
     public function scoreSheet(){
-        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',3)->orderBy('applicant_id')->get();
+        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',3)->orderBy('final_id')->get();
         return view('ats.final.score-sheet', compact('students'));
     }
 
