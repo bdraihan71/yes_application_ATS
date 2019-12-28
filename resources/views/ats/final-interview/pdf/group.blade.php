@@ -87,7 +87,7 @@
         </div>
         <div id="heading">
             <h4>International Education and Resource Network – Bangladesh (iEARN-BD)</h4>
-            <h4>Kennedy – Lugar Youth Exchange and Study (YES) Program 2018-2019</h4>
+            <h4>Kennedy – Lugar Youth Exchange and Study (YES) Program 2020-21</h4>
             <h3>Group Interview Score Sheet</h3>
         </div>
         <div class="header-img">
@@ -110,7 +110,7 @@
     </div>
     <div style="clear: both;"><br></div>
     <div class="student-info-heading">
-        <div style="width: 8%">ID</div>
+        <div style="width: 8%">Serial</div>
         <div style="width: 20%">Applicant Name</div>
         <div style="width: 6%">Score (0-5)</div>
         <div style="width: 32%">Characteristics Present/Flags</div>
@@ -120,49 +120,49 @@
 
     <div class="for-loop-code">
         <div class="row-1">
-            <div style="width: 8%">{{empty($slot->getStudent_1)?"unassigned" :$slot->getStudent_1->applicant_id}}</div>
+            <div style="width: 8%">{{empty($slot->getStudent_1)?"unassigned" :$slot->getStudent_1->final_id}}</div>
             <div style="width: 15%; overflow-wrap: break-word;">{{empty($slot->getStudent_1)?"unassigned" :$slot->getStudent_1->first_name}} {{empty($slot->getStudent_1)?"unassigned" :$slot->getStudent_1->last_name}}</div>
-            <div style="width: 5%"><img style="width: 90%" src="/images/ats/eltis_students/{{empty($slot->getStudent_1)?"unassigned" :$slot->getStudent_1->applicant_id}}.jpg"></div>
+            <div style="width: 5%"><img style="width: 50%" src="{{empty($slot->getStudent_1)?"unassigned" :$slot->getStudent_1->photo}}"></div>
             <div style="width: 6%"></div>
             <div style="width: 32%"></div>
             <div style="width: 32%;"></div>
         </div>
         <div class="row-1">
-            <div style="width: 8%">{{empty($slot->getStudent_2)?"unassigned" : $slot->getStudent_2->applicant_id}}</div>
+            <div style="width: 8%">{{empty($slot->getStudent_2)?"unassigned" : $slot->getStudent_2->final_id}}</div>
             <div style="width: 15%; overflow-wrap: break-word;">{{empty($slot->getStudent_2)?"unassigned" : $slot->getStudent_2->first_name}} {{empty($slot->getStudent_2)?"unassigned" : $slot->getStudent_2->last_name}}</div>
-            <div style="width: 5%"><img style="width: 90%" src="/images/ats/eltis_students/{{empty($slot->getStudent_2)?"unassigned" : $slot->getStudent_2->applicant_id}}.jpg"></div>
+            <div style="width: 5%"><img style="width: 50%" src="{{empty($slot->getStudent_2)?"unassigned" : $slot->getStudent_2->photo}}"></div>
             <div style="width: 6%"></div>
             <div style="width: 32%"></div>
             <div style="width: 32%"></div>
         </div>
         <div class="row-1">
-            <div style="width: 8%">{{empty($slot->getStudent_3)?"unassigned" : $slot->getStudent_3->applicant_id}}</div>
+            <div style="width: 8%">{{empty($slot->getStudent_3)?"unassigned" : $slot->getStudent_3->final_id}}</div>
             <div style="width: 15%; overflow-wrap: break-word;">{{empty($slot->getStudent_3)?"unassigned" : $slot->getStudent_3->first_name}} {{empty($slot->getStudent_3)?"unassigned" : $slot->getStudent_3->last_name}}</div>
-            <div style="width: 5%"><img style="width: 90%" src="/images/ats/eltis_students/{{empty($slot->getStudent_3)?"unassigned" : $slot->getStudent_3->applicant_id}}.jpg"></div>
+            <div style="width: 5%"><img style="width: 50%" src="{{empty($slot->getStudent_3)?"unassigned" : $slot->getStudent_3->photo}}"></div>
             <div style="width: 6%"></div>
             <div style="width: 32%"></div>
             <div style="width: 32%;"></div>
         </div>
         <div class="row-1">
-            <div style="width: 8%">{{empty($slot->getStudent_4)?"unassigned" : $slot->getStudent_4->applicant_id}}</div>
+            <div style="width: 8%">{{empty($slot->getStudent_4)?"unassigned" : $slot->getStudent_4->final_id}}</div>
             <div style="width: 15%; overflow-wrap: break-word;">{{empty($slot->getStudent_4)?"unassigned" : $slot->getStudent_4->first_name}} {{empty($slot->getStudent_4)?"unassigned" : $slot->getStudent_4->last_name}}</div>
-            <div style="width: 5%"><img style="width: 90%" src="/images/ats/eltis_students/{{empty($slot->getStudent_4)?"unassigned" : $slot->getStudent_4->applicant_id}}.jpg"></div>
+            <div style="width: 5%"><img style="width: 50%" src="{{empty($slot->getStudent_4)?"unassigned" : $slot->getStudent_4->photo}}"></div>
             <div style="width: 6%"></div>
             <div style="width: 32%"></div>
             <div style="width: 32%"></div>
         </div>
         <div class="row-1">
-            <div style="width: 8%">{{empty($slot->getStudent_5)?"unassigned" : $slot->getStudent_5->applicant_id}}</div>
+            <div style="width: 8%">{{empty($slot->getStudent_5)?"unassigned" : $slot->getStudent_5->final_id}}</div>
             <div style="width: 15%; overflow-wrap: break-word;">{{empty($slot->getStudent_5)?"unassigned" : $slot->getStudent_5->first_name}} {{empty($slot->getStudent_5)?"unassigned" : $slot->getStudent_5->last_name}}</div>
-            <div style="width: 5%"><img style="width: 90%" src="/images/ats/eltis_students/{{empty($slot->getStudent_5)?"unassigned" : $slot->getStudent_5->applicant_id}}.jpg"></div>
+            <div style="width: 5%"><img style="width: 50%" src="/{{empty($slot->getStudent_5)?"unassigned" : $slot->getStudent_5->photo}}"></div>
             <div style="width: 6%"></div>
             <div style="width: 32%"></div>
             <div style="width: 32%;"></div>
         </div>
         <div class="row-1">
-            <div style="width: 8%">{{empty($slot->getStudent_6)?"unassigned" : $slot->getStudent_6->applicant_id}}</div>
+            <div style="width: 8%">{{empty($slot->getStudent_6)?"unassigned" : $slot->getStudent_6->final_id}}</div>
             <div style="width: 15%; overflow-wrap: break-word;">{{empty($slot->getStudent_6)?"unassigned" : $slot->getStudent_6->first_name}} {{empty($slot->getStudent_6)?"unassigned" : $slot->getStudent_6->last_name}}</div>
-            <div style="width: 5%"><img style="width: 90%" src="/images/ats/eltis_students/{{empty($slot->getStudent_6)?"unassigned" : $slot->getStudent_6->applicant_id}}.jpg"></div>
+            <div style="width: 5%"><img style="width: 50%" src="{{empty($slot->getStudent_6)?"unassigned" : $slot->getStudent_6->photo}}"></div>
             <div style="width: 6%"></div>
             <div style="width: 32%"></div>
             <div style="width: 32%"></div>
