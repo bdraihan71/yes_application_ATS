@@ -74,7 +74,7 @@
 				</div>
 				<div id="heading">
 					<h4>International Education and Resource Network – Bangladesh (iEARN-BD)</h4>
-					<h4>Kennedy – Lugar Youth Exchange and Study (YES) Program 2018-2019</h4>
+					<h4>Kennedy – Lugar Youth Exchange and Study (YES) Program 2020-21</h4>
 					<h3>Interview Round</h3>
 					<h3>Parents' Questionnaire</h3>
 				</div>
@@ -85,14 +85,14 @@
 
 			<div class="student-info">
 				<div class="info-type">
-					<div style="width: 10%">ID</div>
+					<div style="width: 10%">Serial</div>
 					<div style="width: 35%">Name of Student</div>
 					<div style="width: 54%">Name of Parent Present</div>
 				</div>
 				<div style="clear: both;"></div>
 
 				<div class="info-field">
-					<div style="width: 10%">{{$student->applicant_id}}</div>
+					<div style="width: 10%">{{$student->final_id}}</div>
 					<div style="width: 35%">{{$student->first_name}} {{$student->last_name}}</div>
 					<div style="width: 54%">{{$student->parent_for_interview}}</div>
 				</div>
