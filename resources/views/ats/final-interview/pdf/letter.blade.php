@@ -17,10 +17,10 @@
             <div style="margin-top: 1in">
                 <div>
                     <div style="width: 400px;  display: inline-table">
-                        <p>Ref: iEARN-BD/YES-16/INTERVIEW/2017-06</p><br>
+                        <p>Ref: iEARN-BD/YES-18/INTERVIEW/2019-06</p><br>
                     </div>
                     <div align="right" style="width: 200px;  display: inline-table" >
-                        <p><b>21 December 2017</b></p>
+                        <p><b>5,6 & 7 January 2020</b></p>
                     </div>
                 </div>
                 <div>
@@ -35,7 +35,7 @@
                     </div>
                     <div align="right" style="width: 200px;  display: inline-table" >
                         <div>
-                            <p>Applicant ID: {{$student->applicant_id}}</p>
+                            <p>Serial: {{$student->final_id}}</p>
                             <img width="100px" src="{{$student->photo}}">
                         </div>
                     </div>
