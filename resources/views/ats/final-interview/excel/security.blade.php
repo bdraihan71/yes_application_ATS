@@ -7,8 +7,7 @@
     </tr>
     </thead>
     <tr class="row">
-        <td>ID</td>
-        <td>Applicant ID</td>
+        <td>Serial</td>
         <td>First Name</td>
         <td>Last Name</td>
         <td>Parent for Interview</td>
@@ -19,8 +18,7 @@
     @foreach($students as $student)
         {{csrf_field()}}
         <tr class="row">
-            <td>{{$student->id}}</td>
-            <td>{{$student->applicant_id}}</td>
+            <td>{{$student->final_id}}</td>
             <td>{{$student->first_name}}</td>
             <td>{{$student->last_name}}</td>
             <td>{{$student->parent_for_interview}}</td>
