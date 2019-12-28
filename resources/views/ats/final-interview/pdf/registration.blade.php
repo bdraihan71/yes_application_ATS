@@ -58,14 +58,14 @@
             <h3>Kennedy Lugar Youth Exchange and Study (YES) Program</h3>
             <h4>Academic Year 2020-21</h4>
             <h3>Registration Sheet: Final Application & Interview Round</h3>
-            <p>Date: 7-9 January 2018</p>
+            <p>Date:  5,6 & 7 January 2020</p>
         </div>
         <img  style="width:100px; background-color: blue ; float: left" src="/images/ats/iearnbd_logo.png">
     </div>
 
 
     <div style="clear: left">
-        <div class="col" style="width: 9%;">Applicant ID</div>
+        <div class="col" style="width: 9%;">Serial</div>
         <div class="col" style="width: 9%; ">Name</div>
         <div class="col" style="width: 9%; ">Image</div>
         <div class="col" style="width: 18%; ">School, District</div>
@@ -76,7 +76,7 @@
 
     @foreach($students as $student)
         <div>
-            <div class="col" style="width: 9%;">{{$student->applicant_id}}</div>
+            <div class="col" style="width: 9%;">{{$student->final_id}}</div>
             <div class="col" style="width: 9%; ">{{$student->first_name}} {{$student->last_name}}</div>
             <div class="col" style="width: 9%; text-align: center;">
                 <img  width="64px" src="{{$student->photo}}">
