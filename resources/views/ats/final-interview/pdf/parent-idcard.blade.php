@@ -48,18 +48,18 @@
                     <h4>International Education and Resource Network</h4>
                     <h3>Kennedy-Lugar Youth Exchange</h3>
                     <h3>and Study Program</h3>
-                    <h4>Academic Year 2018-2019</h4>
+                    <h4>Academic Year 2020-21</h4>
                 </div>
                 <div>
                     <h1 style="color: darkblue;">Final Application & Interview Round</h1>
-                    <h3>7, 8 & 9 January 2018</h3>
+                    <h3>5,6 & 7 January 2020</h3>
                     {{--<img width="100px" src="/images/ats/eltis_students/{{$student->applicant_id}}.jpg"><br>--}}
                     <br>
                     <h2>{{$student->parent_for_interview}}</h2>
                     <b>Parent of {{$student->first_name}} {{$student->last_name}}</b><br>
                     {{$student->schoolName}},
                     {{$student->district}}
-                    <p id="app-id">Applicant ID: {{$student->applicant_id}}</p>
+                    <p id="app-id">Serial: {{$student->final_id}}</p>
                 </div>
                 <div>
                     <p>Reporting Time: {{$student->reporting_time()}}</p>
