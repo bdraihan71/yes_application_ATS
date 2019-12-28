@@ -1,11 +1,7 @@
 <html>
 <table class="table table-responsive table-sm">
     <thead>
-    <tr class="row">
-        <td>ID</td>
-        <td>Name</td>
-    </tr>
-    </thead>
+    
     <tr class="row">
         <td>Serial</td>
         <td>First Name</td>
@@ -15,6 +11,7 @@
         <td>Father Contact</td>
         <td>Mother Contact</td>
     </tr>
+    </thead>
     @foreach($students as $student)
         {{csrf_field()}}
         <tr class="row">
