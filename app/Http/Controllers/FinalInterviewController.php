@@ -107,7 +107,7 @@ class FinalInterviewController extends Controller
     }
 
     public function invitation(){
-        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',4)->orderBy('applicant_id')->get();
+        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',4)->orderBy('final_id')->get();
         return view('ats.final-interview.pdf.letter', compact('students'));
     }
 
@@ -133,27 +133,27 @@ class FinalInterviewController extends Controller
 
     public function individual($interviewer){
         $interviewer = Constant::where('key', "Individual Interviewer ".$interviewer)->first()->value;
-        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',4)->orderBy('applicant_id')->get();
+        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',4)->orderBy('final_id')->get();
         return view('ats.final-interview.pdf.individual', compact('students','interviewer'));
     }
 
     public function envelope(){
-        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',4)->orderBy('applicant_id')->get();
+        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',4)->orderBy('final_id')->get();
         return view('ats.final-interview.pdf.envelope', compact('students'));
     }
 
     public function idcard(){
-        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',4)->orderBy('applicant_id')->get();
+        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',4)->orderBy('final_id')->get();
         return view('ats.final-interview.pdf.idcard', compact('students'));
     }
 
     public function parentIdcard(){
-        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',4)->orderBy('applicant_id')->get();
+        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',4)->orderBy('final_id')->get();
         return view('ats.final-interview.pdf.parent-idcard', compact('students'));
     }
 
     public function registration(){
-        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',4)->orderBy('applicant_id')->get();
+        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',4)->orderBy('final_id')->get();
         return view('ats.final-interview.pdf.registration', compact('students'));
     }
 
@@ -163,7 +163,7 @@ class FinalInterviewController extends Controller
     }
 
     public function parentQuestionnaire(){
-        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',4)->orderBy('applicant_id')->get();
+        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',4)->orderBy('final_id')->get();
         return view('ats.final-interview.pdf.parentQuestionnaire', compact('students'));
     }
 
@@ -174,7 +174,7 @@ class FinalInterviewController extends Controller
 
     public function security(){
 
-        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',4)->orderBy('applicant_id')->get();
+        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',4)->orderBy('final_id')->get();
 
 
         Excel::create('Filename', function ($excel) use ( $students) {
@@ -195,22 +195,22 @@ class FinalInterviewController extends Controller
     }
 
     public function hfletterScoresheet(){
-        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',4)->orderBy('applicant_id')->get();
+        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',4)->orderBy('final_id')->get();
         return view('ats.final-interview.pdf.hfletter-scoresheet', compact('students'));
     }
 
     public function teacherRecommendationScoresheet(){
-        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',4)->orderBy('applicant_id')->get();
+        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',4)->orderBy('final_id')->get();
         return view('ats.final-interview.pdf.teacher-recommendation-scoresheet', compact('students'));
     }
 
     public function activityAchievementScoresheet(){
-        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',4)->orderBy('applicant_id')->get();
+        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',4)->orderBy('final_id')->get();
         return view('ats.final-interview.pdf.activity-achievement-scoresheet', compact('students'));
     }
 
     public function overallAppraisalScoresheet(){
-        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',4)->orderBy('applicant_id')->get();
+        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',4)->orderBy('final_id')->get();
         return view('ats.final-interview.pdf.overall-appraisal-scoresheet', compact('students'));
     }
 
@@ -224,7 +224,7 @@ class FinalInterviewController extends Controller
     }
 
     public function scoreSheet(){
-        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',4)->orderBy('applicant_id')->get();
+        $students = Student::where('batch_id',  env('AKASH_BATCH'))->where('stage','>',4)->orderBy('final_id')->get();
         return view('ats.final-interview.score-sheet', compact('students'));
     }
 

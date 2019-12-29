@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-8">
             <table border="1">
-                <form action="/ats/final/parent" method="post">
+                <form action="/ats/final-interview/parent" method="post">
                     {{csrf_field()}}
                 <tr>
                     <td>Serial</td>

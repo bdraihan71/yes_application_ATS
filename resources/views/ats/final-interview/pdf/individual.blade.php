@@ -74,8 +74,10 @@
         </div>
         <div id="heading">
             <h4>International Education and Resource Network – Bangladesh (iEARN-BD)</h4>
-            <h4>Kennedy – Lugar Youth Exchange and Study (YES) Program 2018-2019</h4>
+            <h4>Kennedy – Lugar Youth Exchange and Study (YES) Program 2020-21</h4>
             <h3>Individual Interview Score Sheet</h3>
+            <p>Date:  5,6 & 7 January 2020</p>
+            
         </div>
         <div class="header-img">
 
@@ -89,7 +91,7 @@
         <div style="clear: both"></div>
         <div class="interviewer-name-post" style="float: left;width: 50%; font-size: 0.9em">{{$interviewer}}</div>
         <div class="student-info-img">
-            <img  style="margin:2px; width: 60px;border: 1px solid black; float: left" src="/images/ats/eltis_students/{{$student->applicant_id}}.jpg">
+            <img  style="margin:2px; width: 60px;border: 1px solid black; float: left" src="{{$student->photo}}">
             <div class="student-info" style="float: left;">
                 <div style="float: left;font-size: 0.8em">Reporting Time: {{$student->reporting_time()}} Applicant ID: {{$student->applicant_id}}</div><br>
                 <div style="float: left;font-size: 0.8em">School: {{$student->schoolName}} , {{$student->district}}</div><br>
