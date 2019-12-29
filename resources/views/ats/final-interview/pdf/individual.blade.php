@@ -48,9 +48,9 @@
             overflow-wrap: break-word;
             float: left;
             border: 1px solid black;
-            height: 45px;
+            height: 65px;
             text-align: center;
-            font-size: 0.8em;
+            font-size: 0.7em;
         }
         .marking-fields div {
             width: 8.8%;
