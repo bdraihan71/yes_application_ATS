@@ -93,7 +93,7 @@
         <div class="student-info-img">
             <img  style="margin:2px; width: 60px;border: 1px solid black; float: left" src="{{$student->photo}}">
             <div class="student-info" style="float: left;">
-                <div style="float: left;font-size: 0.8em">Reporting Time: {{$student->reporting_time()}} Applicant ID: {{$student->applicant_id}}</div><br>
+                <div style="float: left;font-size: 0.8em">Reporting Time: {{$student->reporting_time()}} Serial: {{$student->final_id}}</div><br>
                 <div style="float: left;font-size: 0.8em">School: {{$student->schoolName}} , {{$student->district}}</div><br>
                 <div style="float: left;font-size: 0.8em">Name: {{$student->first_name}} {{$student->last_name}} </div>
             </div>
