@@ -20,7 +20,7 @@
                         <p>Ref: iEARN-BD/YES-18/INTERVIEW/2019-06</p><br>
                     </div>
                     <div align="right" style="width: 200px;  display: inline-table" >
-                        <p><b>5,6 & 7 January 2020</b></p>
+                        <p><b>1 January 2020</b></p>
                     </div>
                 </div>
                 <div>
@@ -50,11 +50,11 @@
                                 Dear <b>{{$student->first_name}} {{$student->last_name}},</b>
                             </p>
                             <p>
-                                Congratulations! You have qualified in <b>ELTiS and In-Class Essay</b> of <b>Kennedy Lugar Youth Exchange & Study Program</b> for <b>Academic Year 2018-2019</b>. We are delighted to invite you to participate in <b>Final Application & Interview Round</b> of the recruitment.
+                                Congratulations! You have qualified in <b>ELTiS and In-Class Essay</b> of <b>Kennedy Lugar Youth Exchange & Study Program</b> for <b>Academic Year 2020-21</b>. We are delighted to invite you to participate in <b>Final Application & Interview Round</b> of the recruitment.
                             </p>
 
                             <p>
-                                Your YES program Final Application has been received and you have been selected to participate in the next phase, which is the <b>Interview Round</b>. The interview will be held at the <b>American Center</b>, Dhaka; Progati Sharoni, Plot 1, J-Block, Dhaka 1212.
+                                Your YES program Final Application has been received and you have been selected to participate in the next phase, which is the <b>Interview Round</b>. The interview will be held at the <b>American Center</b>, Dhaka; Progati Sharoni, Plot 1, Baridhara, J-Block, Dhaka 1212.
                             </p>
 
                             <p>
@@ -85,7 +85,7 @@
                 <div style="width: 350px; display: inline-table" >
                     <b>Address of American Center, Dhaka</b><br>
                     Progati Sharoni, Plot 1,<br>
-                    J-Block, Dhaka 1212<br>
+                    Baridhara, J-Block, Dhaka 1212<br>
                     <img width="350px" src="/images/ats/am_center_map.png">
                 </div>
             </div>

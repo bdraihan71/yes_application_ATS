@@ -10,7 +10,7 @@
                     {{csrf_field()}}
                     <tr>
                         <td>Stage</td>
-                        <td>Applicant ID</td>
+                        <td>Serial</td>
                         <td>Student Name</td>
                     </tr>
                     @php
@@ -20,8 +20,8 @@
                         @foreach($students as $student)
                             <tr>
                                 <td><input value="{{$student->stage}}" type="number" name="{{$student->id}}"></td>
-                                <td><a href="/ats/student/{{$student->id}}/account/1">{{$student->applicant_id}}</a></td>
-                                <td>{{$student->first_name}} {{$student->last_name}}</td>
+                                <td>{{$student->final_id}}</td>
+                                <td><a href="/ats/student/{{$student->id}}/account/1">{{$student->first_name}} {{$student->last_name}}</a></td>
                             </tr>
                             @php $count++ @endphp
                         @endforeach

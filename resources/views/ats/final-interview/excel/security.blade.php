@@ -6,6 +6,7 @@
         <td>Serial</td>
         <td>First Name</td>
         <td>Last Name</td>
+        <td>Email</td>
         <td>Parent for Interview</td>
         <td>Student Contact</td>
         <td>Father Contact</td>
@@ -18,6 +19,7 @@
             <td>{{$student->final_id}}</td>
             <td>{{$student->first_name}}</td>
             <td>{{$student->last_name}}</td>
+            <td>{{$student->email}}</td>
             <td>{{$student->parent_for_interview}}</td>
             <td>{{$student->contact}}</td>
             <td>{{$student->fatherContact}}</td>
