@@ -50,19 +50,19 @@
                                 Dear <b>{{$student->first_name}} {{$student->last_name}},</b>
                             </p>
                             <p>
-                                Congratulations! You have qualified in <b>ELTiS and In-Class Essay</b> of <b>Kennedy Lugar Youth Exchange & Study Program</b> for <b>Academic Year 2020-21</b>. We are delighted to invite you to participate in <b>Final Application & Interview Round</b> of the recruitment.
+                                Congratulations! You have qualified in the <b>ELTiS and In-Class Essay</b> round of <b>Kennedy Lugar Youth Exchange & Study Program</b> for <b>Academic Year 2020-21</b>. We are delighted to invite you to participate in <b>Final Application & Interview Round</b> of the recruitment.
                             </p>
 
                             <p>
-                                Your YES program Final Application has been received and you have been selected to participate in the next phase, which is the <b>Interview Round</b>. The interview will be held at the <b>American Center</b>, Dhaka; Progati Sharoni, Plot 1, Baridhara, J-Block, Dhaka 1212.
+                                Your YES program <b>Final Application</b> has been received and you have been selected to participate in the next phase, which is the <b>Final Interview</b> Round. The interview will be held at the <b>American Center</b>, Dhaka; Progati Sharoni, Plot 1, Baridhara, J-Block, Dhaka 1212.
                             </p>
 
                             <p>
-                                You and your parent, <b>{{$student->parent_for_interview}}</b> are requested to be present at the venue sharp on <b>{{$student->reporting_time()}}</b>. It is <b>absolutely mandatory</b> for {{$student->parent_for_interview}} to be present with you. Parents and applicants are <b>required</b> to carry a photo ID (e.g. passport/ national ID/ school ID  that has photo and name) with them on the day of the interview. For security reasons, only you and {{$student->parent_for_interview}} will be allowed to enter the venue.
+                                You and your parent, are requested to be present at the venue sharp on <b>{{$student->reporting_time()}}</b>. It is <b>absolutely mandatory</b> for {{$student->parent_for_interview}} to be present with you. Parents and applicants are <b>required</b> to carry a photo ID (e.g. passport/ national ID/ school ID  that has photo and name) with them on the day of the interview. For security reasons, only you and {{$student->parent_for_interview}} will be allowed to enter the venue.
                             </p>
 
                             <p>
-                                You <b>must</b> also bring all your <b>original supporting documents</b> (Birth certificate, Passport, Transcripts, Vaccination Records and Achievement Certificate) that you have submitted along with your Final Application for verification.
+                                You <b>must</b> also bring all your <b>original supporting documents</b> (Birth certificate, Passport, Transcripts, Vaccination Records and Achievement Certificate) that you have submitted along with your <b>Final Application</b> for verification.
                             </p>
 
                         </div>
