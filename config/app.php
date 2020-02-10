@@ -158,6 +158,7 @@ return [
 
         Maatwebsite\Excel\ExcelServiceProvider::class,
         Barryvdh\DomPDF\ServiceProvider::class,
+        Aws\Laravel\AwsServiceProvider::class,
 
     ],
 
@@ -207,6 +208,7 @@ return [
 
         'Excel' => Maatwebsite\Excel\Facades\Excel::class,
         'PDF' => Barryvdh\DomPDF\Facade::class,
+        'AWS' => Aws\Laravel\AwsFacade::class,
 
     ],
 

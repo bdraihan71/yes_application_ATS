@@ -145,3 +145,4 @@ Route::get('/student/create', 'AtsController@create')->middleware('auth')->name(
 Route::post('/student/create', 'AtsController@store')->middleware('auth')->name('student.store');
 // route registration attempts to home
 Route::any('/register','HomeController@dashboard');
+Route::get('/sendSMS', 'SMSController@sendSMS');
