@@ -299,7 +299,9 @@
                             <table class="table">
                                 <tr class="bg-white">
                                     <th>Contact Number: </th>
-                                    <td>{{$student->contact}}</td>
+                                    <td>{{$student->contact}}
+                                    <a href="/text/{{$student->contact}}" class = "btn btn-success">SMS</a>
+                                    </td>
                                 </tr>
                                 <tr class="bg-white">
                                     <th>District: </th>

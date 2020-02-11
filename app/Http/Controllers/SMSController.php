@@ -8,12 +8,22 @@ use AWS;
 
 class SMSController extends Controller
 {
-    public function sendSMS(){
+
+    public function text($number)
+    {
+        return view('ats.text', compact('number'));
+    }
+
+    public function sendSMS(Request $request){
+        $this->validate($request,[
+            'mobile_number' => 'required',
+            'text' => 'required|max:140',
+        ]);
         $sms = AWS::createClient('sns');
     
         $sms->publish([
-                'Message' => 'Hello, Test message',
-                'PhoneNumber' => '+8801855316883',	
+                'Message' => $request->text,
+                'PhoneNumber' => $request->mobile_number,	
                 // 'PhoneNumber' => '+8801755837774',	
                 'MessageAttributes' => [
                     'AWS.SNS.SMS.SMSType'  => [
@@ -22,6 +32,8 @@ class SMSController extends Controller
                         ]
                     ],
                 ]);
+
+                
        
-}
+    }
 }
