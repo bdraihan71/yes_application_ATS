@@ -31,7 +31,7 @@ class SMSController extends Controller
                         'StringValue' => 'Transactional',
                         ]
                         ,'AWS.SNS.SMS.SenderID'  => [
-                            'StringValue' => 'KL-YES',
+                            'StringValue' => 'KLYES',
                             'DataType'    => 'String',
                         ]
                     ],
