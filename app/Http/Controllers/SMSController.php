@@ -24,16 +24,20 @@ class SMSController extends Controller
         $sms->publish([
                 'Message' => $request->text,
                 'PhoneNumber' => $request->mobile_number,	
-                // 'PhoneNumber' => '+8801755837774',	
+                // 'PhoneNumber' => '+8801855316883',	
                 'MessageAttributes' => [
                     'AWS.SNS.SMS.SMSType'  => [
                         'DataType'    => 'String',
-                        'StringValue' => 'Promotional',
+                        'StringValue' => 'Transactional',
+                        ]
+                        ,'AWS.SNS.SMS.SenderID'  => [
+                            'StringValue' => 'KL-YES',
+                            'DataType'    => 'String',
                         ]
                     ],
                 ]);
 
                 
-       
+        return redirect()->back();
     }
 }
