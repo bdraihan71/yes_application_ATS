@@ -17,10 +17,10 @@ return [
     |
     */
     'credentials' => [
-        'key'    => env('SNS_AWS_ACCESS_KEY_ID', ''),
-        'secret' => env('SNS_AWS_SECRET_ACCESS_KEY', ''),
+        'key'    => 'AKIAXEGAVG7YQRKD2M6U',
+        'secret' => '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',
     ],
-    'region' => env('SNS_AWS_REGION', 'us-east-1'),
+    'region' => 'us-east-1',
     'version' => 'latest',
     'ua_append' => [
         'L5MOD/' . AwsServiceProvider::VERSION,
