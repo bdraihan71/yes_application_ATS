@@ -451,9 +451,16 @@
 
                                 <tr class="bg-white">
                                     <th>Phone Number: </th>
-                                    <td>{{$student->fatherContact}}</td>
+                                    <td>
+                                        {{$student->fatherContact}}
+                                        <a href="/text/{{$student->fatherContact}}" class = "btn btn-success">SMS</a>
+                                    </td>
                                     <th>Phone Number: </th>
-                                    <td>{{$student->motherContact}}</td>
+                                    <td>
+                                        {{$student->motherContact}}
+                                        <a href="/text/{{$student->motherContact}}" class = "btn btn-success">SMS</a>
+                                    </td>
+                                    
                                 </tr>
 
                                 <tr class="bg-white">
