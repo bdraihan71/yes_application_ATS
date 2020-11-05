@@ -123,6 +123,7 @@ class PhoneInterviewController extends Controller
 
     public function processWithdraw(Request $request)
     {
+        
         $student = Student::find($request->student_id);
         $student->stage = 2;
         $student->save();
@@ -137,6 +138,7 @@ class PhoneInterviewController extends Controller
             'stage'=> 2,
             'body'=> "Student withdrawn",
         ]);
+       
         $request->session()->flash('message', 'Student has been withdrawn.');
         return redirect()->back();
     }

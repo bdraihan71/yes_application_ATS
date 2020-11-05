@@ -7,7 +7,7 @@
             <ul class="nav nav-pills nav-stacked">
                 <li><a href="/ats/eltis/">Stacks</a></li>
                 <li><a href="/ats/eltis/result/publish">Get Publishable Result</a></li>
-                <li><a href="/ats/eltis/backup">Backup</a></li>
+                {{-- <li><a href="/ats/eltis/backup">Backup</a></li> --}}
                 <li><a href="/ats/eltis/score_sheet">ELTiS Score Sheet</a></li>
                 <li><a href="/ats/eltis/serial_assignment">Serial Assignment</a></li>
                 <li><a href="/ats/eltis/in_class_essary_score_sheet">In Class Essay - Score Sheet</a></li>
