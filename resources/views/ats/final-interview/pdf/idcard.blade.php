@@ -57,7 +57,7 @@
                     <b>{{$student->first_name}} {{$student->last_name}}</b><br>
                     {{$student->schoolName}},
                     {{$student->district}}
-                    <p id="app-id">Serial: {{$student->final_id}}</p>
+                    <p id="app-id">Application ID: {{20210000 + $student->applicant_id}}</p>
                 </div>
                 <div>
                     <h3>Reporting Time:</h3>

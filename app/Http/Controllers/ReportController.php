@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\DB;
 class ReportController extends Controller
 {
     public function districtwise(Request $request){
-
+  
             $query = "SELECT district,
   count(*) total, sum(case when sex = 'male' then 1 else 0 end) males,
   sum(case when sex = 'female' then 1 else 0 end) females,

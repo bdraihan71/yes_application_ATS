@@ -84,6 +84,7 @@ class FinalInterviewController extends Controller
         $students = Student::where('stage', 5 )
             ->whereNotIn('id', $students_id)->orderBy('first_name')
             ->get();
+            dd($students);
         return view('ats.final-interview.slot.show', compact('slot', 'students'));
     }
 
@@ -159,6 +160,7 @@ class FinalInterviewController extends Controller
 
     public function schedule(){
         $slots = FinalInterviewSlot::all();
+    // dd($slots);
         return view('ats.final-interview.pdf.schedule', compact('slots'));
     }
 

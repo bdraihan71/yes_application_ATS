@@ -56,7 +56,7 @@
         <div style="margin-top:15px; width: 700px; text-align: center; float: left">
 
             <h3>Kennedy Lugar Youth Exchange and Study (YES) Program</h3>
-            <h4>Academic Year 2021-22</h4>
+            <h4>Academic Year 2020-21</h4>
             <h3>Interview Schedule</h3>
             <p>Date: 5,6 & 7 January 2020</p>
         </div>
@@ -67,7 +67,7 @@
     <div style="clear: left">
         <table border="1" cellspacing="0">
             <tr>
-                <td>Serial ID</td>
+                <td>Application ID</td>
                 <td>Name of Student</td>
                 <td>Name of Parent</td>
                 <td>School/College</td>
@@ -83,7 +83,7 @@
     @foreach($slots as $slot)
         @if(!empty($slot->getStudent_1))
             <tr>
-            <td>{{$slot->getStudent_1->final_id}}</td>
+            <td>{{20210000 + $slot->getStudent_1->applicant_id}}</td>
             <td>{{$slot->getStudent_1->first_name}} {{empty($slot->getStudent_1)?'unassigned': $slot->getStudent_1->last_name}}</td>
             <td>{{$slot->getStudent_1->parent_for_interview}}</td>
             <td>{{$slot->getStudent_1->schoolName}}</td>
@@ -97,7 +97,7 @@
         @endif
         @if(!empty($slot->getStudent_2))
             <tr>
-            <td>{{$slot->getStudent_2->final_id}}</td>
+            <td>{{20210000 + $slot->getStudent_2->applicant_id}}</td>
             <td>{{$slot->getStudent_2->first_name}} {{empty($slot->getStudent_2)?'unassigned': $slot->getStudent_2->last_name}}</td>
             <td>{{$slot->getStudent_2->parent_for_interview}}</td>
             <td>{{$slot->getStudent_2->schoolName}}</td>
@@ -111,7 +111,7 @@
         @endif
         @if(!empty($slot->getStudent_3))
         <tr>
-            <td>{{$slot->getStudent_3->final_id}}</td>
+            <td>{{20210000 + $slot->getStudent_3->applicant_id}}</td>
             <td>{{$slot->getStudent_3->first_name}} {{empty($slot->getStudent_3)?'unassigned': $slot->getStudent_3->last_name}}</td>
             <td>{{$slot->getStudent_3->parent_for_interview}}</td>
             <td>{{$slot->getStudent_3->schoolName}}</td>
@@ -125,7 +125,7 @@
         @endif
         @if(!empty($slot->getStudent_4))
         <tr>
-            <td>{{$slot->getStudent_4->final_id}}</td>
+            <td>{{20210000 + $slot->getStudent_4->applicant_id}}</td>
             <td>{{$slot->getStudent_4->first_name}} {{empty($slot->getStudent_4)?'unassigned': $slot->getStudent_4->last_name}}</td>
             <td>{{$slot->getStudent_4->parent_for_interview}}</td>
             <td>{{$slot->getStudent_4->schoolName}}</td>
@@ -139,7 +139,7 @@
         @endif
         @if(!empty($slot->getStudent_5))
         <tr>
-            <td>{{$slot->getStudent_5->final_id}}</td>
+            <td>{{20210000 + $slot->getStudent_5->applicant_id}}</td>
             <td>{{$slot->getStudent_5->first_name}} {{empty($slot->getStudent_5)?'unassigned': $slot->getStudent_5->last_name}}</td>
             <td>{{$slot->getStudent_5->parent_for_interview}}</td>
             <td>{{$slot->getStudent_5->schoolName}}</td>
@@ -153,7 +153,7 @@
         @endif
         @if(!empty($slot->getStudent_6))
         <tr>
-            <td>{{$slot->getStudent_6->final_id}}</td>
+            <td>{{20210000 + $slot->getStudent_6->applicant_id}}</td>
             <td>{{$slot->getStudent_6->first_name}} {{empty($slot->getStudent_6)?'unassigned': $slot->getStudent_6->last_name}}</td>
             <td>{{$slot->getStudent_6->parent_for_interview}}</td>
             <td>{{$slot->getStudent_6->schoolName}}</td>
