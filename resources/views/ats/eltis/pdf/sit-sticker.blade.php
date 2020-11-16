@@ -34,7 +34,7 @@
                     <div style="text-align:left; font-size: 80%; padding: 2%">
                         <b></b>
                         <b>{{$student->first_name}} {{$student->last_name}}</b><br>
-                        <b>Serial: {{$student->serial}}</b><br><br>
+                        <b>Applicant ID: {{20210000 + $student->applicant_id}}</b><br><br>
                         {{$student->schoolName}}, {{$student->district}}
                     </div>
                 </div>

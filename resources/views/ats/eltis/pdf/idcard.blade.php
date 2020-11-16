@@ -82,7 +82,7 @@
                     <h4>International Education and Resource Network</h4>
                     <h3>Kennedy-Lugar Youth Exchange</h3>
                     <h3>and Study Program</h3>
-                    <h4>Academic Year 2020-2021</h4>
+                    <h4>Academic Year 2021-2021</h4>
                 </div>
                 <div>
                     <h1 style="color: darkblue;">ELTiS Test Round</h1>
@@ -91,7 +91,7 @@
                     <b>{{$student->first_name}} {{$student->last_name}}</b><br>
                     {{$student->schoolName}},
                     {{$student->district}}
-                    <p id="app-id">Serial: {{$student->serial}}</p>
+                    <p id="app-id">Applicant ID: {{20210000 + $student->applicant_id}}</p>
                 </div>
             </div>
 

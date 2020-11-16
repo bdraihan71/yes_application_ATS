@@ -7,14 +7,14 @@
 
         <table border="1" style="border-collapse: collapse;">
             <tr>
-                <td>Serial</td>
+                <td>Applicant ID</td>
                 <td>Name</td>
                 <td>School</td>
                 <!-- <td>Status</td> -->
             </tr>
             @foreach($students as $student)
                 <tr>
-                    <td>{{$student->final_id}}</td>
+                    <td>{{20210000 + $student->applicant_id}}</td>
                     <td>{{$student->first_name}} {{$student->last_name}}</td>
                     <td>{{$student->schoolName}}</td>
                     {{-- @if($student->stage == 7)

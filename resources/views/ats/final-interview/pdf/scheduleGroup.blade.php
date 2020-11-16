@@ -54,7 +54,7 @@
             <div style="margin-top:15px; width: 500px; text-align: center; float: left">
 
                 <h3>Kennedy Lugar Youth Exchange and Study (YES) Program</h3>
-                <h4>Academic Year 2020-21</h4>
+                <h4>Academic Year 2021-22</h4>
             </div>
             <img  style="width:100px; background-color: blue ; float: left" src="/images/ats/iearnbd_logo.png">
         </div>

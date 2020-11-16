@@ -74,7 +74,7 @@
 				</div>
 				<div id="heading">
 					<h4>International Education and Resource Network – Bangladesh (iEARN-BD)</h4>
-					<h4>Kennedy – Lugar Youth Exchange and Study (YES) Program 2020-21 <br> Date:  5,6 & 7 January 2020</h4>
+					<h4>Kennedy – Lugar Youth Exchange and Study (YES) Program 2021-22 <br> Date:  5,6 & 7 January 2020</h4>
 					<h3>Interview Round</h3>
 					<h3>Parents' Questionnaire</h3>
 				</div>

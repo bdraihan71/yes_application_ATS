@@ -210,9 +210,9 @@
                                     <td>{{$student->date_of_birth}}</td>
                                 </tr>
                                 <tr class="bg-white">
-                                    <th>Age on 1st of August, 2020: </th>
+                                    <th>Age on 1st of August, 2021: </th>
                                     <?php
-                                        $date1=date_create("2020-8-1");
+                                        $date1=date_create("2021-8-1");
                                         $date2=date_create("$student->date_of_birth");
                                         $diff=date_diff($date1,$date2);
                                     ?>

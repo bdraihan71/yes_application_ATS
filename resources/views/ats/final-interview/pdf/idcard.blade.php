@@ -48,7 +48,7 @@
                     <h4>International Education and Resource Network</h4>
                     <h3>Kennedy-Lugar Youth Exchange</h3>
                     <h3>and Study Program</h3>
-                    <h4>Academic Year 2020-21</h4>
+                    <h4>Academic Year 2021-22</h4>
                 </div>
                 <div>
                     <h1 style="color: darkblue;">Final Application & Interview Round</h1>

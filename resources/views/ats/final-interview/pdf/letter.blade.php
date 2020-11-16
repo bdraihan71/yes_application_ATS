@@ -44,13 +44,13 @@
                     <div>
                         <div>
                             <p>
-                                <b>Sub: Invitation to participate in Step 4: Final Application & Interview Round of K-L YES Program 2020-21.</b>
+                                <b>Sub: Invitation to participate in Step 4: Final Application & Interview Round of K-L YES Program 2021-22.</b>
                             </p>
                             <p>
                                 Dear <b>{{$student->first_name}} {{$student->last_name}},</b>
                             </p>
                             <p>
-                                Congratulations! You have qualified in the <b>ELTiS and In-Class Essay</b> round of <b>Kennedy Lugar Youth Exchange & Study Program</b> for <b>Academic Year 2020-21</b>. We are delighted to invite you to participate in <b>Final Application & Interview Round</b> of the recruitment.
+                                Congratulations! You have qualified in the <b>ELTiS and In-Class Essay</b> round of <b>Kennedy Lugar Youth Exchange & Study Program</b> for <b>Academic Year 2021-22</b>. We are delighted to invite you to participate in <b>Final Application & Interview Round</b> of the recruitment.
                             </p>
 
                             <p>

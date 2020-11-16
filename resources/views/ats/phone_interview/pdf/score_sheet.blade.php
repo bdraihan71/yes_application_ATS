@@ -18,7 +18,7 @@
             <div>
                 <table border="1" style="border-collapse: collapse;">
                     <tr>
-                        <td colspan="2" >KL Youth Exchange and Study (Academic Year: 2020-21)</td>
+                        <td colspan="2" >KL Youth Exchange and Study (Academic Year: 2021-22)</td>
                     </tr>
                     <tr>
                         <td colspan="2" >Phone Interview Score Sheet</td>
@@ -72,7 +72,7 @@
                 <br>
                 <table border="1" style="border-collapse: collapse;">
                     <tr>
-                        <td colspan="2" >KL Youth Exchange and Study (Academic Year: 2020-21)</td>
+                        <td colspan="2" >KL Youth Exchange and Study (Academic Year: 2021-22)</td>
                     </tr>
                     <tr>
                         <td colspan="2" >Phone Interview Score Sheet</td>

@@ -33,7 +33,7 @@
             <div class="col" style="width: 9%;">{{$student->serial}}</div>
             <div class="col" style="width: 9%; ">{{$student->first_name}} {{$student->last_name}}</div>
             <div class="col" style="width: 9%; text-align: center;">
-                <img  width="64px" src="{{$student->photo}}">
+                <img  width="64px" height="64px" src="{{$student->photo}}">
             </div>
             <div class="col" style="width: 18%; ">{{$student->schoolName}}, {{$student->district}}</div>
             <div class="col" style="width: 15%; ">{{$student->contact}}, F- {{$student->fatherContact}}, M- {{$student->motherContact}}</div>

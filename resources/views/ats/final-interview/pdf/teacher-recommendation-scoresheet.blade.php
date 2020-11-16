@@ -56,7 +56,7 @@
         <div style="margin-top:15px; width: 495px; text-align: center; float: left">
 
             <h3>Kennedy Lugar Youth Exchange and Study (YES) Program</h3>
-            <h4>Academic Year 2020-21</h4>
+            <h4>Academic Year 2021-22</h4>
             <h3>Score Sheet: Teacher Recommendation Letter</h3>
             <p>Date:  5,6 & 7 January 2020</p>
             <p></p>
@@ -79,7 +79,7 @@
             <div class="col" style="width: 9%;">{{$student->final_id}}</div>
             <div class="col" style="width: 9%; ">{{$student->first_name}} {{$student->last_name}}</div>
             <div class="col" style="width: 9%; text-align: center;">
-                <img  width="64px" src="{{$student->photo}}">
+                <img  width="64px" height="64px" src="{{$student->photo}}">
             </div>
             <div class="col" style="width: 18%; "></div>
             <div class="col" style="width: 31%; "></div>
@@ -96,7 +96,7 @@
                 <div style="margin-top:15px; width: 495px; text-align: center; float: left">
 
                     <h3>Kennedy Lugar Youth Exchange and Study (YES) Program</h3>
-                    <h4>Academic Year 2020-21</h4>
+                    <h4>Academic Year 2021-22</h4>
                     <h3>Score Sheet: Teacher Recommendation Letter</h3>
                     <p>Date:  5,6 & 7 January 2020</p>
                     <p></p>
