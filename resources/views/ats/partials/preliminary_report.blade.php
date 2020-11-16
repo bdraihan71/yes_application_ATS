@@ -1,6 +1,6 @@
 {{csrf_field()}}
 <tr>
-    <td>{{$student->applicant_id}}</td>
+    <td>{{20210000 + $student->applicant_id}}</td>
     <td><a href="/ats/student/{{$student->id}}/account/1">{{$student->first_name}}</a></td>
     <input type="hidden" name="student_id" value="{{$student->id}}">
 

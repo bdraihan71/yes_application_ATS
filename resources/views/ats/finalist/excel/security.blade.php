@@ -20,7 +20,7 @@
         {{csrf_field()}}
         <tr class="row">
             <td>{{$student->id}}</td>
-            <td>{{$student->applicant_id}}</td>
+            <td>{{20210000 + $student->applicant_id}}</td>
             <td>{{$student->first_name}}</td>
             <td>{{$student->last_name}}</td>
             <td>{{$student->parent_for_interview}}</td>

@@ -33,7 +33,7 @@
        <button class="btn btn-danger">Delete</button>
     </form>
     <a  class="btn btn-primary" href="{{route('student.edit', $student->id)}}" role="button">Edit</a>
-    <h3> {{$student->applicant_id}}: {{$student->first_name}} {{$student->last_name}}</h3>
+    <h3> {{20210000 + $student->applicant_id}}: {{$student->first_name}} {{$student->last_name}}</h3>
 
     <div class="row">
         <div class="col-md-8">
@@ -197,7 +197,7 @@
                     <div class="panel-body bg-info">
                         <h3 class="bg-white">Student Image:</h3>
                         <img src="{{$student->photo}}" width="700px">
-                        <h2 class="bg-white">Application ID: {{$student->applicant_id}}</h2>
+                        <h2 class="bg-white">Application ID: {{20210000 + $student->applicant_id}}</h2>
                         <!-- <h4 class="bg-white">ID: {{$student->id}}</h4> -->
                         {{-- <h4 class="bg-white">Status: {{$student->status}}</h4> --}}
                         

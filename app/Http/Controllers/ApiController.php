@@ -77,6 +77,7 @@ class ApiController extends Controller
             // dd($output['student']['citizenship']);
             // dd($output['guardian']['father_name']);
             // dd($output['student']['district']);
+            // dd($output['application']['id']);
 
             if($student){
                 // $student->update($output);
@@ -113,6 +114,7 @@ class ApiController extends Controller
 
                 //guardian info
                 $student->father_present = $output['guardian']['father_present'];
+                $student->father_nid = $output['guardian']['father_nid'];
                 $student->fatherFirstName = $output['guardian']['father_name'];
                 $student->fatherContact = $output['guardian']['father_phone'];
                 $student->fatherEmailID = $output['guardian']['father_email'];
@@ -195,7 +197,7 @@ class ApiController extends Controller
                 // $student->school_type = $output[''];
                 // $student->aboutYourself = $output[''];
                 // $student->ageOnFirstAugust = $output[''];
-                $student->applicant_id = $output['id'];
+                $student->applicant_id = $output['application']['id'];
                 // $student->fatherLastName = $output[''];
                 // $student->fatherMiddleName = $output[''];
                 // $student->fatherOfficePhone = $output[''];
@@ -229,11 +231,11 @@ class ApiController extends Controller
     public function  fatherNid(){
         //$url = env('FIREBASE_DATBASE_URL') . "/applicants.json";
         $url = env('FATHER_NID');
-
         // create curl resource
         $ch = curl_init();
 
 
+       
         // set url
         curl_setopt($ch, CURLOPT_URL, $url);
 
@@ -242,7 +244,7 @@ class ApiController extends Controller
 
         // $output contains the output string
         $output = curl_exec($ch);
-
+       
         // close curl resource to free up system resources
         curl_close($ch);
 
@@ -250,13 +252,16 @@ class ApiController extends Controller
         $output = json_decode($output, true);
 
         $output2 =($output);
-
+        
         //  dd($output2);
         foreach($output2 as $key=>$output){
+            // dd( $output['id']);
             // echo '<pre>';
             //     print_r('ID:'.$output['id']. '  NID:'. $output['guardian']['father_nid']);
             // echo '</pre>';
-            $student = Student::where('applicant_id', $output['id'])->firstOrFail();;
+            // $student = Student::where('applicant_id', $output['id'])->firstOrFail();
+            $student = Student::where('applicant_id', $output['id'])->firstOrFail();
+           
             $student->father_nid = $output['guardian']['father_nid'];
             $student->save();
 
