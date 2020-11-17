@@ -16,7 +16,7 @@
                 $count = 1;
             @endphp
             @foreach($students as $student)
-                @if($student->stage == 4)
+                @if($student->stage > 3)
                 
                 <tr>
                     <td>{{$count}}</td>

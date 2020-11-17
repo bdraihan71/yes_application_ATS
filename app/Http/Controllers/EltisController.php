@@ -45,7 +45,6 @@ class EltisController extends Controller
            
 
         }
-      
         $pdf = PDF::loadView('ats.eltis.pdf.result', compact('students'));
 
         return $pdf->download(env('AKASH_PDF_ELTIS_RESULT_NAME'));

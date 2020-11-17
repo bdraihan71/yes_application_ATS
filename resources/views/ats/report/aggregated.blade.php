@@ -2,7 +2,7 @@
 
 <!-- Main Content -->
 @section('preliminary_application_content')
-    <h1>Aggegated</h1>
+    <h1>Aggregated</h1>
     <div class="row">
        <div>
            <table class="table table-responsive table-striped table-bordered">
