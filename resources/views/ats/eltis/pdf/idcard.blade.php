@@ -76,9 +76,10 @@
 
                 <div>
                     <br>
-                    <img src="/images/ats/dos_logo.png" class="logo" width="75px">
-                    <img src="/images/ats/yes_logo.png" class="logo" width="75px">
-                    <img src="/images/ats/iearnbd_logo.png" class="logo" width="75px">
+                    <img src="/images/ats/American_Flag.png" class="logo" width="56px" style=" margin-bottom: 12px;">
+                    <img src="/images/ats/dos_logo.png" class="logo" width="56px">
+                    <img src="/images/ats/yes_logo.png" class="logo" width="56px">
+                    <img src="/images/ats/iearnbd_logo.png" class="logo" width="56px">
                     <h4>International Education and Resource Network</h4>
                     <h3>Kennedy-Lugar Youth Exchange</h3>
                     <h3>and Study Program</h3>
