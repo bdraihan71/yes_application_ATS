@@ -160,7 +160,7 @@ class ApiController extends Controller
                 // $student->question_reason = $output['question']['reason'];
                 // $student->question_culture = $output['question']['culture'];
                 // $student->aboutCommunityWork = $output['question']['community'];
-                $student->question_mental = $output['question']['bio'];
+                $student->bio = $output['question']['bio'];
                 $student->question_mental = $output['question']['mental'];
                 $student->question_promotion = $output['question']['promotion'];
                 $student->question_other = $output['question']['other'];

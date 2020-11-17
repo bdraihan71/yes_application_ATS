@@ -489,6 +489,10 @@
 
                             <table class="table">
                                 <tr class="bg-white">
+                                    <th class="school-field-name" width="200px">Bio: </th>
+                                    <td class="school-address-field">{{$student->bio}}</td>
+                                </tr>
+                                <tr class="bg-white">
                                     <th class="school-field-name" width="200px">Why Apply YES program: </th>
                                     <td class="school-address-field">{{$student->question_reason}}</td>
                                 </tr>
