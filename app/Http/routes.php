@@ -23,7 +23,7 @@ Route::get('/', function () {
 Route::auth();
 
 Route::get('/api/sync/all', 'ApiController@syncAll');
-Route::get('/api/sync/fathernid', 'ApiController@fatherNid');
+// Route::get('/api/sync/fathernid', 'ApiController@fatherNid');
 Route::get('/api/sync/{firebase_id}', 'ApiController@syncData');
 
 Route::get('/ats', 'AtsController@home')->middleware('auth');
