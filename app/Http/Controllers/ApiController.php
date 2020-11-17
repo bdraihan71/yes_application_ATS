@@ -73,7 +73,7 @@ class ApiController extends Controller
         //  dd($output2);
         foreach($output2 as $key=>$output){
             //$student = Student::where('applicant_id', $output['applicant_id'])->first();
-            $student = Student::where('applicant_id', $output['id'])->first();
+            $student = Student::where('applicant_id', $output['application']['id'])->first();
             // dd($output['student']['citizenship']);
             // dd($output['guardian']['father_name']);
             // dd($output['student']['district']);
