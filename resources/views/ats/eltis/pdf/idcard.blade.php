@@ -92,7 +92,7 @@
                     <b>{{$student->first_name}} {{$student->last_name}}</b><br>
                     {{$student->schoolName}},
                     {{$student->district}}
-                    <p id="app-id">Applicant ID: {{20210000 + $student->applicant_id}}</p>
+                    <p id="app-id">Applicant ID: {{20210000 + $student->applicant_id +2}}</p>
                 </div>
             </div>
 

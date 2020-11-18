@@ -35,7 +35,7 @@
                     </div>
                     <div align="right" style="width: 200px;  display: inline-table" >
                         <div>
-                            <p>Applicant ID: {{20210000 + $student->applicant_id}}</p>
+                            <p>Applicant ID: {{20210000 + $student->applicant_id +2}}</p>
                             <img width="80px" src="{{$student->photo}}">
                         </div>
                     </div>

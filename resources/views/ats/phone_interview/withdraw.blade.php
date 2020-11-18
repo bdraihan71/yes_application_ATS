@@ -9,7 +9,7 @@
                 {{csrf_field()}}
                 <select class="form-control" name="student_id">
                     @foreach($students as $student)
-                        <option value="{{$student->id}}">{{20210000 + $student->applicant_id}}: {{$student->first_name}} {{$student->last_name}}</option>
+                        <option value="{{$student->id}}">{{20210000 + $student->applicant_id +2}}: {{$student->first_name}} {{$student->last_name}}</option>
                     @endforeach
                 </select><br>
                 <button class="btn btn-primary" type="submit">Withdraw Student</button>

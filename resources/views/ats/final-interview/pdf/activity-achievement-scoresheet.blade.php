@@ -78,7 +78,7 @@
 
 @foreach($students as $student)
     <div>
-        <div class="col" style="width: 9%;">{{20210000 + $student->applicant_id}}</div>
+        <div class="col" style="width: 9%;">{{20210000 + $student->applicant_id +2}}</div>
         <div class="col" style="width: 9%; ">{{$student->first_name}} {{$student->last_name}}</div>
         <div class="col" style="width: 9%; text-align: center;">
             <img  width="64px" height="64px" src="{{$student->photo}}">

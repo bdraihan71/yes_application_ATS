@@ -81,7 +81,7 @@
             <td>{{$student->aboutYourself}}</td>
             <td>{{$student->address}}</td>
             <td>{{$student->ageOnFirstAugust}}</td>
-            <td>{{20210000 + $student->applicant_id}}</td>
+            <td>{{20210000 + $student->applicant_id +2}}</td>
             <td>{{$student->birthCertificate}}</td>
             <td>{{$student->citizenship}}</td>
             <td>{{$student->classCurrentlyStudying}}</td>

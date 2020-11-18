@@ -53,13 +53,13 @@
                 <div>
                     <h1 style="color: darkblue;">Final Application & Interview Round</h1>
                     <h3>5,6 & 7 January 2020</h3>
-                    {{--<img width="100px" src="/images/ats/eltis_students/{{20210000 + $student->applicant_id}}.jpg"><br>--}}
+                    {{--<img width="100px" src="/images/ats/eltis_students/{{20210000 + $student->applicant_id +2}}.jpg"><br>--}}
                     <br>
                     <h2>{{$student->parent_for_interview}}</h2>
                     <b>Parent of {{$student->first_name}} {{$student->last_name}}</b><br>
                     {{$student->schoolName}},
                     {{$student->district}}
-                    <p id="app-id">Application ID: {{20210000 + $student->applicant_id}}</p>
+                    <p id="app-id">Application ID: {{20210000 + $student->applicant_id +2}}</p>
                 </div>
                 <div>
                     <p>Reporting Time: {{$student->reporting_time()}}</p>

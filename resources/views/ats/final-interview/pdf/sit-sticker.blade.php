@@ -29,12 +29,12 @@
             @while($counter<2)
                 <div style="border:1px solid black; width: 350px; height: 90px; float: left">
                     <div style="float:left; padding: 2%">
-                        <img  width="70px" src="/images/ats/eltis_students/{{20210000 + $student->applicant_id}}.jpg">
+                        <img  width="70px" src="/images/ats/eltis_students/{{20210000 + $student->applicant_id +2}}.jpg">
                     </div>
                     <div style="text-align:left; font-size: 80%; padding: 2%">
                         <b></b>
                         <b>{{$student->first_name}} {{$student->last_name}}</b><br>
-                        <b>Applicant ID: {{20210000 + $student->applicant_id}}</b><br><br>
+                        <b>Applicant ID: {{20210000 + $student->applicant_id +2}}</b><br><br>
                         {{$student->schoolName}}, {{$student->district}}
                     </div>
                 </div>

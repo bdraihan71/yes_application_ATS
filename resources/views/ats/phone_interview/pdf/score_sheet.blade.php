@@ -29,7 +29,7 @@
                     </tr>
                     <tr>
                         <td>Applicant ID</td>
-                        <td>{{20210000 + $student->applicant_id}}</td>
+                        <td>{{20210000 + $student->applicant_id +2}}</td>
                     </tr>
                     <tr>
                         <td>Name</td>
@@ -83,7 +83,7 @@
                     </tr>
                     <tr>
                         <td>Applicant ID</td>
-                        <td>{{20210000 + $student->applicant_id}}</td>
+                        <td>{{20210000 + $student->applicant_id +2}}</td>
                     </tr>
                     <tr>
                         <td>Name</td>

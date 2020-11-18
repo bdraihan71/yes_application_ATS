@@ -20,7 +20,7 @@
                         @foreach($students as $student)
                             <tr>
                                 <td><input value="4" type="checkbox" name="{{$student->id}}" {!!($student->stage==4)?"checked":"unchecked"!!}></td>
-                                <td><a href="/ats/student/{{$student->id}}/account/1">{{20210000 + $student->applicant_id}}</a></td>
+                                <td><a href="/ats/student/{{$student->id}}/account/1">{{20210000 + $student->applicant_id +2}}</a></td>
                                 <td>{{$student->first_name}} {{$student->last_name}}</td>
                             </tr>
                             @php $count++ @endphp

@@ -21,7 +21,7 @@
             @if(count($students)>0)
                     @foreach($students as $student)
                     <tr>
-                        {{-- <td><a href="/ats/student/{{$student->id}}/account/1">{{20210000 + $student->applicant_id}}</a></td> --}}
+                        {{-- <td><a href="/ats/student/{{$student->id}}/account/1">{{20210000 + $student->applicant_id +2}}</a></td> --}}
                         <td>{{$student->final_id}}</td>
                         <td>{{$student->first_name}} {{$student->last_name}}</td>
                         <td>{{$student->fatherFirstName}} {{$student->fatherMiddleName}} {{$student->fatherLastName}}</td>
