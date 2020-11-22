@@ -1,13 +1,13 @@
 <table class="table table-hover table-bordered table-striped table-responsive table-sm">
     <thead>
     <tr>
-        <td>ID</td>
+        <td>Application ID</td>
         <td>first_name</td>
         <td>aboutCommunityWork</td>
         <td>aboutYourself</td>
         <td>address</td>
         <td>ageOnFirstAugust</td>
-        <td>applicant_id</td>
+        {{-- <td>applicant_id</td> --}}
         <td>birthCertificate</td>
         <td>citizenship</td>
         <td>classCurrentlyStudying</td>
@@ -75,13 +75,14 @@
     @foreach($students as $student)
         {{csrf_field()}}
         <tr>
-            <td>{{$student->id}}</td>
+            {{-- <td>{{$student->id}}</td> --}}
+            <td>{{20210000 + $student->applicant_id +2}}</td>
             <td>{{$student->first_name}}</td>
             <td>{{$student->aboutCommunityWork}}</td>
             <td>{{$student->aboutYourself}}</td>
             <td>{{$student->address}}</td>
             <td>{{$student->ageOnFirstAugust}}</td>
-            <td>{{20210000 + $student->applicant_id +2}}</td>
+            {{-- <td>{{20210000 + $student->applicant_id +2}}</td> --}}
             <td>{{$student->birthCertificate}}</td>
             <td>{{$student->citizenship}}</td>
             <td>{{$student->classCurrentlyStudying}}</td>
