@@ -16,7 +16,7 @@
                 <li><a href="/student/create">Student Create</a></li>
                 <li><a href="/ats/preliminary_application/">Application Stacks</a></li>
                 <li><a href="/ats/preliminary_application/result">Result</a></li>
-                {{-- <li><a href="/ats/preliminary_application/backup">Backup</a></li> --}}
+                <li><a href="/ats/preliminary_application/backup">Backup</a></li>
                 <!-- <li><a href="/ats/preliminary_application/import">Import</a></li>
                 <li><a href="/ats/preliminary_application/improvise">Improvise</a></li>
                 <li><a href="/ats/preliminary_application/sync">Sync Score</a></li> -->
