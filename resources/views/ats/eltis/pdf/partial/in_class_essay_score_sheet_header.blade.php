@@ -47,7 +47,7 @@
 
 
 <div style="clear: left">
-    <div class="col" style="width: 8%;">Serial</div>
+    <div class="col" style="width: 8%;">Application ID</div>
     <div class="col" style="width: 10%; ">Name</div>
     <div class="col" style="width: 10%; ">Image</div>
     <div class="col" style="width: 30%; ">School</div>
