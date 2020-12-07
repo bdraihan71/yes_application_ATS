@@ -17,8 +17,8 @@
 
         <h3>Kennedy Lugar Youth Exchange and Study (YES) Program</h3>
         <h4>Academic Year 2021-22</h4>
-        <h3>Score Sheet: ELTiS & In-Class Essay Round</h3>
-        <p>Date: 13-12-2019</p>
+        <h3>Score Sheet: ELTiS Round</h3>
+        <p>Date: 8-11 December, 2020</p>
     </div>
     <img  style="width:100px; background-color: blue ; float: left" src="/images/ats/iearnbd_logo.png">
 </div>
@@ -47,7 +47,7 @@
 
 
 <div style="clear: left">
-    <div class="col" style="width: 8%;">Application ID</div>
+    <div class="col" style="width: 8%;">Applicant ID</div>
     <div class="col" style="width: 10%; ">Name</div>
     <div class="col" style="width: 10%; ">Image</div>
     <div class="col" style="width: 20%; ">School</div>

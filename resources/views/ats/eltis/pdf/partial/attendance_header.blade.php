@@ -35,7 +35,7 @@
         <h3>Kennedy Lugar Youth Exchange and Study (YES) Program</h3>
         <h4>Academic Year 2021-22</h4>
         <h3>Attendance Sheet: ELTiS & In-Class Essay Round</h3>
-        <p>Date: 13-12-2019</p>
+        <p>Date: 8-11 December, 2020</p>
     </div>
     <img  style="width:100px; background-color: blue ; float: left" src="/images/ats/iearnbd_logo.png">
 </div>
